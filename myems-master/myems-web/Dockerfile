@@ -1,0 +1,27 @@
+FROM node:latest AS build-stage
+WORKDIR /opt
+COPY . .
+
+# use this for node v22 or above, note that the default command maybe slow at sometime
+RUN npm i
+
+# use this if above command is slow or unavialiable
+# RUN npm i --registry https://registry.npm.taobao.org
+
+RUN npm run build
+
+
+FROM nginx:latest AS production-stage
+
+# RUN apt update && apt install -y nano telnet
+
+# remove the default config
+RUN rm /etc/nginx/conf.d/default.conf && rm /etc/nginx/nginx.conf
+
+# create new root folder
+RUN mkdir -p /var/www/myems-web
+
+COPY nginx.conf /etc/nginx/
+COPY --from=build-stage /opt/build/ /var/www/myems-web
+EXPOSE 80
+CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]

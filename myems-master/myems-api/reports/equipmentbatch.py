@@ -1,0 +1,474 @@
+"""
+Equipment Batch Report API
+
+This module provides REST API endpoints for generating equipment batch reports.
+It analyzes energy consumption data for multiple equipment within a space hierarchy,
+providing comprehensive insights into equipment performance and energy usage patterns.
+
+Key Features:
+- Multi-equipment energy consumption analysis
+- Space hierarchy traversal and analysis
+- Energy category breakdown
+- Base period vs reporting period comparison
+- Excel export functionality
+- Performance metrics calculation
+
+Report Components:
+- Equipment energy consumption summary
+- Space-based equipment grouping
+- Energy category analysis
+- Performance comparison metrics
+- Consumption trends and patterns
+- Efficiency indicators
+
+The module uses Falcon framework for REST API and includes:
+- Database queries for equipment data
+- Space tree traversal algorithms
+- Energy consumption calculations
+- Excel export via excelexporters
+- Multi-language support
+- User authentication and authorization
+"""
+
+import hashlib
+import logging
+from datetime import datetime, timedelta, timezone
+from decimal import Decimal
+import falcon
+import mysql.connector
+import redis
+import simplejson as json
+from anytree import AnyNode, LevelOrderIter
+import config
+import excelexporters.equipmentbatch
+import pdfexporters.equipmentbatch
+import docxexporters.equipmentbatch
+from core.useractivity import access_control, api_key_control
+
+logger = logging.getLogger(__name__)
+
+
+class Reporting:
+    def __init__(self):
+        """"Initializes Reporting"""
+        pass
+
+    ####################################################################################################################
+    # PROCEDURES
+    # Step 1: valid parameters
+    # Step 2: build a space tree
+    # Step 3: query all equipments in the space tree
+    # Step 4: query energy categories
+    # Step 5: query reporting period energy input
+    # Step 6: construct the report
+    ####################################################################################################################
+    @staticmethod
+    def on_get(req, resp):
+        if 'API-KEY' not in req.headers or \
+                not isinstance(req.headers['API-KEY'], str) or \
+                len(str.strip(req.headers['API-KEY'])) == 0:
+            access_control(req)
+        else:
+            api_key_control(req)
+        space_id = req.params.get('spaceid')
+        reporting_period_start_datetime_local = req.params.get('reportingperiodstartdatetime')
+        reporting_period_end_datetime_local = req.params.get('reportingperiodenddatetime')
+        language = req.params.get('language')
+        quick_mode = req.params.get('quickmode')
+        export_excel = req.params.get('exportexcel')
+        export_pdf = req.params.get('exportpdf')
+        export_docx = req.params.get('exportdocx')
+
+        ################################################################################################################
+        # Step 1: valid parameters
+        ################################################################################################################
+        if space_id is None:
+            raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST', description='API.INVALID_SPACE_ID')
+        else:
+            space_id = str.strip(space_id)
+            if not space_id.isdigit() or int(space_id) <= 0:
+                raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                       description='API.INVALID_SPACE_ID')
+            else:
+                space_id = int(space_id)
+
+        timezone_offset = int(config.utc_offset[1:3]) * 60 + int(config.utc_offset[4:6])
+        if config.utc_offset[0] == '-':
+            timezone_offset = -timezone_offset
+
+        if reporting_period_start_datetime_local is None:
+            raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                   description="API.INVALID_REPORTING_PERIOD_START_DATETIME")
+        else:
+            reporting_period_start_datetime_local = str.strip(reporting_period_start_datetime_local)
+            try:
+                reporting_start_datetime_utc = datetime.strptime(reporting_period_start_datetime_local,
+                                                                 '%Y-%m-%dT%H:%M:%S')
+            except ValueError:
+                raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                       description="API.INVALID_REPORTING_PERIOD_START_DATETIME")
+            reporting_start_datetime_utc = \
+                reporting_start_datetime_utc.replace(tzinfo=timezone.utc) - timedelta(minutes=timezone_offset)
+            # nomalize the start datetime
+            if config.minutes_to_count == 30 and reporting_start_datetime_utc.minute >= 30:
+                reporting_start_datetime_utc = reporting_start_datetime_utc.replace(minute=30, second=0, microsecond=0)
+            else:
+                reporting_start_datetime_utc = reporting_start_datetime_utc.replace(minute=0, second=0, microsecond=0)
+
+        if reporting_period_end_datetime_local is None:
+            raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                   description="API.INVALID_REPORTING_PERIOD_END_DATETIME")
+        else:
+            reporting_period_end_datetime_local = str.strip(reporting_period_end_datetime_local)
+            try:
+                reporting_end_datetime_utc = datetime.strptime(reporting_period_end_datetime_local,
+                                                               '%Y-%m-%dT%H:%M:%S')
+            except ValueError:
+                raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                       description="API.INVALID_REPORTING_PERIOD_END_DATETIME")
+            reporting_end_datetime_utc = reporting_end_datetime_utc.replace(tzinfo=timezone.utc) - \
+                timedelta(minutes=timezone_offset)
+
+        if reporting_start_datetime_utc >= reporting_end_datetime_utc:
+            raise falcon.HTTPError(status=falcon.HTTP_400, title='API.BAD_REQUEST',
+                                   description='API.INVALID_REPORTING_PERIOD_END_DATETIME')
+
+        # if turn quick mode on, do not return parameters data and excel file
+        is_quick_mode = False
+        if quick_mode is not None and \
+                len(str.strip(quick_mode)) > 0 and \
+                str.lower(str.strip(quick_mode)) in ('true', 't', 'on', 'yes', 'y'):
+            is_quick_mode = True
+
+        is_export_excel = False
+        if export_excel is not None and \
+                len(str.strip(export_excel)) > 0 and \
+                str.lower(str.strip(export_excel)) in ('true', 't', 'on', 'yes', 'y'):
+            is_export_excel = True
+
+        is_export_pdf = False
+        if export_pdf is not None and \
+                len(str.strip(export_pdf)) > 0 and \
+                str.lower(str.strip(export_pdf)) in ('true', 't', 'on', 'yes', 'y'):
+            is_export_pdf = True
+
+        is_export_docx = False
+        if export_docx is not None and \
+                len(str.strip(export_docx)) > 0 and \
+                str.lower(str.strip(export_docx)) in ('true', 't', 'on', 'yes', 'y'):
+            is_export_docx = True
+
+        ############################################################################################################
+        # Redis cache
+        ############################################################################################################
+        cache_key = None
+        cache_expire = 1800  # 30 minutes
+        redis_client = None
+        if config.redis.get('is_enabled'):
+            try:
+                redis_client = redis.Redis(
+                    host=config.redis['host'],
+                    port=config.redis['port'],
+                    password=config.redis.get('password') or None,
+                    db=config.redis['db'],
+                    decode_responses=True,
+                    socket_connect_timeout=2,
+                    socket_timeout=2
+                )
+                redis_client.ping()
+
+                # Normalize end datetimes for cache key: set minute/second/microsecond to 0
+                reporting_end_datetime_utc_normalized = None
+                if reporting_end_datetime_utc is not None:
+                    reporting_end_datetime_utc_normalized = reporting_end_datetime_utc.replace(
+                        minute=0, second=0, microsecond=0)
+
+                cache_params = {
+                    "spaceid": space_id,
+                    "reporting_start_datetime_utc": reporting_start_datetime_utc.isoformat()
+                    if reporting_start_datetime_utc else None,
+                    "reporting_end_datetime_utc": reporting_end_datetime_utc_normalized.isoformat()
+                    if reporting_end_datetime_utc_normalized else None,
+                    "language": language,
+                    "quickmode": is_quick_mode,
+                    "exportexcel": is_export_excel,
+                    "exportpdf": is_export_pdf,
+                    "exportdocx": is_export_docx,
+                }
+                cache_params_json = json.dumps(cache_params, sort_keys=True)
+                cache_key = 'report:equipmentbatch:' + hashlib.sha256(cache_params_json.encode('utf-8')).hexdigest()
+
+                cached_result = redis_client.get(cache_key)
+                if cached_result:
+                    resp.text = cached_result
+                    return
+            except Exception:
+                redis_client = None
+
+        cnx_system_db = None
+        cnx_energy_db = None
+        cnx_billing_db = None
+        cnx_carbon_db = None
+        try:
+            cnx_system_db = mysql.connector.connect(**config.myems_system_db)
+            cnx_energy_db = mysql.connector.connect(**config.myems_energy_db)
+            cnx_billing_db = mysql.connector.connect(**config.myems_billing_db)
+            cnx_carbon_db = mysql.connector.connect(**config.myems_carbon_db)
+            
+            cursor_system_db = None
+            cursor_energy_db = None
+            cursor_billing_db = None
+            cursor_carbon_db = None
+            try:
+                cursor_system_db = cnx_system_db.cursor()
+                cursor_energy_db = cnx_energy_db.cursor()
+                cursor_billing_db = cnx_billing_db.cursor()
+                cursor_carbon_db = cnx_carbon_db.cursor()
+
+                cursor_system_db.execute(" SELECT name "
+                                         " FROM tbl_spaces "
+                                         " WHERE id = %s ", (space_id,))
+                row = cursor_system_db.fetchone()
+
+                if row is None:
+                    raise falcon.HTTPError(status=falcon.HTTP_404, title='API.NOT_FOUND',
+                                           description='API.SPACE_NOT_FOUND')
+                else:
+                    space_name = row[0]
+
+                ######################################################################################################
+                # Step 2: build a space tree
+                ######################################################################################################
+
+                query = (" SELECT id, name, parent_space_id "
+                         " FROM tbl_spaces "
+                         " ORDER BY id ")
+                cursor_system_db.execute(query)
+                rows_spaces = cursor_system_db.fetchall()
+                node_dict = dict()
+                if rows_spaces is not None and len(rows_spaces) > 0:
+                    for row in rows_spaces:
+                        parent_node = node_dict[row[2]] if row[2] is not None else None
+                        node_dict[row[0]] = AnyNode(id=row[0], parent=parent_node, name=row[1])
+
+                space_node = node_dict.get(space_id)
+                space_name = '/'.join([node.name for node in space_node.path]) if space_node is not None else space_name
+
+                ###################################################################################################
+                # Step 3: query all equipments in the space tree
+                ###################################################################################################
+                equipment_dict = dict()
+                space_dict = dict()
+
+                for node in LevelOrderIter(node_dict[space_id]):
+                    space_dict[node.id] = node.name
+
+                space_ids = list(space_dict.keys())
+                if space_ids:
+                    space_ids_placeholders = ','.join(['%s'] * len(space_ids))
+                    cursor_system_db.execute(" SELECT e.id, e.name AS equipment_name, "
+                                             "        e.uuid AS equipment_uuid, s.name AS space_name, "
+                                             "        s.id AS space_id, "
+                                             "        cc.name AS cost_center_name, e.description "
+                                             " FROM tbl_spaces s, tbl_spaces_equipments se, "
+                                             "      tbl_equipments e, tbl_cost_centers cc "
+                                             " WHERE s.id IN ( " + space_ids_placeholders + ") "
+                                             "       AND se.space_id = s.id AND se.equipment_id = e.id "
+                                             "       AND e.cost_center_id = cc.id  ", tuple(space_ids))
+                    rows_equipments = cursor_system_db.fetchall()
+                    if rows_equipments is not None and len(rows_equipments) > 0:
+                        for row in rows_equipments:
+                            current_space_id = row[4]
+                            current_space_node = node_dict.get(current_space_id)
+                            current_space_path = \
+                                '/'.join([node.name for node in current_space_node.path]) \
+                                if current_space_node is not None else row[3]
+                            equipment_dict[row[0]] = {"equipment_name": row[1],
+                                                      "equipment_uuid": row[2],
+                                                      "space_name": current_space_path,
+                                                      "cost_center_name": row[5],
+                                                      "description": row[6],
+                                                      "values": list()}
+
+                #####################################################################################################
+                # Step 4: query energy categories
+                #####################################################################################################
+                # query energy categories in reporting period
+                energy_category_set = set()
+                cursor_energy_db.execute(" SELECT DISTINCT(energy_category_id) "
+                                         " FROM tbl_equipment_input_category_hourly "
+                                         " WHERE start_datetime_utc >= %s AND start_datetime_utc < %s ",
+                                         (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                rows_energy_categories = cursor_energy_db.fetchall()
+                if rows_energy_categories is not None and len(rows_energy_categories) > 0:
+                    for row_energy_category in rows_energy_categories:
+                        energy_category_set.add(row_energy_category[0])
+
+                # query all energy categories
+                cursor_system_db.execute(" SELECT id, name, unit_of_measure "
+                                         " FROM tbl_energy_categories "
+                                         " ORDER BY id ", )
+                rows_energy_categories = cursor_system_db.fetchall()
+                if rows_energy_categories is None or len(rows_energy_categories) == 0:
+                    raise falcon.HTTPError(status=falcon.HTTP_404,
+                                           title='API.NOT_FOUND',
+                                           description='API.ENERGY_CATEGORY_NOT_FOUND')
+                energy_category_list = list()
+                for row_energy_category in rows_energy_categories:
+                    if row_energy_category[0] in energy_category_set:
+                        energy_category_list.append({"id": row_energy_category[0],
+                                                     "name": row_energy_category[1],
+                                                     "unit_of_measure": row_energy_category[2]})
+
+                ########################################################################################
+                # Step 5: query reporting period energy input
+                ########################################################################################
+                if equipment_dict:
+                    equipment_ids = list(equipment_dict.keys())
+                    if not equipment_ids:
+                        equipment_ids = None
+                    else:
+                        equipment_ids_placeholders = ','.join(['%s'] * len(equipment_ids))
+                        cursor_energy_db.execute(
+                            " SELECT equipment_id, energy_category_id, SUM(actual_value) "
+                            " FROM tbl_equipment_input_category_hourly "
+                            " WHERE equipment_id IN (" + equipment_ids_placeholders + ") "
+                            "     AND start_datetime_utc >= %s "
+                            "     AND start_datetime_utc < %s "
+                            " GROUP BY equipment_id, energy_category_id ",
+                            tuple(equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                        rows_equipment_energy = cursor_energy_db.fetchall()
+                        # build mapping: equipment_id -> {energy_category_id: sum_value}
+                        energy_map = {}
+                        for row in rows_equipment_energy:
+                            energy_map.setdefault(row[0], {})[row[1]] = row[2]
+                        for equipment_id in equipment_dict:
+                            for energy_category in energy_category_list:
+                                subtotal = Decimal(0.0)
+                                if equipment_id in energy_map and energy_category['id'] in energy_map[equipment_id]:
+                                    subtotal = energy_map[equipment_id][energy_category['id']]
+                                equipment_dict[equipment_id]['values'].append(subtotal)
+
+                        # Query total cost for each equipment from billing db
+                        cursor_billing_db.execute(
+                            " SELECT equipment_id, SUM(actual_value) "
+                            " FROM tbl_equipment_input_category_hourly "
+                            " WHERE equipment_id IN (" + equipment_ids_placeholders + ") "
+                            "     AND start_datetime_utc >= %s "
+                            "     AND start_datetime_utc < %s "
+                            " GROUP BY equipment_id ",
+                            tuple(equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                        rows_equipment_cost = cursor_billing_db.fetchall()
+                        cost_map = {}
+                        if rows_equipment_cost:
+                            for row in rows_equipment_cost:
+                                cost_map[row[0]] = float(row[1]) if row[1] else 0.0
+
+                        # Query total carbon emissions for each equipment from carbon db
+                        cursor_carbon_db.execute(
+                            " SELECT equipment_id, SUM(actual_value) "
+                            " FROM tbl_equipment_input_category_hourly "
+                            " WHERE equipment_id IN (" + equipment_ids_placeholders + ") "
+                            "     AND start_datetime_utc >= %s "
+                            "     AND start_datetime_utc < %s "
+                            " GROUP BY equipment_id ",
+                            tuple(equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                        rows_equipment_carbon = cursor_carbon_db.fetchall()
+                        carbon_map = {}
+                        if rows_equipment_carbon:
+                            for row in rows_equipment_carbon:
+                                carbon_map[row[0]] = float(row[1]) if row[1] else 0.0
+
+                        # Attach cost and carbon to equipment_dict
+                        for equipment_id in equipment_dict:
+                            equipment_dict[equipment_id]['cost'] = cost_map.get(equipment_id, 0.0)
+                            equipment_dict[equipment_id]['carbon_emissions'] = carbon_map.get(equipment_id, 0.0)
+
+            finally:
+                if cursor_system_db:
+                    cursor_system_db.close()
+                if cursor_energy_db:
+                    cursor_energy_db.close()
+                if cursor_billing_db:
+                    cursor_billing_db.close()
+                if cursor_carbon_db:
+                    cursor_carbon_db.close()
+
+        finally:
+            if cnx_system_db:
+                cnx_system_db.close()
+            if cnx_energy_db:
+                cnx_energy_db.close()
+            if cnx_billing_db:
+                cnx_billing_db.close()
+            if cnx_carbon_db:
+                cnx_carbon_db.close()
+
+        ################################################################################################################
+        # Step 6: construct the report
+        ################################################################################################################
+        equipment_list = list()
+        for equipment_id, equipment in equipment_dict.items():
+            equipment_list.append({
+                "id": equipment_id,
+                "equipment_name": equipment['equipment_name'],
+                "equipment_uuid": equipment['equipment_uuid'],
+                "space_name": equipment['space_name'],
+                "cost_center_name": equipment['cost_center_name'],
+                "description": equipment['description'],
+                "values": equipment['values'],
+                "cost": equipment.get('cost', 0.0),
+                "carbon_emissions": equipment.get('carbon_emissions', 0.0),
+            })
+
+        result = {'space_id': space_id,
+                  'space_name': space_name,
+                  'equipments': equipment_list,
+                  'energycategories': energy_category_list,
+                  'excel_bytes_base64': None,
+                  'pdf_bytes_base64': None,
+                  'docx_bytes_base64': None}
+
+        # export result to Excel/PDF/DOCX file and then encode the file to base64 string
+        result['excel_bytes_base64'] = None
+        result['pdf_bytes_base64'] = None
+        result['docx_bytes_base64'] = None
+        if not is_quick_mode:
+            if is_export_excel:
+                try:
+                    result['excel_bytes_base64'] = \
+                        excelexporters.equipmentbatch.export(result,
+                                                             space_name,
+                                                             reporting_period_start_datetime_local,
+                                                             reporting_period_end_datetime_local,
+                                                             language)
+                except Exception:
+                    logger.error("Failed to export Excel", exc_info=True)
+            if is_export_pdf:
+                try:
+                    result['pdf_bytes_base64'] = \
+                        pdfexporters.equipmentbatch.export(result,
+                                                           space_name,
+                                                           reporting_period_start_datetime_local,
+                                                           reporting_period_end_datetime_local,
+                                                           language)
+                except Exception:
+                    logger.error("Failed to export PDF", exc_info=True)
+            if is_export_docx:
+                try:
+                    result['docx_bytes_base64'] = \
+                        docxexporters.equipmentbatch.export(result,
+                                                            space_name,
+                                                            reporting_period_start_datetime_local,
+                                                            reporting_period_end_datetime_local,
+                                                            language)
+                except Exception:
+                    logger.error("Failed to export DOCX", exc_info=True)
+        resp_text = json.dumps(result)
+        resp.text = resp_text
+
+        if config.redis.get('is_enabled') and redis_client is not None and cache_key is not None:
+            try:
+                redis_client.setex(cache_key, cache_expire, resp_text)
+            except Exception:
+                logger.warning("Failed to write cache key %s", cache_key, exc_info=True)

@@ -1,0 +1,207 @@
+<p align="center">
+   <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
+</p>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.9.0</h1>
+<h3 align="center">Hệ thống quản lý năng lượng mã nguồn mở hàng đầu ngành</h3>
+<h6 align="center">Hơn một nghìn trường hợp dự án, đạt chứng nhận kiểm định CMA</h6>
+<h6 align="center">Cam kết mã nguồn mở vĩnh viễn</h6>
+<h6 align="center">Hỗ trợ kỹ thuật miễn phí trong nhóm QQ và WeChat</h6>
+<h6 align="center">Bảo trì liên tục, 1 phiên bản nhỏ mỗi tháng, 1 phiên bản chính mỗi năm</h6>
+
+[![CodeQL Scanning](https://github.com/MyEMS/myems/actions/workflows/codeql.yml/badge.svg)](https://github.com/MyEMS/myems/security/code-scanning)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MyEMS/myems/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MyEMS/myems/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/MyEMS/myems/badges/build.png?b=master)](https://scrutinizer-ci.com/g/MyEMS/myems/build-status/master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
+
+[Chinois simplifié](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [Japonais](./README_JP.md) | [한국어](./README_KR.md) | [Chinois traditionnel](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
+## Giới thiệu MyEMS
+
+Hệ thống quản lý năng lượng mã nguồn mở MyEMS tham chiếu tiêu chuẩn ISO 50001 quản lý năng lượng (GB/T 23331-2020), áp dụng cho các tòa nhà, nhà máy, trung tâm thương mại, bệnh viện, khu công nghiệp và trung tâm quản lý năng lượng và carbon để thu thập, phân tích và báo cáo năng lượng và phát thải carbon cho điện, nước, khí đốt, lạnh, nhiệt, v.v. Cũng bao gồm các chức năng tùy chọn của phiên bản doanh nghiệp như quang điện, lưu trữ năng lượng, trạm sạc, lưới điện vi mô, nhà máy điện ảo, điều khiển thiết bị, chẩn đoán lỗi, quản lý đơn hàng công việc và tối ưu hóa trí tuệ nhân tạo. Được phát triển và duy trì bởi một công ty chuyên nghiệp có kinh nghiệm, đảm bảo hỗ trợ lâu dài. Sử dụng mã nguồn mở để giúp các nhóm doanh nghiệp, khu công nghiệp và nhà khai thác năng lượng trong phát triển carbon thấp!
+
+## Kiến trúc MyEMS
+
+![MyEMS Architecture Function View](./docs/images/architecture-function-view-cn.png)
+
+![MyEMS Architecture Site View](./docs/images/architecture-site-view-cn.png)
+
+![MyEMS Data Flow](./docs/images/myems-data-flow-cn.svg)
+
+## Trình diễn giao diện người dùng web MyEMS
+
+![MyEMS Web 0](./docs/images/myems_web_en_0.png)
+![MyEMS Web 1](./docs/images/myems_web_en_1.png)
+![MyEMS Web 2](./docs/images/myems_web_en_2.png)
+![MyEMS Web 3](./docs/images/myems_web_en_3.png)
+![MyEMS Web 4](./docs/images/myems_web_en_4.png)
+![MyEMS Web 5](./docs/images/myems_web_en_5.png)
+![MyEMS Web 6](./docs/images/myems_web_en_6.png)
+![MyEMS Web 7](./docs/images/myems_web_en_7.png)
+![MyEMS Web 8](./docs/images/myems_web_en_8.png)
+![MyEMS Web 9](./docs/images/myems_web_en_9.png)
+![MyEMS Web 10](./docs/images/myems_web_en_10.png)
+![MyEMS Web 11](./docs/images/myems_web_en_11.png)
+![MyEMS Web 12](./docs/images/myems_web_en_12.png)
+![MyEMS Web 13](./docs/images/myems_web_en_13.png)
+![MyEMS Web 14](./docs/images/myems_web_en_14.png)
+![MyEMS Web 15](./docs/images/myems_web_en_15.png)
+![MyEMS Web 16](./docs/images/myems_web_en_16.png)
+![MyEMS Web 17](./docs/images/myems_web_en_17.png)
+![MyEMS Web 18](./docs/images/myems_web_en_18.png)
+![MyEMS Web 19](./docs/images/myems_web_en_19.png)
+![MyEMS Web 20](./docs/images/myems_web_en_20.png)
+![MyEMS Web 21](./docs/images/myems_web_en_21.png)
+![MyEMS Web 22](./docs/images/myems_web_en_22.png)
+![MyEMS Web 23](./docs/images/myems_web_en_23.png)
+![MyEMS Web 24](./docs/images/myems_web_en_24.png)
+![MyEMS Web 25](./docs/images/myems_web_en_25.png)
+![MyEMS Web 26](./docs/images/myems_web_en_26.png)
+![MyEMS Web 27](./docs/images/myems_web_en_27.png)
+![MyEMS Web 28](./docs/images/myems_web_en_28.png)
+
+
+## Trình diễn giao diện người dùng Admin MyEMS
+
+![MyEMS Admin 0](./docs/images/myems_admin_en_0.png)
+![MyEMS Admin 1](./docs/images/myems_admin_en_1.png)
+![MyEMS Admin 2](./docs/images/myems_admin_en_2.png)
+![MyEMS Admin 3](./docs/images/myems_admin_en_3.png)
+![MyEMS Admin 4](./docs/images/myems_admin_en_4.png)
+![MyEMS Admin 5](./docs/images/myems_admin_en_5.png)
+![MyEMS Admin 6](./docs/images/myems_admin_en_6.png)
+![MyEMS Admin 7](./docs/images/myems_admin_en_7.png)
+![MyEMS Admin 8](./docs/images/myems_admin_en_8.png)
+![MyEMS Admin 9](./docs/images/myems_admin_en_9.png)
+![MyEMS Admin 10](./docs/images/myems_admin_en_10.png)
+![MyEMS Admin 11](./docs/images/myems_admin_en_11.png)
+![MyEMS Admin 12](./docs/images/myems_admin_en_12.png)
+![MyEMS Admin 13](./docs/images/myems_admin_en_13.png)
+![MyEMS Admin 14](./docs/images/myems_admin_en_14.png)
+![MyEMS Admin 15](./docs/images/myems_admin_en_15.png)
+![MyEMS Admin 16](./docs/images/myems_admin_en_16.png)
+
+## Trình diễn giao diện người dùng Dashboard MyEMS
+
+![MyEMS Large Screen Dashboard](./docs/images/myems-large-screen-dashboard.gif)
+
+![MyEMS Dashboard GCC](./docs/images/myems-dashboard-gcc.png)
+
+
+## Tính năng phiên bản cộng đồng MyEMS
+
+Xem [https://myems.cn/vi/docs/community](https://myems.cn/vi/docs/community) để biết chi tiết
+
+## Tính năng phiên bản doanh nghiệp MyEMS
+
+Xem [https://myems.cn/vi/docs/enterprise](https://myems.cn/vi/docs/enterprise) để biết chi tiết
+
+
+## Tải xuống MyEMS (phiên bản cộng đồng)
+
+[1]. [https://gitee.com/myems/myems](https://gitee.com/myems/myems) (khuyến nghị)
+
+[2]. [https://github.com/myems/myems](https://github.com/myems/myems)
+
+[3]. [https://bitbucket.org/myems/myems](https://bitbucket.org/myems/myems)
+
+[4]. [https://gitlab.com/myems/myems](https://gitlab.com/myems/myems)
+
+[5]. [https://gitcode.net/myems/myems](https://gitcode.net/myems/myems)
+
+[6]. [https://gitlink.org.cn/myems/myems](https://gitlink.org.cn/myems/myems)
+
+[7]. [https://atomgit.com/myems/myems](https://atomgit.com/myems/myems)
+
+[8]. [https://gitea.com/myems/myems](https://gitea.com/myems/myems)
+
+[9]. [https://codeberg.org/myems/myems](https://codeberg.org/myems/myems)
+
+[10]. [https://git.launchpad.net/myems](https://git.launchpad.net/myems)
+
+## Cài đặt MyEMS (phiên bản cộng đồng)
+
+Xem [https://myems.cn/vi/docs/category/installation](https://myems.cn/vi/docs/category/installation) để biết chi tiết
+
+## Thành phần cấu tạo MyEMS
+
+### Cơ sở dữ liệu MyEMS
+
+Xem giới thiệu [database](./database/README.md)
+
+### Giao diện ứng dụng API MyEMS
+
+Xem giới thiệu [myems-api](./myems-api/README.md)
+
+### Giao diện người dùng Admin MyEMS
+
+Xem giới thiệu [myems-admin](myems-admin/README.md)
+
+### Dịch vụ thu thập dữ liệu Modbus TCP MyEMS
+
+Xem giới thiệu [myems-modbus-tcp](./myems-modbus-tcp/README.md)
+
+### Dịch vụ làm sạch dữ liệu MyEMS
+
+Xem giới thiệu [myems-cleaning](./myems-cleaning/README.md)
+
+### Dịch vụ chuẩn hóa dữ liệu MyEMS
+
+Xem giới thiệu [myems-normalization](./myems-normalization/README.md)
+
+### Dịch vụ tổng hợp dữ liệu MyEMS
+
+Xem giới thiệu [myems-aggregation](./myems-aggregation/README.md)
+
+### Giao diện người dùng web MyEMS
+
+Xem giới thiệu [myems-web](myems-web/README.md)
+
+### Số cổng mặc định
+
+MyEMS Web UI: 80
+
+MyEMS API: 8000
+
+MyEMS Admin UI: 8001
+
+### Mật khẩu mặc định
+
+Admin UI:
+
+Tên người dùng: administrator
+
+Mật khẩu: !MyEMS1
+
+
+Web UI:
+
+Tên người dùng: administrator
+
+Mật khẩu: !MyEMS1
+
+
+## Liên hệ với chúng tôi
+
+- Công ty: Haishi Software
+- Liên hệ: Zhang Nengyuan
+- Điện thoại WeChat: (+86) 13011132526
+- Email: zny@myems.org
+
+| Platform | Description | QR Code |
+|---------|--------------|---------|
+| WeChat      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| Feishu      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| Compte officiel WeChat     | Hệ thống quản lý năng lượng mã nguồn mở | ![Hệ thống quản lý năng lượng mã nguồn mở](./docs/images/qr_code_mp_weixin.png) |
+| Chaîne vidéo WeChat     | MyEMS Hệ thống Quản lý Năng lượng Mã nguồn Mở | ![MyEMS Hệ thống Quản lý Năng lượng Mã nguồn Mở](./docs/images/qr_code_wechat_channels.png) |
+| Groupe WeChat     | Nhóm WeChat | ![Nhóm WeChat](./docs/images/qr_code_wechat_group.png) |
+| QQGroupe     | 792528967 | ![QQGroupe](./docs/images/qr_code_qq_group.png) |
+| Xiaohongshu     | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+
+## Video
+
+
+## 🔖 Đề xuất
+
+- 👉 Biểu mẫu quy trình làm việc BPM Chichang mã thấp : [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
+- 👉 IoTGateway: Cổng IoT đa nền tảng dựa trên .NET6 [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)
+- 👉 Nền tảng iot Enjoy [https://gitee.com/open-enjoy/enjoy-iot](https://gitee.com/open-enjoy/enjoy-iot)

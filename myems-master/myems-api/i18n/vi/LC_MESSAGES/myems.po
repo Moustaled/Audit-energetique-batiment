@@ -1,0 +1,575 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-09 16:44+0800\n"
+"PO-Revision-Date: 2023-09-07 18:13+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "Space"
+msgstr "Không gian"
+
+msgid "Start Datetime"
+msgstr "Bắt đầu Datetime"
+
+msgid "End Datetime"
+msgstr "Ngày kết thúc"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Period Type"
+msgstr "Loại khoảng thời gian"
+
+msgid "Reporting Start Datetime"
+msgstr "Ngày bắt đầu báo cáo"
+
+msgid "Reporting End Datetime"
+msgstr "Báo cáo ngày kết thúc"
+
+msgid "Reporting Period Consumption"
+msgstr "Tiêu thụ kỳ báo cáo"
+
+msgid "Consumption"
+msgstr "Tiêu thụ"
+
+msgid "Per Unit Area"
+msgstr "Trên một đơn vị diện tích"
+
+msgid "Increment Rate"
+msgstr "Tỷ lệ gia tăng"
+
+msgid "Ton of Standard Coal"
+msgstr "Tấn than tiêu chuẩn"
+
+msgid "Ton of Carbon Dioxide Emissions"
+msgstr "Tấn khí thải carbon dioxide"
+
+msgid "Electricity Consumption by Time-Of-Use"
+msgstr "Tiêu thụ điện theo thời gian sử dụng"
+
+msgid "TopPeak"
+msgstr "Đỉnh TopPeak"
+
+msgid "OnPeak"
+msgstr "Vào lúc cao điểm"
+
+msgid "MidPeak"
+msgstr "Giữa giờ cao điểm"
+
+msgid "OffPeak"
+msgstr "OffPeak"
+
+msgid "Deep"
+msgstr "Thung lũng sâu"
+
+msgid "Ton of Standard Coal(TCE) by Energy Category"
+msgstr "Tấn than tiêu chuẩn (TCE) theo loại năng lượng"
+
+msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
+msgstr "Tấn khí thải carbon dioxide (TCO2E) theo loại năng lượng"
+
+msgid "Energy Analysis"
+msgstr "Phân tích Năng lượng"
+
+msgid "Energy Saving Analysis"
+msgstr "Phân tích Tiết kiệm Năng lượng"
+
+msgid "Energy Plan Analysis"
+msgstr "Phân tích Kế hoạch Năng lượng"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "Dữ liệu không gian - Phân tích phân loại năng lượng"
+
+
+msgid "Child Spaces Data"
+msgstr "Dữ liệu không gian trẻ em"
+
+msgid "Child Space"
+msgstr "Không gian trẻ em"
+
+msgid "Detailed Data"
+msgstr "Dữ liệu chi tiết"
+
+msgid "Datetime"
+msgstr "Ngày giờ"
+
+msgid "Subtotal"
+msgstr "Tổng phụ"
+
+msgid "Parameters"
+msgstr "Thông số"
+
+msgid "Base Period Carbon Dioxide Emissions"
+msgstr "Thời kỳ cơ sở Phát thải carbon Dioxide"
+
+msgid "Reporting Period Carbon Dioxide Emissions"
+msgstr "Kỳ báo cáo Phát thải Carbon Dioxide"
+
+msgid "Carbon Dioxide Emissions"
+msgstr "Phát thải carbon dioxide"
+
+msgid "Electricity Carbon Dioxide Emissions by Time-Of-Use"
+msgstr "Điện phát thải carbon dioxide theo thời gian sử dụng"
+
+msgid "Carbon Dioxide Emissions Proportion"
+msgstr "Tỷ lệ phát thải carbon dioxide"
+
+msgid "Total"
+msgstr "Tất cả"
+
+msgid "Base Period Costs"
+msgstr "Chi phí giai đoạn cơ sở"
+
+msgid "Reporting Period Costs"
+msgstr "Chi phí kỳ báo cáo"
+
+msgid "Cost"
+msgstr "Chi phí"
+
+msgid "Electricity Cost by Time-Of-Use"
+msgstr "Chi phí điện theo thời gian sử dụng"
+
+msgid "Costs Proportion"
+msgstr "Tỷ lệ chi phí"
+
+msgid "Base Period Cumulative Efficiency"
+msgstr "Thời gian cơ sở Hiệu quả tích lũy"
+
+msgid "Reporting Period Cumulative Efficiency"
+msgstr "Kỳ báo cáo Hiệu quả tích lũy"
+
+msgid "Efficiency"
+msgstr "Hiệu quả"
+
+msgid "Cumulative Efficiency"
+msgstr "Hiệu quả tích lũy"
+
+msgid "Income"
+msgstr "Thu nhập"
+
+msgid "Base Period Income"
+msgstr "Thu nhập thời kỳ cơ sở"
+
+msgid "Reporting Period Income"
+msgstr "Thu nhập kỳ báo cáo"
+
+msgid "Incomes by Energy Category"
+msgstr "Thu nhập theo loại năng lượng"
+
+msgid "Incomes"
+msgstr "Thu nhập"
+
+msgid "Proportion"
+msgstr "Tỷ lệ"
+
+msgid "Load"
+msgstr "Tải"
+
+msgid "Base Period Average Load"
+msgstr "Thời gian cơ sở Tải trung bình"
+
+msgid "Reporting Period Average Load"
+msgstr "Kỳ báo cáo Tải trung bình"
+
+msgid "Average Load"
+msgstr "Tải trung bình"
+
+msgid "Base Period Maximum Load"
+msgstr "Thời gian cơ sở Tải tối đa"
+
+msgid "Reporting Period Maximum Load"
+msgstr "Thời gian báo cáo Tải tối đa"
+
+msgid "Maximum Load"
+msgstr "Tải tối đa"
+
+msgid "Reporting Period Load Factor"
+msgstr "Hệ số tải kỳ báo cáo"
+
+msgid "Load Factor"
+msgstr "Hệ số tải"
+
+msgid "Base Period Output"
+msgstr "Sản lượng giai đoạn cơ sở"
+
+msgid "Reporting Period Output"
+msgstr "Sản lượng kỳ báo cáo"
+
+msgid "Output"
+msgstr "Ra"
+
+msgid "Base Period Saving"
+msgstr "Tiết kiệm thời gian cơ bản"
+
+msgid "Base Period Plan"
+msgstr "Kế hoạch Kỳ Cơ sở"
+
+
+msgid "Reporting Period Saving"
+msgstr "Tiết kiệm kỳ báo cáo"
+
+msgid "Reporting Period Plan"
+msgstr "Kế hoạch Kỳ Báo cáo"
+
+
+msgid "Baseline"
+msgstr "Baseline"
+
+msgid "Actual"
+msgstr "Thực tế"
+
+msgid "Saving"
+msgstr "Tiết kiệm"
+
+msgid "Plan"
+msgstr "Kế hoạch"
+
+
+msgid "Decreased"
+msgstr "Giảm"
+
+msgid "Statistics"
+msgstr "Thống kê"
+
+msgid "Reporting Period"
+msgstr "Kỳ báo cáo"
+
+msgid "Arithmetic Mean"
+msgstr "Trung bình số học"
+
+msgid "Median (Middle Value)"
+msgstr "Trung vị (Giá trị trung bình)"
+
+msgid "Minimum Value"
+msgstr "Giá trị tối thiểu"
+
+msgid "Maximum Value"
+msgstr "Giá trị tối đa"
+
+msgid "Sample Standard Deviation"
+msgstr "Độ lệch chuẩn mẫu"
+
+msgid "Sample Variance"
+msgstr "Phương sai mẫu"
+
+msgid "Cost Center"
+msgstr "Trung tâm chi phí"
+
+msgid "Description"
+msgstr "Sự miêu tả"
+
+msgid "Master Meter Consumption"
+msgstr "Tiêu thụ đồng hồ chính"
+
+msgid "Submeters Consumption"
+msgstr "Tiêu thụ công tơ con"
+
+msgid "Difference"
+msgstr "Sự khác nhau"
+
+msgid "Percentage Difference"
+msgstr "Chênh lệch tỷ lệ phần trăm"
+
+msgid "Start Integrity Rate"
+msgstr "Tỷ lệ toàn vẹn bắt đầu"
+
+msgid "End Integrity Rate"
+msgstr "Tỷ lệ toàn vẹn cuối cùng"
+
+msgid "Full Integrity Rate"
+msgstr "Tỷ lệ toàn vẹn đầy đủ"
+
+msgid "Trend"
+msgstr "Xu hướng"
+
+msgid "Payment Notice"
+msgstr "Thông báo thanh toán"
+
+msgid "Lease Number"
+msgstr "Số hợp đồng thuê"
+
+msgid "Bill Number"
+msgstr "Số hóa đơn"
+
+msgid "Lease Contract Number"
+msgstr "Số hợp đồng thuê"
+
+msgid "Bill Date"
+msgstr "Ngày lập hóa đơn"
+
+msgid "Payment Due Date"
+msgstr "Ngày đến hạn thanh toán"
+
+msgid "Amount Payable"
+msgstr "Số tiền phải trả"
+
+msgid "Energy Category"
+msgstr "Danh mục năng lượng"
+
+msgid "Billing Period Start"
+msgstr "Thời hạn thanh toán Bắt đầu"
+
+msgid "Billing Period End"
+msgstr "Kết thúc thời hạn thanh toán"
+
+msgid "Quantity"
+msgstr "Số lượng"
+
+msgid "Unit"
+msgstr "Đơn vị"
+
+msgid "Amount"
+msgstr "Lượng"
+
+msgid "Tax Rate"
+msgstr "Thuế suất"
+
+msgid "VAT Output Tax"
+msgstr "Thuế đầu ra VAT"
+
+msgid "Total Amount Payable"
+msgstr "Tổng số tiền phải trả"
+
+msgid "Electricity Costs by Time-Of-Use"
+msgstr "Chi phí điện theo thời gian sử dụng"
+
+msgid "Electricity Carbon Dioxide Emissions Proportion by Time-Of-Use"
+msgstr "Tỷ lệ phát thải carbon dioxide điện theo thời gian sử dụng"
+
+msgid "Associated Equipment Data"
+msgstr "Dữ liệu thiết bị liên quan"
+
+msgid "Associated Equipment"
+msgstr "Thiết bị liên quan"
+
+msgid "Electricity Cost Proportion by Time-Of-Use"
+msgstr "Tỷ lệ chi phí điện theo thời gian sử dụng"
+
+msgid "Start Value"
+msgstr "Giá trị bắt đầu"
+
+msgid "End Value"
+msgstr "Giá trị cuối cùng"
+
+msgid "Difference Value"
+msgstr "Giá trị chênh lệch"
+
+msgid "Base Period"
+msgstr "Thời gian cơ sở"
+
+msgid "Base Period Start Datetime"
+msgstr "Thời gian cơ sở Bắt đầu Datetime"
+
+msgid "Base Period End Datetime"
+msgstr "Thời gian kết thúc giai đoạn cơ sở"
+
+msgid "Base Period Consumption"
+msgstr "Tiêu thụ thời gian cơ sở"
+
+msgid "All"
+msgstr "Tất cả"
+
+msgid "Tariff"
+msgstr "Thuế quan"
+
+msgid "Non Working Days"
+msgstr "Ngày không làm việc"
+
+msgid "Working Days"
+msgstr "Ngày làm việc"
+
+msgid "Carbon Emissions"
+msgstr "Phát thải carbon"
+
+msgid "Costs"
+msgstr "Chi phí"
+
+msgid "Carbon"
+msgstr "Khí thải CO2"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "Phân tích dự báo năng lượng"
+
+msgid "Space Comparison Analysis"
+msgstr "Phân tích So sánh Không gian"
+
+msgid "Energy Item Analysis"
+msgstr "Phân tích Hạng mục Năng lượng"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "Phân tích Tiêu thụ Năng lượng"
+
+msgid "Batch Analysis"
+msgstr "Phân tích hàng loạt"
+
+msgid "Equipment Comparison"
+msgstr "So sánh Thiết bị"
+
+msgid "Equipment Tracking"
+msgstr "Theo dõi Thiết bị"
+
+msgid "Equipment Data"
+msgstr "Dữ liệu thiết bị"
+
+msgid "Energy Category Analysis"
+msgstr "Phân tích phân loại năng lượng"
+
+msgid "Meter Data"
+msgstr "Mét"
+
+msgid "Meter Energy"
+msgstr "Năng lượng đo"
+
+msgid "Meter Carbon"
+msgstr "Thiết bị phát thải CO2"
+
+msgid "Meter Cost"
+msgstr "Chi phí đồng hồ đo"
+
+msgid "Meter Trend"
+msgstr "Xu hướng đồng hồ đo"
+
+msgid "Meter Saving"
+msgstr "Tiết kiệm đồng hồ"
+
+msgid "Meter Plan"
+msgstr "Kế hoạch đồng hồ"
+
+msgid "Meter Prediction"
+msgstr "Dự đoán đồng hồ"
+
+msgid "Prediction"
+msgstr "Dự báo"
+
+msgid "Reporting Period Prediction"
+msgstr "Dự báo kỳ báo cáo"
+
+msgid "Meter Submeters Balance"
+msgstr "Master Meter Submeters Balance"
+
+msgid "Meter Comparison"
+msgstr "So sánh đồng hồ"
+
+msgid "Meter Tracking"
+msgstr "Theo dõi đồng hồ đo"
+
+msgid "Power Quality Data"
+msgstr "Dữ liệu chất lượng điện năng"
+msgid "Power Quality Analysis"
+msgstr "Phân tích chất lượng điện năng"
+
+msgid "Point"
+msgstr "Điểm"
+
+msgid "Category"
+msgstr "Nhóm"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "Limit"
+msgstr "Giới hạn"
+
+msgid "Normal Limit"
+msgstr "Giới hạn bình thường"
+
+msgid "Severe Limit"
+msgstr "Giới hạn nghiêm trọng"
+
+msgid "Compliance"
+msgstr "Tỷ lệ đạt"
+
+msgid "Worst Deviation"
+msgstr "Độ lệch tệ nhất"
+
+msgid "Worst Time"
+msgstr "Thời điểm tệ nhất"
+
+msgid "Virtual Meter Energy"
+msgstr "Năng lượng đồng hồ ảo"
+
+msgid "Virtual Meter Carbon"
+msgstr "Khí thải CO2 ảo"
+
+msgid "Virtual Meter Cost"
+msgstr "Chi phí đồng hồ ảo"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "Phân tích hàng loạt đồng hồ ảo"
+
+msgid "Virtual Meter Saving"
+msgstr "Tiết kiệm đồng hồ ảo"
+
+msgid "Virtual Meter Plan"
+msgstr "Kế hoạch đồng hồ ảo"
+
+msgid "Virtual Meter Prediction"
+msgstr "Dự đoán đồng hồ ảo"
+
+msgid "Virtual Meter Comparison"
+msgstr "So sánh công tơ ảo"
+
+msgid "Offline Meter Energy"
+msgstr "Đồng hồ đo năng lượng ngoại tuyến"
+
+msgid "Offline Meter Carbon"
+msgstr "Phát thải CO2 cho thiết bị ngoại tuyến"
+
+msgid "Offline Meter Cost"
+msgstr "Chi phí đồng hồ ngoại tuyến"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "Phân tích hàng loạt đồng hồ ngoại tuyến"
+
+msgid "Offline Meter Saving"
+msgstr "Tiết kiệm đồng hồ ngoại tuyến"
+
+msgid "Offline Meter Plan"
+msgstr "Kế hoạch đồng hồ ngoại tuyến"
+
+msgid "Combined Equipment"
+msgstr "Thiết bị kết hợp"
+
+msgid "Tenant"
+msgstr "Người thuê"
+
+msgid "Tenant Data"
+msgstr "Dữ liệu người thuê"
+
+msgid "Tenant Bill"
+msgstr "Hóa đơn người thuê"
+
+msgid "Tenant Comparison"
+msgstr "So sánh người thuê"
+
+msgid "Store Data"
+msgstr "Dữ liệu cửa hàng"
+
+msgid "Store Comparison"
+msgstr "So sánh cửa hàng"
+
+msgid "Store"
+msgstr "Cửa hàng"
+
+msgid "Shopfloor Data"
+msgstr "Dữ liệu tầng cửa hàng"
+
+msgid "Shopfloor Comparison"
+msgstr "So sánh tầng cửa hàng"
+
+msgid "Combined Equipment Data"
+msgstr "Dữ liệu Thiết bị Kết hợp"

@@ -1,0 +1,680 @@
+import React, { Fragment, useEffect, useState, useContext, useCallback } from 'react';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  Button,
+  ButtonGroup,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  CustomInput,
+  Spinner,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Media
+} from 'reactstrap';
+import moment from 'moment';
+import loadable from '@loadable/component';
+import Cascader from 'rc-cascader';
+import { getCookieValue, createCookie, checkEmpty, handleAPIError } from '../../../helpers/utils';
+import withRedirect from '../../../hoc/withRedirect';
+import { withTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
+import ButtonIcon from '../../common/ButtonIcon';
+import DeepSeekAnalysisModal from '../common/DeepSeekAnalysisModal';
+import { APIBaseURL, settings } from '../../../config';
+import DateRangePickerWrapper from '../common/DateRangePickerWrapper';
+import { endOfDay } from 'date-fns';
+import Appcontext from '../../../context/Context';
+import { Link } from 'react-router-dom';
+import Flex from '../../common/Flex';
+import blankPage from '../../../assets/img/generic/blank-page.png';
+
+const DetailedDataTable = loadable(() => import('../common/DetailedDataTable'));
+
+const CombinedEquipmentBatch = ({ setRedirect, setRedirectUrl, t }) => {
+  let current_moment = moment();
+  useEffect(() => {
+    let is_logged_in = getCookieValue('is_logged_in');
+    let user_name = getCookieValue('user_name');
+    let user_display_name = getCookieValue('user_display_name');
+    let user_uuid = getCookieValue('user_uuid');
+    let token = getCookieValue('token');
+    if (checkEmpty(is_logged_in) || checkEmpty(token) || checkEmpty(user_uuid) || !is_logged_in) {
+      setRedirectUrl(`/authentication/basic/login`);
+      setRedirect(true);
+    } else {
+      //update expires time of cookies
+      createCookie('is_logged_in', true, settings.cookieExpireTime);
+      createCookie('user_name', user_name, settings.cookieExpireTime);
+      createCookie('user_display_name', user_display_name, settings.cookieExpireTime);
+      createCookie('user_uuid', user_uuid, settings.cookieExpireTime);
+      createCookie('token', token, settings.cookieExpireTime);
+    }
+  });
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      let is_logged_in = getCookieValue('is_logged_in');
+      if (is_logged_in === null || !is_logged_in) {
+        setRedirectUrl(`/authentication/basic/login`);
+        setRedirect(true);
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [setRedirectUrl, setRedirect]);
+
+  // State
+  // Query Parameters
+  const [selectedSpaceName, setSelectedSpaceName] = useState(undefined);
+  const [selectedSpaceID, setSelectedSpaceID] = useState(undefined);
+  const [combinedEquipmentList, setCombinedEquipmentList] = useState([]);
+  const [cascaderOptions, setCascaderOptions] = useState(undefined);
+  const [reportingPeriodDateRange, setReportingPeriodDateRange] = useState([
+    current_moment
+      .clone()
+      .startOf('month')
+      .toDate(),
+    current_moment.toDate()
+  ]);
+  const dateRangePickerLocale = {
+    sunday: t('sunday'),
+    monday: t('monday'),
+    tuesday: t('tuesday'),
+    wednesday: t('wednesday'),
+    thursday: t('thursday'),
+    friday: t('friday'),
+    saturday: t('saturday'),
+    ok: t('ok'),
+    today: t('today'),
+    yesterday: t('yesterday'),
+    hours: t('hours'),
+    minutes: t('minutes'),
+    seconds: t('seconds'),
+    last7Days: t('last7Days'),
+    formattedMonthPattern: 'yyyy-MM-dd'
+  };
+  const dateRangePickerStyle = { display: 'block', zIndex: 10 };
+  const { language } = useContext(Appcontext);
+
+  // buttons
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const [spinnerHidden, setSpinnerHidden] = useState(true);
+  const [exportButtonHidden, setExportButtonHidden] = useState(true);
+  const [smartAnalysisOpen, setSmartAnalysisOpen] = useState(false);
+  const [smartAnalysisContext, setSmartAnalysisContext] = useState(null);
+  const [resultDataHidden, setResultDataHidden] = useState(true);
+  const [exportExcel, setExportExcel] = useState(false);
+  const [exportDocx, setExportDocx] = useState(false);
+  const [exportPdf, setExportPdf] = useState(false);
+
+  //Results
+  const [detailedDataTableColumns, setDetailedDataTableColumns] = useState([
+    {
+      dataField: 'id',
+      text: t('ID'),
+      sort: true,
+      headerStyle: { width: '90px' },
+      style: { width: '90px' },
+      headerClasses: 'combined-equipment-batch-sticky-id',
+      classes: 'combined-equipment-batch-sticky-id'
+    },
+    {
+      dataField: 'name',
+      text: t('Name'),
+      sort: true,
+      headerStyle: { width: '220px' },
+      style: { width: '220px' },
+      headerClasses: 'combined-equipment-batch-sticky-name',
+      classes: 'combined-equipment-batch-sticky-name'
+    },
+    { dataField: 'space', text: t('Space'), sort: true }
+  ]);
+  const [excelBytesBase64, setExcelBytesBase64] = useState(undefined);
+  const [docxBytesBase64, setDocxBytesBase64] = useState(undefined);
+  const [pdfBytesBase64, setPdfBytesBase64] = useState(undefined);
+
+  useEffect(() => {
+    let isResponseOK = false;
+    fetch(APIBaseURL + '/spaces/tree', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+        'User-UUID': getCookieValue('user_uuid'),
+        Token: getCookieValue('token')
+      },
+      body: null
+    })
+      .then(response => {
+        if (response.ok) {
+          isResponseOK = true;
+        }
+        return response.json();
+      })
+      .then(json => {
+        if (isResponseOK) {
+          // rename keys
+          json = JSON.parse(
+            JSON.stringify([json])
+              .split('"id":')
+              .join('"value":')
+              .split('"name":')
+              .join('"label":')
+          );
+          setCascaderOptions(json);
+          // set the default selected space
+          setSelectedSpaceName([json[0]].map(o => o.label));
+          setSelectedSpaceID([json[0]].map(o => o.value));
+
+          setSubmitButtonDisabled(false);
+          setSpinnerHidden(true);
+        } else {
+          handleAPIError(json, setRedirect, setRedirectUrl, t, toast);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [t]);
+
+  const labelClasses = 'ls text-uppercase text-600 font-weight-semi-bold mb-0';
+
+  let onSpaceCascaderChange = (value, selectedOptions) => {
+    setSelectedSpaceName(selectedOptions.map(o => o.label).join('/'));
+    setSelectedSpaceID(value[value.length - 1]);
+    setCombinedEquipmentList([]);
+    setExportButtonHidden(true);
+    setSubmitButtonDisabled(false);
+  };
+
+  // Callback fired when value changed
+  let onReportingPeriodChange = DateRange => {
+    if (DateRange == null) {
+      setReportingPeriodDateRange([null, null]);
+    } else {
+      if (moment(DateRange[1]).format('HH:mm:ss') === '00:00:00') {
+        // if the user did not change time value, set the default time to the end of day
+        DateRange[1] = endOfDay(DateRange[1]);
+      }
+      setReportingPeriodDateRange([DateRange[0], DateRange[1]]);
+    }
+  };
+
+  // Callback fired when value clean
+  let onReportingPeriodClean = event => {
+    setReportingPeriodDateRange([null, null]);
+  };
+
+  // Handler
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    // disable submit button
+    setSubmitButtonDisabled(true);
+    // show spinner
+    setSpinnerHidden(false);
+    // hide export button
+    setExportButtonHidden(true);
+    // hide result data
+    setResultDataHidden(true);
+    setExcelBytesBase64(undefined);
+    setDocxBytesBase64(undefined);
+    setPdfBytesBase64(undefined);
+
+    // Reinitialize tables
+    setCombinedEquipmentList([]);
+
+    let isResponseOK = false;
+    fetch(
+      APIBaseURL +
+        '/reports/combinedequipmentbatch?' +
+        'spaceid=' +
+        selectedSpaceID +
+        '&reportingperiodstartdatetime=' +
+        moment(reportingPeriodDateRange[0]).format('YYYY-MM-DDTHH:mm:ss') +
+        '&reportingperiodenddatetime=' +
+        moment(reportingPeriodDateRange[1]).format('YYYY-MM-DDTHH:mm:ss') +
+        '&language=' +
+        language +
+        '&exportexcel=' +
+        exportExcel +
+        '&exportdocx=' +
+        exportDocx +
+        '&exportpdf=' +
+        exportPdf,
+      {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json',
+          'User-UUID': getCookieValue('user_uuid'),
+          Token: getCookieValue('token')
+        },
+        body: null
+      }
+    )
+      .then(response => {
+        if (response.ok) {
+          isResponseOK = true;
+        }
+        return response.json();
+      })
+      .then(json => {
+        if (isResponseOK) {
+          let detailed_column_list = [];
+          detailed_column_list.push({
+            dataField: 'id',
+            text: t('ID'),
+            sort: true,
+            headerStyle: { width: '90px' },
+            style: { width: '90px' },
+            headerClasses: 'combined-equipment-batch-sticky-id',
+            classes: 'combined-equipment-batch-sticky-id'
+          });
+          detailed_column_list.push({
+            dataField: 'name',
+            text: t('Name'),
+            formatter: nameFormatter,
+            sort: true,
+            headerStyle: { width: '220px' },
+            style: { width: '220px' },
+            headerClasses: 'combined-equipment-batch-sticky-name',
+            classes: 'combined-equipment-batch-sticky-name'
+          });
+          detailed_column_list.push({
+            dataField: 'space',
+            text: t('Space'),
+            sort: true
+          });
+          json['energycategories'].forEach((currentValue, index) => {
+            detailed_column_list.push({
+              dataField: 'a' + index,
+              text: currentValue['name'] + ' (' + currentValue['unit_of_measure'] + ')',
+              sort: true,
+              formatter: function(decimalValue) {
+                if (typeof decimalValue === 'number') {
+                  return decimalValue.toFixed(2);
+                } else {
+                  return null;
+                }
+              }
+            });
+          });
+          detailed_column_list.push({
+            dataField: 'carbon_emissions',
+            text: t('Carbon Emissions') + ' (KGCO2E)',
+            sort: true,
+            formatter: function(decimalValue) {
+              if (typeof decimalValue === 'number') {
+                return decimalValue.toFixed(2);
+              } else {
+                return null;
+              }
+            }
+          });
+          detailed_column_list.push({
+            dataField: 'cost',
+            text: t('Costs') + ' (CNY)',
+            sort: true,
+            formatter: function(decimalValue) {
+              if (typeof decimalValue === 'number') {
+                return decimalValue.toFixed(2);
+              } else {
+                return null;
+              }
+            }
+          });
+          setDetailedDataTableColumns(detailed_column_list);
+          let combined_equipments = [];
+          if (json['combined_equipments'].length > 0) {
+            json['combined_equipments'].forEach((currentCombinedEquipment, index) => {
+              let detailed_value = {};
+              detailed_value['id'] = currentCombinedEquipment['id'];
+              detailed_value['name'] = currentCombinedEquipment['combined_equipment_name'];
+              detailed_value['uuid'] = currentCombinedEquipment['combined_equipment_uuid'];
+              detailed_value['space'] = currentCombinedEquipment['space_name'];
+              detailed_value['costcenter'] = currentCombinedEquipment['cost_center_name'];
+              currentCombinedEquipment['values'].forEach((currentValue, energyCategoryIndex) => {
+                detailed_value['a' + energyCategoryIndex] = currentValue;
+              });
+              detailed_value['carbon_emissions'] = currentCombinedEquipment['carbon_emissions'] || 0;
+              detailed_value['cost'] = currentCombinedEquipment['cost'] || 0;
+              combined_equipments.push(detailed_value);
+            });
+          }
+
+          setCombinedEquipmentList(combined_equipments);
+
+          setExcelBytesBase64(json['excel_bytes_base64']);
+          setDocxBytesBase64(json['docx_bytes_base64']);
+      setPdfBytesBase64(json['pdf_bytes_base64']);
+
+          // enable submit button
+          setSubmitButtonDisabled(false);
+          // hide spinner
+          setSpinnerHidden(true);
+          // show export button
+          setExportButtonHidden(false);
+          // show result data
+          setResultDataHidden(false);
+        } else {
+          handleAPIError(json, setRedirect, setRedirectUrl, t, toast);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  const handleExport = (e, type) => {
+    e.preventDefault();
+    if (type === 'excel' && excelBytesBase64) {
+      const mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+      const fileName = 'combinedequipmentbatch.xlsx';
+      const fileUrl = 'data:' + mimeType + ';base64,' + excelBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    } else if (type === 'docx' && docxBytesBase64) {
+      const mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+      const fileName = 'combinedequipmentbatch.docx';
+      const fileUrl = 'data:' + mimeType + ';base64,' + docxBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    } else if (type === 'pdf' && pdfBytesBase64) {
+      const mimeType = 'application/pdf';
+      const fileName = 'combinedequipmentbatch.pdf';
+      const fileUrl = 'data:' + mimeType + ';base64,' + pdfBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    }
+  };
+
+  const buildSmartAnalysisContext = useCallback(() => {
+    const fixedFields = new Set(['id', 'name', 'uuid', 'space', 'costcenter', 'carbon_emissions', 'cost']);
+    const buildBatchRowSample = row => {
+      if (!row || typeof row !== 'object') {
+        return row;
+      }
+      const sample = {
+        id: row.id,
+        name: row.name,
+        uuid: row.uuid,
+        space: row.space,
+        costcenter: row.costcenter
+      };
+      const energyCategoryValues = {};
+      let count = 0;
+      Object.keys(row).forEach(k => {
+        if (fixedFields.has(k) || count >= 20) {
+          return;
+        }
+        energyCategoryValues[k] = row[k];
+        count += 1;
+      });
+      if (Object.keys(energyCategoryValues).length) {
+        sample.energyCategoryValues = energyCategoryValues;
+      }
+      return sample;
+    };
+    const energyCategoryColumns = detailedDataTableColumns
+      .filter(c => c.dataField && !fixedFields.has(c.dataField))
+      .map(c => ({ field: c.dataField, label: c.text }))
+      .slice(0, 20);
+    const spaceDisplayName = Array.isArray(selectedSpaceName)
+      ? selectedSpaceName.join('/')
+      : selectedSpaceName ?? null;
+    return {
+      reportType: 'combined_equipment_batch',
+      reportTitle: t('Batch Analysis'),
+      space: { id: selectedSpaceID, name: spaceDisplayName },
+      reportingPeriod: {
+        start: reportingPeriodDateRange[0]
+          ? moment(reportingPeriodDateRange[0]).format('YYYY-MM-DDTHH:mm:ss')
+          : null,
+        end: reportingPeriodDateRange[1]
+          ? moment(reportingPeriodDateRange[1]).format('YYYY-MM-DDTHH:mm:ss')
+          : null
+      },
+      batchSummary: {
+        combinedEquipmentCount: combinedEquipmentList.length
+      },
+      energyCategoryColumns,
+      batchDataSample: combinedEquipmentList.slice(0, 80).map(buildBatchRowSample)
+    };
+  }, [
+    t,
+    selectedSpaceID,
+    selectedSpaceName,
+    reportingPeriodDateRange,
+    combinedEquipmentList,
+    detailedDataTableColumns
+  ]);
+
+  const openSmartAnalysis = () => {
+    setSmartAnalysisContext(buildSmartAnalysisContext());
+    setSmartAnalysisOpen(true);
+  };
+
+  const nameFormatter = (dataField, { name, uuid }) => (
+    <Link to={{ pathname: '/combinedequipment/energycategory?uuid=' + uuid }} target="_blank">
+      <Media tag={Flex} align="center">
+        <Media body className="ml-2">
+          <h5 className="mb-0 fs--1">{name}</h5>
+        </Media>
+      </Media>
+    </Link>
+  );
+
+  return (
+    <Fragment>
+      <div>
+        <Breadcrumb>
+          <BreadcrumbItem>{t('Combined Equipment Data')}</BreadcrumbItem>
+          <BreadcrumbItem active>{t('Batch Analysis')}</BreadcrumbItem>
+        </Breadcrumb>
+      </div>
+      <Card className="bg-light mb-3">
+        <CardBody className="p-3">
+          <Form onSubmit={handleSubmit}>
+            <Row form>
+              <Col xs={6} sm={3}>
+                <FormGroup className="form-group">
+                  <Label className={labelClasses} for="space">
+                    {t('Space')}
+                  </Label>
+                  <br />
+                  <Cascader
+                    options={cascaderOptions}
+                    onChange={onSpaceCascaderChange}
+                    changeOnSelect
+                    expandTrigger="hover"
+                  >
+                    <Input bsSize="sm" value={selectedSpaceName || ''} readOnly />
+                  </Cascader>
+                </FormGroup>
+              </Col>
+
+              <Col xs={6} sm={3}>
+                <FormGroup className="form-group">
+                  <Label className={labelClasses} for="reportingPeriodDateRangePicker">
+                    {t('Reporting Period')}
+                  </Label>
+                  <br />
+                  <DateRangePickerWrapper
+                    id="reportingPeriodDateRangePicker"
+                    format="yyyy-MM-dd HH:mm:ss"
+                    value={reportingPeriodDateRange}
+                    onChange={onReportingPeriodChange}
+                    size="sm"
+                    style={dateRangePickerStyle}
+                    onClean={onReportingPeriodClean}
+                    locale={dateRangePickerLocale}
+                    placeholder={t('Select Date Range')}
+                  />
+                </FormGroup>
+              </Col>
+              <Col xs={6} sm={3}>
+                <FormGroup className="form-group">
+                  <Label className={labelClasses}>{t('Export')}{t('(Optional)')}</Label>
+                  <div>
+                    <CustomInput type="checkbox" id="exportExcel" name="exportExcel" label="Excel" bsSize="sm" inline checked={exportExcel} onChange={({ target }) => setExportExcel(target.checked)} />
+                    <CustomInput type="checkbox" id="exportDocx" name="exportDocx" label="DOCX" bsSize="sm" inline checked={exportDocx} onChange={({ target }) => setExportDocx(target.checked)} />
+                  
+                    <CustomInput type="checkbox" id="exportPdf" name="exportPdf" label="PDF" bsSize="sm" inline checked={exportPdf} onChange={({ target }) => setExportPdf(target.checked)} /></div>
+                </FormGroup>
+              </Col>
+              <Col xs="auto">
+                <FormGroup>
+                  <br />
+                  <ButtonGroup id="submit">
+                    <Button size="sm" color="success" disabled={submitButtonDisabled}>
+                      {t('Submit')}
+                    </Button>
+                  </ButtonGroup>
+                </FormGroup>
+              </Col>
+              <Col xs="auto">
+                <FormGroup>
+                  <br />
+                  <Spinner color="primary" hidden={spinnerHidden} />
+                </FormGroup>
+              </Col>
+              <Col xs="auto">
+                <br />
+                <UncontrolledDropdown hidden={exportButtonHidden} inNavbar>
+                  <DropdownToggle color="falcon-default" size="sm" caret>{t('Export')}</DropdownToggle>
+                  <DropdownMenu style={{ left: 0, right: 'auto', top: '100%' }}>
+                    {excelBytesBase64 ? (<DropdownItem onClick={e => handleExport(e, 'excel')}>{t('EXCEL')}</DropdownItem>) : null}
+                    {docxBytesBase64 ? (<DropdownItem onClick={e => handleExport(e, 'docx')}>{t('DOCX')}</DropdownItem>) : null}
+                    {pdfBytesBase64 ? (<DropdownItem onClick={e => handleExport(e, 'pdf')}>{t('PDF')}</DropdownItem>) : null}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </Col>
+              {settings.enableAIAnalysis ? (
+                <Col xs="auto">
+                  <br />
+                  <Button
+                    color="falcon-default"
+                    size="sm"
+                    hidden={exportButtonHidden}
+                    onClick={openSmartAnalysis}
+                  >
+                    {t('AI Analysis')}
+                  </Button>
+                </Col>
+              ) : null}
+            </Row>
+          </Form>
+        </CardBody>
+      </Card>
+      <div
+        className="blank-page-image-container"
+        style={{ visibility: resultDataHidden ? 'visible' : 'hidden', display: resultDataHidden ? '' : 'none' }}
+      >
+        <img className="img-fluid" src={blankPage} alt="" />
+      </div>
+      <div style={{ visibility: resultDataHidden ? 'hidden' : 'visible', display: resultDataHidden ? 'none' : '' }}>
+        <style>{`
+          .table-scroll-container thead th.combined-equipment-batch-sticky-id,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-id,
+          .table-scroll-container thead th.combined-equipment-batch-sticky-name,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-name {
+            position: sticky !important;
+            white-space: nowrap !important;
+            background-clip: padding-box !important;
+          }
+          .table-scroll-container thead th.combined-equipment-batch-sticky-id,
+          .table-scroll-container thead th.combined-equipment-batch-sticky-name {
+            background-color: var(--light) !important;
+            z-index: 2 !important;
+          }
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-id,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-name {
+            background-color: var(--white) !important;
+            z-index: 1 !important;
+          }
+          .table-scroll-container thead .sticky-first-column {
+            z-index: 2 !important;
+          }
+          .table-scroll-container tbody td.sticky-first-column {
+            z-index: 1 !important;
+          }
+          .table-scroll-container tbody tr:nth-of-type(even) td.combined-equipment-batch-sticky-id,
+          .table-scroll-container tbody tr:nth-of-type(even) td.combined-equipment-batch-sticky-name {
+            background-color: var(--light) !important;
+          }
+          .table-scroll-container tbody tr:hover td.combined-equipment-batch-sticky-id,
+          .table-scroll-container tbody tr:hover td.combined-equipment-batch-sticky-name {
+            background-image: linear-gradient(rgba(44, 123, 229, 0.12), rgba(44, 123, 229, 0.12));
+          }
+          .table-scroll-container thead th.combined-equipment-batch-sticky-id,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-id {
+            left: 0 !important;
+          }
+          .table-scroll-container thead th.combined-equipment-batch-sticky-name,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-name {
+            left: 90px !important;
+          }
+          .table-scroll-container thead th.combined-equipment-batch-sticky-name,
+          .table-scroll-container tbody td.combined-equipment-batch-sticky-name {
+            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.12) !important;
+          }
+        `}</style>
+        <DetailedDataTable
+          data={combinedEquipmentList}
+          title={t('Detailed Data')}
+          columns={detailedDataTableColumns}
+          pagesize={50}
+        />
+      </div>
+      {settings.enableAIAnalysis ? (
+        <DeepSeekAnalysisModal
+          isOpen={smartAnalysisOpen}
+          toggle={() => setSmartAnalysisOpen(false)}
+          language={language}
+          reportContext={smartAnalysisContext}
+          setRedirect={setRedirect}
+          setRedirectUrl={setRedirectUrl}
+        />
+      ) : null}
+    </Fragment>
+  );
+};
+
+export default withTranslation()(withRedirect(CombinedEquipmentBatch));
