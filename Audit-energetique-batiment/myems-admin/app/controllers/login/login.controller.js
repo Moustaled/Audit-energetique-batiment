@@ -17,7 +17,7 @@ app.controller('LoginController', function (
 
 	$scope.dataLoading = false;
 	$scope.isFullScreen = false;
-	$scope.language = $window.localStorage.getItem("myems_admin_ui_language") || "zh_CN"; //zh_CN, en, de, fr, es, ru, ar, vi, th, tr, ms, id, zh_TW, pt
+	$scope.language = 'fr';
 	$scope.fullScreenTitle = "FULLSCREEN";
 	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
 	$scope.showPassword = false;
@@ -238,9 +238,9 @@ app.controller('LoginController', function (
 	// full screen section end.
 
 	$scope.changeLanguage = function (langKey) {
-		$translate.use(langKey);
-		$scope.language = langKey;
-		$window.localStorage.setItem("myems_admin_ui_language", langKey);
+		$translate.use('fr');
+		$scope.language = 'fr';
+		$window.localStorage.setItem("myems_admin_ui_language", "fr");
 	};
 
 	// web message alarm section start

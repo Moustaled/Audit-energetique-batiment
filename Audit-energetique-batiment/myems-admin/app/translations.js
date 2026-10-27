@@ -1,17 +1,8 @@
-/**
- * Translation Resource Loader.
- */
+/** Interface française, y compris après une ancienne session dans une autre langue. */
 function config($translateProvider) {
   var bundles = window.myemsAdminTranslations || {};
-
-  Object.keys(bundles).forEach(function (lang) {
-    $translateProvider.translations(lang, bundles[lang]);
-  });
-
-  var lang =
-    window.localStorage.getItem("myems_admin_ui_language") || "fr"; //en, zh_CN, de, fr, es, ru, ar, vi, th, tr, ms, id, zh_TW, pt, ko_KR, it, pol, nl, jp, fa
-
-  $translateProvider.preferredLanguage(lang);
+  $translateProvider.translations('fr', bundles.fr || {});
+  $translateProvider.preferredLanguage('fr');
+  $translateProvider.fallbackLanguage('fr');
 }
-
-angular.module("inspinia").config(config);
+angular.module('inspinia').config(config);
