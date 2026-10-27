@@ -17,7 +17,7 @@ app.controller('SpaceController', function (
 	$scope.currentSpaceID = 1;
 	$scope.currentSpace = {};
 	$scope.currentSpaceChildren = [];
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.exportdata = '';
 	$scope.importdata = '';
 

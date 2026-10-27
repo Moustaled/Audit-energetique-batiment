@@ -15,7 +15,7 @@ app.controller('EnergyFlowDiagramNodeController', function(
       $scope.energyflowdiagrams = [];
       $scope.energyflowdiagramnodes = [];
       $scope.currentEnergyFlowDiagram = null;
-	  $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	  $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
       // Load all energy flow diagrams from API
       $scope.getAllEnergyFlowDiagrams = function() {
 		let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

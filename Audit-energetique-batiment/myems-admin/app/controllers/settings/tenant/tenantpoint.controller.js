@@ -14,7 +14,7 @@ app.controller('TenantPointController', function (
     toaster, 
     SweetAlert,
     DragDropWarningService) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentTenant = {selected:undefined};
     $scope.isTenantSelected = false;
     // Load all data sources from API

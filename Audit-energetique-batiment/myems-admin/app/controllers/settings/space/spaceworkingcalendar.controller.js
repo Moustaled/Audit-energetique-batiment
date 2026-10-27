@@ -16,7 +16,7 @@ app.controller('SpaceWorkingCalendarController', function(
     $scope.workingcalendars = [];
     $scope.spaceworkingcalendars = [];
     $scope.filteredWorkingCalendars = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingWorkingcalendars = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

@@ -5,7 +5,7 @@ app.controller('MainController', [
 
         $rootScope.$on("handleReLogin",function(){
             $timeout(function(){
-                $window.localStorage.removeItem("myems_admin_ui_current_user");
+                $window.localStorage.removeItem("enerbat_admin_ui_current_user");
                 $location.path('/login');
             },2000)
         });

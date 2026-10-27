@@ -1,12 +1,12 @@
-# Audit énergétique du bâtiment
+# EnerBat
 
-Édition française de l’administration MyEMS présente dans cette archive.
+Édition française de l’administration EnerBat présente dans cette archive.
 
-![Logo MyEMS conservé](myems-admin/img/myemslogo.png)
+![Logo EnerBat conservé](enerbat-admin/img/enerbatlogo.png)
 
 ## À quoi sert ce projet ?
 
-Configurer les bâtiments, les compteurs et les données nécessaires au suivi des consommations d’énergie. Le nom de cette édition est **Audit énergétique du bâtiment**. MyEMS reste identifié comme logiciel d’origine.
+Configurer les bâtiments, les compteurs et les données nécessaires au suivi des consommations d’énergie. Le nom de cette édition est **EnerBat**. EnerBat reste identifié comme logiciel d’origine.
 
 ## Présentation en français
 
@@ -20,7 +20,7 @@ Ces schémas sont des illustrations explicatives, pas des captures d’une appli
 
 ## État de l’archive
 
-L’archive contient du code d’administration, des bibliothèques et des scripts SQL. Les modèles HTML du dossier `myems-admin/views/`, le serveur `myems-api` et l’interface `myems-web` sont absents. L’administration ne peut donc pas fonctionner entièrement à partir de cette archive seule. Aucun résultat énergétique ni fonctionnement complet n’est revendiqué.
+L’archive contient du code d’administration, des bibliothèques et des scripts SQL. Les modèles HTML du dossier `enerbat-admin/views/`, le serveur `enerbat-api` et l’interface `enerbat-web` sont absents. L’administration ne peut donc pas fonctionner entièrement à partir de cette archive seule. Aucun résultat énergétique ni fonctionnement complet n’est revendiqué.
 
 ## Personnalisation française
 
@@ -28,4 +28,4 @@ Le français est imposé au chargement et à la connexion. Les anciennes capture
 
 ## Licence et origine
 
-Basé sur MyEMS. Les fichiers LICENSE d’origine, le logo et les copyrights sont conservés. La licence inclut une condition additionnelle concernant le logo et le copyright ; cette édition ne supprime pas ces mentions.
+Basé sur EnerBat. Les fichiers LICENSE d’origine, le logo et les copyrights sont conservés. La licence inclut une condition additionnelle concernant le logo et le copyright ; cette édition ne supprime pas ces mentions.

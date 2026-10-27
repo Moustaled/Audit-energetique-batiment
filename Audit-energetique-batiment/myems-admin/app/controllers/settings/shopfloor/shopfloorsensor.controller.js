@@ -12,7 +12,7 @@ app.controller('ShopfloorSensorController', function (
     DragDropWarningService) {
 
     $scope.currentShopfloor = {selected: undefined};
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isShopfloorSelected = false;
     $scope.shopfloorsensors = [];
 

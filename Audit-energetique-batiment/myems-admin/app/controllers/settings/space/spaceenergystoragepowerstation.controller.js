@@ -17,7 +17,7 @@ app.controller('SpaceEnergyStoragePowerStationController', function(
     $scope.energystoragepowerstations = [];
     $scope.spaceenergystoragepowerstations = [];
     $scope.filteredEnergyStoragePowerStations = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingEnergystoragepowerstations = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

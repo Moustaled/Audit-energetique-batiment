@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["zh_CN"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["zh_CN"] = {
             TIMEZONE: {
                 'Dateline Standard Time': '日界线标准时间 (GMT-12:00) 国际日期变更线西侧',
                 'Samoa Standard Time': '萨摩亚标准时间 (GMT-11:00) 中途岛、萨摩亚',
@@ -96,7 +96,7 @@
                 'Paraguay Standard Time': '巴拉圭标准时间 (GMT-04:00) 亚松森',
                 'Kamchatka Standard Time': '堪察加标准时间 (GMT+12:00) 彼得罗巴甫洛夫斯克'
             },
-      MY_EMS_NAME: "MyEMS",
+      MY_EMS_NAME: "EnerBat",
       LANGUAGE: "语 言",
       FULLSCREEN: "全屏显示",
       EXITFULLSCREEN: "退出全屏",

@@ -17,7 +17,7 @@ app.controller('StoreWorkingCalendarController', function(
 
     $scope.stores = [];
     $scope.storeworkingcalendars = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentStore = {selected: undefined};
     $scope.isStoreSelected = false;
 

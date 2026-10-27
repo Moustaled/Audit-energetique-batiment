@@ -12,7 +12,7 @@ app.controller('VirtualPowerPlantMicrogridController', function (
     toaster,
     SweetAlert) {
     $scope.currentVirtualPowerPlant = {selected:undefined};
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     // Load all microgrids from API
     $scope.getAllMicrogrids = function () {
         let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

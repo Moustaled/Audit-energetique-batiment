@@ -8,7 +8,7 @@ app.controller('TextMessageController', function(
 	TextMessageService,
 	SweetAlert,
 	toaster) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.$on('handleBroadcastTextMessageOptionChanged', function (event, data) {
         if (angular.isDefined(data.load)) {
             $scope.tabledata = [];

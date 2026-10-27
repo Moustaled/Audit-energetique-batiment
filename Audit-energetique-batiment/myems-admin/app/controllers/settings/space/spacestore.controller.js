@@ -15,7 +15,7 @@ app.controller('SpaceStoreController', function(
     $scope.stores = [];
     $scope.spacestores = [];
     $scope.filteredStores = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingStores = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

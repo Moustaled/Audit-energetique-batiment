@@ -12,7 +12,7 @@ app.controller('CombinedEquipmentCommandController', function (
     CombinedEquipmentCommandService,
     toaster,
     DragDropWarningService) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentCombinedEquipment = {selected:undefined};
     $scope.isCombinedEquipmentSelected = false;
     // Load all commands from API

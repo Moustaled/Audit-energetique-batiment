@@ -15,7 +15,7 @@ app.controller('MicrogridUserController', function (
     SweetAlert,
     DragDropWarningService) {
     $scope.currentMicrogrid = {selected:undefined};
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isMicrogridSelected = false;
     // Load all users from API
     $scope.getAllUsers = function () {

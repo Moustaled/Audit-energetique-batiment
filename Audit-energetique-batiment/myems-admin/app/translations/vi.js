@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["vi"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["vi"] = {
                 TIMEZONE: {
                     "Dateline Standard Time": 'Giờ Đường ngày quốc tế (GMT-12:00) Phía tây Đường ngày quốc tế',
                     "Samoa Standard Time": 'Giờ Samoa (GMT-11:00) Đảo Midway, Samoa',
@@ -96,7 +96,7 @@
                     "Paraguay Standard Time": 'Giờ Paraguay (GMT-04:00) Asunción',
                     "Kamchatka Standard Time": 'Giờ Kamchatka (GMT+12:00) Petropavlovsk'
                 },
-                MY_EMS_NAME: 'MyEMS',
+                MY_EMS_NAME: 'EnerBat',
                 LANGUAGE: 'Ngôn ngữ',
                 FULLSCREEN: 'Toàn màn hình',
                 EXITFULLSCREEN: 'Thoát khỏi chế độ toàn màn hình',

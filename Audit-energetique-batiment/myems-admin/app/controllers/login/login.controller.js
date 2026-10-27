@@ -19,7 +19,7 @@ app.controller('LoginController', function (
 	$scope.isFullScreen = false;
 	$scope.language = 'fr';
 	$scope.fullScreenTitle = "FULLSCREEN";
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.showPassword = false;
 
 	$scope.togglePassword = function() {
@@ -68,11 +68,11 @@ app.controller('LoginController', function (
 					body: $translate.instant('TOASTER.LOGIN_SUCCESS'),
 					showCloseButton: true,
 				});
-				$window.localStorage.setItem("myems_admin_ui_current_user", JSON.stringify(response.data));
+				$window.localStorage.setItem("enerbat_admin_ui_current_user", JSON.stringify(response.data));
 
 				$scope.createCookie('is_logged_in', true, 1000 * 60 * 5 * 1);
 				$location.path('/settings/space');
-				$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+				$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 			} else {
 				toaster.pop({
 					type: "error",
@@ -101,7 +101,7 @@ app.controller('LoginController', function (
 					body: $translate.instant('TOASTER.LOGOUT_SUCCESS'),
 					showCloseButton: true,
 				});
-				$window.localStorage.removeItem("myems_admin_ui_current_user");
+				$window.localStorage.removeItem("enerbat_admin_ui_current_user");
 				$location.path('/login');
 			} else {
 				toaster.pop({
@@ -110,7 +110,7 @@ app.controller('LoginController', function (
 					body: $translate.instant(response.data.description),
 					showCloseButton: true,
 				});
-				$window.localStorage.removeItem("myems_admin_ui_current_user");
+				$window.localStorage.removeItem("enerbat_admin_ui_current_user");
 				$location.path('/login');
 			}
 		});
@@ -240,7 +240,7 @@ app.controller('LoginController', function (
 	$scope.changeLanguage = function (langKey) {
 		$translate.use('fr');
 		$scope.language = 'fr';
-		$window.localStorage.setItem("myems_admin_ui_language", "fr");
+		$window.localStorage.setItem("enerbat_admin_ui_language", "fr");
 	};
 
 	// web message alarm section start

@@ -16,7 +16,7 @@ app.controller(
   ) {
     $scope.currentEnergyStoragePowerStation = { selected: undefined };
     $scope.cur_user = JSON.parse(
-      $window.localStorage.getItem("myems_admin_ui_current_user")
+      $window.localStorage.getItem("enerbat_admin_ui_current_user")
     );
     // Load all energy storage containers from API
     $scope.getAllEnergyStorageContainers = function () {

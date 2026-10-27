@@ -5,11 +5,11 @@ app
             $rootScope.$state = $state;
             $transitions.onStart( { }, function(trans) {
                 if ($location.$$path.indexOf('login')==-1) {
-                    if ($window.localStorage.getItem("myems_admin_ui_current_user")){
-                        currentUser = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+                    if ($window.localStorage.getItem("enerbat_admin_ui_current_user")){
+                        currentUser = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
                     }
                     if (currentUser == undefined || currentUser.is_admin === false) {
-                        $window.localStorage.removeItem("myems_admin_ui_current_user");
+                        $window.localStorage.removeItem("enerbat_admin_ui_current_user");
                         return $state.target("login.login");
                     } else {
                         $rootScope.pageTitle = trans.to().data.pageTitle;

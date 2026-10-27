@@ -14,7 +14,7 @@ app.controller('MenuController', function (
     $scope.rawMenus = [];
     $scope.currentMenu = {};
     $scope.currentMenuChildren = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 
     // Load all menus from API
     $scope.getAllMenus = function () {

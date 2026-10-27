@@ -17,7 +17,7 @@ app.controller('TenantMeterController', function(
     SweetAlert,
     DragDropWarningService) {
     $scope.currentTenant = {selected:undefined};
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.isTenantSelected = false;
 	$scope.currentMeterType = "meters";
 	$scope.currentmeters = [];

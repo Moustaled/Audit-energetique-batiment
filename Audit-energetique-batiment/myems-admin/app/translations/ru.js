@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["ru"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["ru"] = {
                 TIMEZONE: {
                     "Dateline Standard Time": 'Время линии изменения даты (GMT-12:00) Запад от Международной линии даты',
                     "Samoa Standard Time": 'Самоанское время (GMT-11:00) Остров Мидвей, Самоа',
@@ -96,7 +96,7 @@
                     UTC: 'Всемирное координированное время (GMT+00:00) Глобальный временной эталон',
                     "Kamchatka Standard Time": 'Камчатское время (GMT+12:00) Петропавловск-Камчатский'
                 },
-                MY_EMS_NAME: 'MyEMS',
+                MY_EMS_NAME: 'EnerBat',
                 LANGUAGE: 'Язык',
                 FULLSCREEN: 'Полноэкранный режим',
                 EXITFULLSCREEN: 'Выйти из полноэкранного режима',

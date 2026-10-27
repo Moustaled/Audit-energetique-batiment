@@ -15,7 +15,7 @@ app.controller('DistributionCircuitPointController', function (
     SweetAlert,
     DragDropWarningService
 ) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentDistributionCircuit = { selected: undefined };
     $scope.isDistributionCircuitSelected = false;
 

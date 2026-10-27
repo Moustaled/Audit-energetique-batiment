@@ -7,297 +7,297 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 ### Changed
 ### Fixed
-- fixed issue of dockerfile in myems-s7
+- fixed issue of dockerfile in enerbat-s7
 ### Removed
 
 
 ## [v6.9.0] - 2026-09-27
 ### Added
-- added docx exporters for space reports in myems-api and myems-web
-- added pdf exporters for equipment reports in myems-api and myems-web
-- added docx exporters for combined equipment reports in myems-api and myems-web
-- added is_enabled to meter, offline meter and virtual meter in myems-api and myems-admin
-- added pdf exporters for reports of meters, offline meters and virtual meters in myems-api and myems-web
-- added docx exporters for equipment reports in myems-api and myems-web
-- added is_enabled to combined equipment, equipment, shopfloor, store and tenant in myems-api and myems-admin
-- added pdf exporters for reports of tenants in myems-api and myems-web
-- added pdf exporters for stores reports in myems-api and myems-web
-- added docx exporters for reports of meters, offline meters and virtual meters in myems-api and myems-web
-- added pdf exporters for shopfloors reports in myems-api and myems-web
-- added docx exporters for tenant reports in myems-api and myems-web
-- added docx exporters for combined equipment reports in myems-api and myems-web
-- added myems opc ua service to acquire data from OPC UA server
-- added docx exporters for shopfloor reports in myems-api and myems-web
-- added docx exporters for tenant reports in myems-api and myems-web
+- added docx exporters for space reports in enerbat-api and enerbat-web
+- added pdf exporters for equipment reports in enerbat-api and enerbat-web
+- added docx exporters for combined equipment reports in enerbat-api and enerbat-web
+- added is_enabled to meter, offline meter and virtual meter in enerbat-api and enerbat-admin
+- added pdf exporters for reports of meters, offline meters and virtual meters in enerbat-api and enerbat-web
+- added docx exporters for equipment reports in enerbat-api and enerbat-web
+- added is_enabled to combined equipment, equipment, shopfloor, store and tenant in enerbat-api and enerbat-admin
+- added pdf exporters for reports of tenants in enerbat-api and enerbat-web
+- added pdf exporters for stores reports in enerbat-api and enerbat-web
+- added docx exporters for reports of meters, offline meters and virtual meters in enerbat-api and enerbat-web
+- added pdf exporters for shopfloors reports in enerbat-api and enerbat-web
+- added docx exporters for tenant reports in enerbat-api and enerbat-web
+- added docx exporters for combined equipment reports in enerbat-api and enerbat-web
+- added enerbat opc ua service to acquire data from OPC UA server
+- added docx exporters for shopfloor reports in enerbat-api and enerbat-web
+- added docx exporters for tenant reports in enerbat-api and enerbat-web
 ### Changed
 - changed the tariff price precision from 6 decimal places to 8 decimal places
-- changed datetime format in myems-web
+- changed datetime format in enerbat-web
 ### Fixed
-- fixed color issues in myems-web
+- fixed color issues in enerbat-web
 ### Removed
 - None
 
 ## [v6.8.0] - 2026-08-29
 ### Added
-- added meter dashboard to myems-api and myems-web
-- added authenticate via API-KEY to webmessage in myems-api
-- added carbon emissions and costs to batch reports of combined equipment, equipment, shopfloor, store and tenant in myems-api and myems-web
-- added Equipment Realtime Monitor to myems-api and myems-web
-- added myems-bacnet to acquire data from BACnet devices (HVAC)
-- added myems-s7 to acquire data from S7 devices (PLC)
-- added split scroll to myems-admin
-- added pdf exporters for space reports in myems-api and myems-web
-- added docx exporter for space energy category report in myems-api and myems-web
+- added meter dashboard to enerbat-api and enerbat-web
+- added authenticate via API-KEY to webmessage in enerbat-api
+- added carbon emissions and costs to batch reports of combined equipment, equipment, shopfloor, store and tenant in enerbat-api and enerbat-web
+- added Equipment Realtime Monitor to enerbat-api and enerbat-web
+- added enerbat-bacnet to acquire data from BACnet devices (HVAC)
+- added enerbat-s7 to acquire data from S7 devices (PLC)
+- added split scroll to enerbat-admin
+- added pdf exporters for space reports in enerbat-api and enerbat-web
+- added docx exporter for space energy category report in enerbat-api and enerbat-web
 ### Changed
-- changed carbon unit to KGCO2E in myems-api
-- updated data source page in myems-admin
-- changed login page in myems-admin
-- changed carbon dioxide emission factor from fixed value to timeofuse values in database, myems-api, myems-admin and myems-aggregation
+- changed carbon unit to KGCO2E in enerbat-api
+- updated data source page in enerbat-admin
+- changed login page in enerbat-admin
+- changed carbon dioxide emission factor from fixed value to timeofuse values in database, enerbat-api, enerbat-admin and enerbat-aggregation
 ### Fixed
-- fixed issue of meter realtime report in myems-web
-- fixed issue of space energy item in myems-web
-- fixed issue of space tree in myems-api
+- fixed issue of meter realtime report in enerbat-web
+- fixed issue of space energy item in enerbat-web
+- fixed issue of space tree in enerbat-api
 ### Removed
 - None
 
 ## [v6.7.0] - 2026-07-26
 ### Added
-- added circle check to energy flow diagram in myems-api and myems-admin
-- added duplicate check for binding meter to space in myems-api and myems-admin
-- added duplicate check for binding meter to shopfloor in myems-api and myems-admin
-- added duplicate check for binding meter to combined equipment in myems-api and myems-admin
-- added duplicate check for binding meter to equipment in myems-api and myems-admin
-- added duplicate check for binding meter to store in myems-api and myems-admin
-- added duplicate check for binding meter to tenant in myems-api and myems-admin
-- added myems_production_db.tbl_equipment_hourly to database
-- added modification protection for super administrator in myems-api and myems-admin
-- added yAxisScale attribute to the MultipleLineChart component to control the scale configuration of the ECharts Y-axis in myems-web
+- added circle check to energy flow diagram in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to space in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to shopfloor in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to combined equipment in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to equipment in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to store in enerbat-api and enerbat-admin
+- added duplicate check for binding meter to tenant in enerbat-api and enerbat-admin
+- added enerbat_production_db.tbl_equipment_hourly to database
+- added modification protection for super administrator in enerbat-api and enerbat-admin
+- added yAxisScale attribute to the MultipleLineChart component to control the scale configuration of the ECharts Y-axis in enerbat-web
 - added ID to equipment list in combined equipment reports
-- added space dashboard to myems-api and myems-web
-- added min/max/avg to trend chart in myems-web
+- added space dashboard to enerbat-api and enerbat-web
+- added min/max/avg to trend chart in enerbat-web
 ### Changed
-- changed component import method from static to dynamic imports in myems-web
-- added ErrorBoundary component to capture rendering errors in myems-web
-- upgraded echarts version in myems-web
-- updated meter realtime report in myems-web
+- changed component import method from static to dynamic imports in enerbat-web
+- added ErrorBoundary component to capture rendering errors in enerbat-web
+- upgraded echarts version in enerbat-web
+- updated meter realtime report in enerbat-web
 - updated deepseek api url and model
 ### Fixed
-- fixed Overwritten property issue in myems-web
-- fixed datetime picker color theme issue in myems-web
-- fixed parameters_data issues in myems-api
-- fixed issues of combinedequipmentdashboard, equipmentdashboard, shopfloordashboard, storedashboard and tenantdashboard in myems-api
-- fixed issue of combined equipment load excel exporter in myems-api
+- fixed Overwritten property issue in enerbat-web
+- fixed datetime picker color theme issue in enerbat-web
+- fixed parameters_data issues in enerbat-api
+- fixed issues of combinedequipmentdashboard, equipmentdashboard, shopfloordashboard, storedashboard and tenantdashboard in enerbat-api
+- fixed issue of combined equipment load excel exporter in enerbat-api
 ### Removed
-- removed print(req.params) from myems-api
+- removed print(req.params) from enerbat-api
 
 ## [v6.6.0] - 2026-06-26
 ### Added
-- added search box to data point page in myems-admin
-- added deepseek AI analysis to reports in myems-web
-- added map to store dashboard in myems-web
-- added offline_meter_data.xlsx download link to myems-admin
-- added data_repair_sample.xlsx download link to myems-admin
-- added hytper link to name in equipment dashboard in myems-web and myems-api
-- added yAxisScale to Operating Characteristic Curve in myems-web
-- added hytper link to name in store dashboard in myems-web and myems-api
-- added hytper link to name in shopfloor dashboard in myems-web and myems-api
-- added hytper link to name in combined equipment dashboard in myems-web and myems-api
-- added hytper link to name in tenant dashboard in myems-web and myems-api
-- added api_key_control to deepseek_chat in myems-api
+- added search box to data point page in enerbat-admin
+- added deepseek AI analysis to reports in enerbat-web
+- added map to store dashboard in enerbat-web
+- added offline_meter_data.xlsx download link to enerbat-admin
+- added data_repair_sample.xlsx download link to enerbat-admin
+- added hytper link to name in equipment dashboard in enerbat-web and enerbat-api
+- added yAxisScale to Operating Characteristic Curve in enerbat-web
+- added hytper link to name in store dashboard in enerbat-web and enerbat-api
+- added hytper link to name in shopfloor dashboard in enerbat-web and enerbat-api
+- added hytper link to name in combined equipment dashboard in enerbat-web and enerbat-api
+- added hytper link to name in tenant dashboard in enerbat-web and enerbat-api
+- added api_key_control to deepseek_chat in enerbat-api
 ### Changed
-- updated meter batch report in myems-api and myems-web
-- updated virtual meter batch report in myems-api and myems-web
-- updated dashboard in myems-web
-- updated notification in myems-web
-- updated equipment dashboard in myems-web
-- updated tenant batch report in myems-api and myems-web
-- updated reset password dialog in myems-web
-- updated login form in myems-web
-- updated knowledge file page in myems-web
-- updated user activity logger in myems-api
+- updated meter batch report in enerbat-api and enerbat-web
+- updated virtual meter batch report in enerbat-api and enerbat-web
+- updated dashboard in enerbat-web
+- updated notification in enerbat-web
+- updated equipment dashboard in enerbat-web
+- updated tenant batch report in enerbat-api and enerbat-web
+- updated reset password dialog in enerbat-web
+- updated login form in enerbat-web
+- updated knowledge file page in enerbat-web
+- updated user activity logger in enerbat-api
 - replaced datetime.utcnow() with datetime.now(timezone.utc)
-- optimized multiple N+1 queries into batch queries in myems-api
-- updated translations in myems-admin
-- updated meter realtime in myems-web
+- optimized multiple N+1 queries into batch queries in enerbat-api
+- updated translations in enerbat-admin
+- updated meter realtime in enerbat-web
 ### Fixed
-- fixed add/edit user issue in myems-admin
-- fixed issue of DateRangePickerWrapper in myems-web
-- fixed issue of MeterSubmetersBalance in myems-web
-- fixed issue of shopfloor prediction report in myems-api
-- fixed typo of file name in myems-aggregation
-- fixed issue of EnergyFlowDiagram in myems-web
+- fixed add/edit user issue in enerbat-admin
+- fixed issue of DateRangePickerWrapper in enerbat-web
+- fixed issue of MeterSubmetersBalance in enerbat-web
+- fixed issue of shopfloor prediction report in enerbat-api
+- fixed typo of file name in enerbat-aggregation
+- fixed issue of EnergyFlowDiagram in enerbat-web
 ### Removed
-- removed unused function from carbon_dioxide_emission_factor in myems-aggregation
-- removed falcon-cors middleware and on_options methods from myems-api
+- removed unused function from carbon_dioxide_emission_factor in enerbat-aggregation
+- removed falcon-cors middleware and on_options methods from enerbat-api
 
 ## [v6.5.0] - 2026-05-26
 ### Added
-- added comprehensive and exhaustive explanatory descriptions to myems-admin
-- added equipment prediction report in myems-web
-- added combined equipment prediction report in myems-web
-- added offlinemeteruuid and virtualmeteruuid as optional request parameter to reports in myems-api
-- added deepseek AI analysis to reports in myems-api and myems-web
-- added meter prediction report in myems-web
-- added offline meter prediction report in myems-web
-- added virtual meter prediction report in myems-web
-- added tenant prediction report in myems-web
-- added shopfloor prediction report in myems-web
-- added store prediction report in myems-web
-- added the function of displaying the password entered by the user to myems-admin
-- added store dashboard to myems-api and myems-web
-- added tenant dashboard to myems-api and myems-web
-- added shopfloor dashboard to myems-api and myems-web
-- added equipment dashboard to myems-api and myems-web
-- added combined equipment dashboard to myems-api and myems-web
-- added full space path to meter tracking in myems-api and myems-web
-- added full space path to meter batch report in myems-api
-- added full space path to virtual meter batch report in myems-api
-- added full space path to offline meter batch report in myems-api
-- added full space path to tenant batch report in myems-api
-- added full space path to store batch report in myems-api
-- added full space path to shopfloor batch report in myems-api
-- added full space path to equipment batch report in myems-api
-- added full space path to combined equipment batch report in myems-api
+- added comprehensive and exhaustive explanatory descriptions to enerbat-admin
+- added equipment prediction report in enerbat-web
+- added combined equipment prediction report in enerbat-web
+- added offlinemeteruuid and virtualmeteruuid as optional request parameter to reports in enerbat-api
+- added deepseek AI analysis to reports in enerbat-api and enerbat-web
+- added meter prediction report in enerbat-web
+- added offline meter prediction report in enerbat-web
+- added virtual meter prediction report in enerbat-web
+- added tenant prediction report in enerbat-web
+- added shopfloor prediction report in enerbat-web
+- added store prediction report in enerbat-web
+- added the function of displaying the password entered by the user to enerbat-admin
+- added store dashboard to enerbat-api and enerbat-web
+- added tenant dashboard to enerbat-api and enerbat-web
+- added shopfloor dashboard to enerbat-api and enerbat-web
+- added equipment dashboard to enerbat-api and enerbat-web
+- added combined equipment dashboard to enerbat-api and enerbat-web
+- added full space path to meter tracking in enerbat-api and enerbat-web
+- added full space path to meter batch report in enerbat-api
+- added full space path to virtual meter batch report in enerbat-api
+- added full space path to offline meter batch report in enerbat-api
+- added full space path to tenant batch report in enerbat-api
+- added full space path to store batch report in enerbat-api
+- added full space path to shopfloor batch report in enerbat-api
+- added full space path to equipment batch report in enerbat-api
+- added full space path to combined equipment batch report in enerbat-api
 ### Changed
-- changed node.js version to 22.22.2, 24.5.0 or later in myems-web
-- changed npm version to 10.9.7, 11.5.1 or later in myems-web
-- changed dockerfile in myems-web
-- changed introduction on waitress which supports windows directly in myems-api
+- changed node.js version to 22.22.2, 24.5.0 or later in enerbat-web
+- changed npm version to 10.9.7, 11.5.1 or later in enerbat-web
+- changed dockerfile in enerbat-web
+- changed introduction on waitress which supports windows directly in enerbat-api
 ### Fixed
-- added try...finally for cnx.close() and cursor.close() in myems-api
-- fixed overwritten property issues in myems-web
-- fixed overwritten property issues in myems-admin
-- fixed semicolon insertion issues in myems-web
-- fixed duplicate property issues in myems-admin
-- fixed dependency files vulnerabilities in myems-web
-- fixed issue of menu setting in myems-admin
+- added try...finally for cnx.close() and cursor.close() in enerbat-api
+- fixed overwritten property issues in enerbat-web
+- fixed overwritten property issues in enerbat-admin
+- fixed semicolon insertion issues in enerbat-web
+- fixed duplicate property issues in enerbat-admin
+- fixed dependency files vulnerabilities in enerbat-web
+- fixed issue of menu setting in enerbat-admin
 ### Removed
 - None
 
 ## [v6.4.0] - 2026-04-26
 ### Added
-- added redis cache to space reports in myems-api
+- added redis cache to space reports in enerbat-api
 - added demo data translations in database
-- added combined equipment prediction excel exporter in myems-api
-- added equipment prediction report in myems-api
-- added meter prediction report in myems-api
-- added shopfloor prediction excel exporter in myems-api
-- added space prediction excel exporter in myems-api
-- added store prediction excel exporter in myems-api
-- added tenant prediction excel exporter in myems-api
-- added virtual meter prediction report in myems-api
-- added support for logging in with the enter key on the login screen in myems-admin
-- added pagination functionality to the data point table in myems-admin
-- added daily data to meter batch report in myems-api and myems-web
+- added combined equipment prediction excel exporter in enerbat-api
+- added equipment prediction report in enerbat-api
+- added meter prediction report in enerbat-api
+- added shopfloor prediction excel exporter in enerbat-api
+- added space prediction excel exporter in enerbat-api
+- added store prediction excel exporter in enerbat-api
+- added tenant prediction excel exporter in enerbat-api
+- added virtual meter prediction report in enerbat-api
+- added support for logging in with the enter key on the login screen in enerbat-admin
+- added pagination functionality to the data point table in enerbat-admin
+- added daily data to meter batch report in enerbat-api and enerbat-web
 ### Changed
-- changed default start_datetime_utc to 2024-12-31 16:00:00 in myems-aggregation, myems-cleaning and myems-normalization
-- split myems-admin/app/translations.js into small files
-- split myems-web/src/i18n.js into small files
+- changed default start_datetime_utc to 2024-12-31 16:00:00 in enerbat-aggregation, enerbat-cleaning and enerbat-normalization
+- split enerbat-admin/app/translations.js into small files
+- split enerbat-web/src/i18n.js into small files
 ### Fixed
-- fixed issue of package.json in myems-web
-- added try...finally for cnx.close() and cursor.close() in myems-api
-- fixed the issue where the scrollbar did not reset when navigating to a new page in myems-admin
+- fixed issue of package.json in enerbat-web
+- added try...finally for cnx.close() and cursor.close() in enerbat-api
+- fixed the issue where the scrollbar did not reset when navigating to a new page in enerbat-admin
 ### Removed
-- removed the default interval_in_seconds from config in myems-modbus-tcp
+- removed the default interval_in_seconds from config in enerbat-modbus-tcp
 
 ## [v6.3.0] - 2026-03-28
 ### Added
-- added Japanese translations in myems-admin and myems-web
-- added timezones translations in myems-admin
-- added Persian translations in myems-admin and myems-web
-- added efficiency indicator to equipment efficiency report in myems-web
-- added efficiency indicator to combined equipment efficiency report in myems-web
-- added redis cache to dashboard in myems-api
+- added Japanese translations in enerbat-admin and enerbat-web
+- added timezones translations in enerbat-admin
+- added Persian translations in enerbat-admin and enerbat-web
+- added efficiency indicator to equipment efficiency report in enerbat-web
+- added efficiency indicator to combined equipment efficiency report in enerbat-web
+- added redis cache to dashboard in enerbat-api
 ### Changed
-- added fixed dependency version numbers to myems-api/requirements.txt
-- changed units of value_per_unit_area and value_per_capita in myems-web
-- changed default username for myems-web from administrator@myems.io to administrator in readme
-- changed the offline meter data entry interface to support 6 decimal places in myems-web
+- added fixed dependency version numbers to enerbat-api/requirements.txt
+- changed units of value_per_unit_area and value_per_capita in enerbat-web
+- changed default username for enerbat-web from administrator@enerbat.io to administrator in readme
+- changed the offline meter data entry interface to support 6 decimal places in enerbat-web
 - updated database demo data
-- changed menu order in myems-admin
-- changed base period date range picker to hide when comparison type is none in myems-web
-- changed default comparison type to none comparison in myems-web
-- changed icon on topnavbar in myems-admin
+- changed menu order in enerbat-admin
+- changed base period date range picker to hide when comparison type is none in enerbat-web
+- changed default comparison type to none comparison in enerbat-web
+- changed icon on topnavbar in enerbat-admin
 ### Fixed
-- fixed overwritten property in myems-web
-- fixed overwritten property in myems-admin
-- added try...finally to cnx.close() and cursor.close() in myems-api
-- fixed translations in myems-admin
-- fixed issues of dashboard in myems-api and myems-web
-- fixed color issue in myems-web
-- fixed environment monitor in myems-web
-- fixed comparison reports in myems-web
-- fixed space energy category report in myems-api and myems-web
+- fixed overwritten property in enerbat-web
+- fixed overwritten property in enerbat-admin
+- added try...finally to cnx.close() and cursor.close() in enerbat-api
+- fixed translations in enerbat-admin
+- fixed issues of dashboard in enerbat-api and enerbat-web
+- fixed color issue in enerbat-web
+- fixed environment monitor in enerbat-web
+- fixed comparison reports in enerbat-web
+- fixed space energy category report in enerbat-api and enerbat-web
 ### Removed
 - removed default password from config.py. Please ensure to set environment variables like MYEMS_SYSTEM_DB_PASSWORD explicitly before deployment.
-- removed id and uuid from export data in myems-admin
+- removed id and uuid from export data in enerbat-admin
 
 ## [v6.2.0] - 2026-02-08
 ### Added
-- added login by mobile phone number to myems-admin
-- added efficiency_indicator to myems_system_db.tbl_equipments in database
-- added efficiency_indicator to equipment in myems-api and myems-admin
-- added efficiency_indicator to myems_system_db.tbl_combined_equipments in database
-- added efficiency_indicator to combined equipment in myems-api and myems-admin
-- added korean translations in myems-admin and myems-web
-- added italian translations in myems-admin and myems-web
-- added Polish translations in myems-admin and myems-web
-- added Dutch translations in myems-admin and myems-web
+- added login by mobile phone number to enerbat-admin
+- added efficiency_indicator to enerbat_system_db.tbl_equipments in database
+- added efficiency_indicator to equipment in enerbat-api and enerbat-admin
+- added efficiency_indicator to enerbat_system_db.tbl_combined_equipments in database
+- added efficiency_indicator to combined equipment in enerbat-api and enerbat-admin
+- added korean translations in enerbat-admin and enerbat-web
+- added italian translations in enerbat-admin and enerbat-web
+- added Polish translations in enerbat-admin and enerbat-web
+- added Dutch translations in enerbat-admin and enerbat-web
 ### Changed
 - automatically extend password expiration time when changing user password
 ### Fixed
-- fixed issues of binding objects in myems-admin
+- fixed issues of binding objects in enerbat-admin
 ### Removed
 - None
 
 ## [v6.1.0] - 2026-01-28
 ### Added
-- added store type setting to myems-admin
-- added optional redis database to myems-api
+- added store type setting to enerbat-admin
+- added optional redis database to enerbat-api
 - added phone to tbl_users in database
-- added login by phone to myems-api and myems-web
-- added login by mobile phone number (china only) to myems-api and myems-web
-- added mobile phone number to user settings in myems-admin
+- added login by phone to enerbat-api and enerbat-web
+- added login by mobile phone number (china only) to enerbat-api and enerbat-web
+- added mobile phone number to user settings in enerbat-admin
 
 ### Changed
-- updated space settings in myems-admin
-- translated object type of point in myems-admin
-- updated default reporting start date time of meter reports in myems-web
+- updated space settings in enerbat-admin
+- translated object type of point in enerbat-admin
+- updated default reporting start date time of meter reports in enerbat-web
 
 ### Fixed
-- optimized combined equipment settings in myems-admin
-- optimized equipment settings in myems-admin
-- optimized meter settings in myems-admin
-- fixed translations in myems-admin
-- fixed issues of binding objects in myems-admin
-- fixed issues of comparison reports in myems-web
-- fixed issue of energyflowdiagram in myems-admin
-- fixed issues of user session timeout handler in myems-web
-- fixed issue of zoom mapbox in myems-web
+- optimized combined equipment settings in enerbat-admin
+- optimized equipment settings in enerbat-admin
+- optimized meter settings in enerbat-admin
+- fixed translations in enerbat-admin
+- fixed issues of binding objects in enerbat-admin
+- fixed issues of comparison reports in enerbat-web
+- fixed issue of energyflowdiagram in enerbat-admin
+- fixed issues of user session timeout handler in enerbat-web
+- fixed issue of zoom mapbox in enerbat-web
 ### Removed
 - None
 
 ## [v5.12.0] - 2025-12-26
 ### Added
-- added indexes to myems_system_db.tbl_menus in database
-- added more specific exception code in myems-api
-- added function to add weekends as non-working day in myems-admin
+- added indexes to enerbat_system_db.tbl_menus in database
+- added more specific exception code in enerbat-api
+- added function to add weekends as non-working day in enerbat-admin
 ### Changed
-- updated get space tree action in myems-api
-- changed official website to https://myems.cn
+- updated get space tree action in enerbat-api
+- changed official website to https://enerbat.cn
 ### Fixed
-- fixed issues of dashboard in myems-api
-- optimized get web menu action in myems-api
+- fixed issues of dashboard in enerbat-api
+- optimized get web menu action in enerbat-api
 - fixed the issue of setting tariff data to 6 decimal places
-- optimized space settings in myems-admin
+- optimized space settings in enerbat-admin
 ### Removed
 - None
 
 
 ## [v5.11.0] - 2025-11-30
 ### Added
-- added space cascader to distribution system in myems-web
-- added search function to tariff setting in myems-admin and myems-api
+- added space cascader to distribution system in enerbat-web
+- added search function to tariff setting in enerbat-admin and enerbat-api
 - added combined equipment comparison report
 - added power quality report
 - added shopfloor comparison report
@@ -306,158 +306,158 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added tenant comparison report
 - added virtual meter comparison report
 - added 24-hour trend charts for space environmental monitor
-- added binding data source to equipment function in myems-api and myems-admin
-- added binding data source to combined equipment function in myems-api and myems-admin
-- added audit log to myems-api and myems-admin
+- added binding data source to equipment function in enerbat-api and enerbat-admin
+- added binding data source to combined equipment function in enerbat-api and enerbat-admin
+- added audit log to enerbat-api and enerbat-admin
 ### Changed
-- updated the format of displaying the paging numbers in the detailed data table in myems-web
+- updated the format of displaying the paging numbers in the detailed data table in enerbat-web
 ### Fixed
-- fixed list refresh issues in all binding functions of stores, shopfloors and distribution systems in myems-admin
-- fixed issue in virtual point procedure in myems-normalization
-- fixed issue of web message batch delete function in myems-api
+- fixed list refresh issues in all binding functions of stores, shopfloors and distribution systems in enerbat-admin
+- fixed issue in virtual point procedure in enerbat-normalization
+- fixed issue of web message batch delete function in enerbat-api
 ### Removed
 - None
 
 ## [v5.10.0] - 2025-10-26
 ### Added
-- added search function to shopfloor setting in myems-admin and myems-api
-- added search function to user setting in myems-admin and myems-api
-- added search function to energy flow diagram setting in myems-admin and myems-api
-- added search function to energy storage container setting in myems-admin and myems-api
-- added search function to energy storage power station setting in myems-admin and myems-api
-- added search function to command setting in myems-admin and myems-api
-- added search function to microgrid setting in myems-admin and myems-api
-- added search function to combined equipment setting in myems-admin and myems-api
-- added search function to photovoltaic power station setting in myems-admin and myems-api
-- added search function to svg setting in myems-admin and myems-api
-- added search function to gateway setting in myems-admin and myems-api
+- added search function to shopfloor setting in enerbat-admin and enerbat-api
+- added search function to user setting in enerbat-admin and enerbat-api
+- added search function to energy flow diagram setting in enerbat-admin and enerbat-api
+- added search function to energy storage container setting in enerbat-admin and enerbat-api
+- added search function to energy storage power station setting in enerbat-admin and enerbat-api
+- added search function to command setting in enerbat-admin and enerbat-api
+- added search function to microgrid setting in enerbat-admin and enerbat-api
+- added search function to combined equipment setting in enerbat-admin and enerbat-api
+- added search function to photovoltaic power station setting in enerbat-admin and enerbat-api
+- added search function to svg setting in enerbat-admin and enerbat-api
+- added search function to gateway setting in enerbat-admin and enerbat-api
 - added equipment comparison report
-- added search function to contact setting in myems-admin and myems-api
-- added asterisks to all required fields in myems-admin
+- added search function to contact setting in enerbat-admin and enerbat-api
+- added asterisks to all required fields in enerbat-admin
 ### Changed
-- updated myems-admin to refresh the point list when binding point to sensor
-- display the username when hovering over the user avatar in myems-web
-- updated myems-admin to refresh the tariff list when binding tariff to cost center
+- updated enerbat-admin to refresh the point list when binding point to sensor
+- display the username when hovering over the user avatar in enerbat-web
+- updated enerbat-admin to refresh the tariff list when binding tariff to cost center
 ### Fixed
-- fixed translations of menu setting page in myems-admin
-- fixed value range issues of point in myems-admin
-- fixed pop error issues when binding working calendar to store, shopfloor, and teant in myems-admin
-- fixed space cascader reset issue of equipment energy category report in myems-web
-- fixed space cascader reset issue of space reports in myems-web
-- fixed space cascader reset issue of store energy category report in myems-web
-- fixed space cascader reset issue of tenant energy category report in myems-web
-- fixed paginator issue of detaileddatatable in myems-web
+- fixed translations of menu setting page in enerbat-admin
+- fixed value range issues of point in enerbat-admin
+- fixed pop error issues when binding working calendar to store, shopfloor, and teant in enerbat-admin
+- fixed space cascader reset issue of equipment energy category report in enerbat-web
+- fixed space cascader reset issue of space reports in enerbat-web
+- fixed space cascader reset issue of store energy category report in enerbat-web
+- fixed space cascader reset issue of tenant energy category report in enerbat-web
+- fixed paginator issue of detaileddatatable in enerbat-web
 ### Removed
 - None
 
 ## [v5.9.0] - 2025-09-28
 ### Added
-- added tenant type function in myems-admin
-- added svg preview to myems-admin
-- added copy token function to gateway in myems-admin
-- added search function to datasource in myems-admin and myems-api
-- added search function to meter in myems-admin and myems-api
-- added search function to virtual meter in myems-admin and myems-api
-- added search function to offline meter in myems-admin and myems-api
+- added tenant type function in enerbat-admin
+- added svg preview to enerbat-admin
+- added copy token function to gateway in enerbat-admin
+- added search function to datasource in enerbat-admin and enerbat-api
+- added search function to meter in enerbat-admin and enerbat-api
+- added search function to virtual meter in enerbat-admin and enerbat-api
+- added search function to offline meter in enerbat-admin and enerbat-api
 - added iot sim card function
-- added search function to equipment in myems-admin and myems-api
-- added search function to tenant in myems-admin and myems-api
-- added search function to store in myems-admin and myems-api
+- added search function to equipment in enerbat-admin and enerbat-api
+- added search function to tenant in enerbat-admin and enerbat-api
+- added search function to store in enerbat-admin and enerbat-api
 ### Changed
-- updated dashboard in myems-web and in myems-api
-- added line breaks between button and table in myems-admin
-- updated myems-admin to refresh the meter list when binding meter to equipment
-- updated myems-admin to refresh the equipment list when binding equipment to combined equipment
+- updated dashboard in enerbat-web and in enerbat-api
+- added line breaks between button and table in enerbat-admin
+- updated enerbat-admin to refresh the meter list when binding meter to equipment
+- updated enerbat-admin to refresh the equipment list when binding equipment to combined equipment
 ### Fixed
-- fixed blank page image style issue in myems-web
+- fixed blank page image style issue in enerbat-web
 ### Removed
 - None
 
 ## [v5.8.0] - 2025-08-28
 ### Added
-- added carbon emissions per unit of energy consumption to equipment in myems-web
-- added carbon emissions per unit of energy consumption to combined equipment in myems-web
-- added action to update point set value in myems-api
-- added tbl_points_set_values to myems_system_db in database
-- added tbl_photovoltaic_power_stations_invertors_points to myems_system_db in database
-- added tbl_photovoltaic_power_stations_loads_points to myems_system_db in database
-- added tbl_photovoltaic_power_stations_grids_points to myems_system_db in database
+- added carbon emissions per unit of energy consumption to equipment in enerbat-web
+- added carbon emissions per unit of energy consumption to combined equipment in enerbat-web
+- added action to update point set value in enerbat-api
+- added tbl_points_set_values to enerbat_system_db in database
+- added tbl_photovoltaic_power_stations_invertors_points to enerbat_system_db in database
+- added tbl_photovoltaic_power_stations_loads_points to enerbat_system_db in database
+- added tbl_photovoltaic_power_stations_grids_points to enerbat_system_db in database
 ### Changed
-- updated meter realtime chart in myems-web
-- updated control mode in myems-admin
+- updated meter realtime chart in enerbat-web
+- updated control mode in enerbat-admin
 ### Fixed
-- fixed issue of deleting point in myems-api
+- fixed issue of deleting point in enerbat-api
 ### Removed
 - None
 
 ## [v5.7.1] - 2025-08-02
 ### Added
-- added binding data source to microgrid in myems-api
-- added binding data source to photovoltaic in myems-api
+- added binding data source to microgrid in enerbat-api
+- added binding data source to photovoltaic in enerbat-api
 ### Changed
 ### Fixed
-- fixed energy flow diagram issue in myems-api
+- fixed energy flow diagram issue in enerbat-api
 ### Removed
 
 ## [v5.7.0] - 2025-07-29
 ### Added
-- added myems-admin.conf and myems-web.conf for nginx
-- added binding microgrid to space in myems-admin
-- added blank page image for space mnvironment monitor in myems-web
-- added quick mode for svg in myems-admin and myems-api
-- added myems_system_db.tbl_energy_storage_containers_data_sources in database
-- added myems_system_db.tbl_microgrids_data_sources in database
-- added myems_system_db.tbl_photovoltaic_power_stations_data_sources in database
-- added carbon emissions per unit of energy consumption to dashboard and space in myems-web
-- added binding data source to energy storage container in myems-admin
+- added enerbat-admin.conf and enerbat-web.conf for nginx
+- added binding microgrid to space in enerbat-admin
+- added blank page image for space mnvironment monitor in enerbat-web
+- added quick mode for svg in enerbat-admin and enerbat-api
+- added enerbat_system_db.tbl_energy_storage_containers_data_sources in database
+- added enerbat_system_db.tbl_microgrids_data_sources in database
+- added enerbat_system_db.tbl_photovoltaic_power_stations_data_sources in database
+- added carbon emissions per unit of energy consumption to dashboard and space in enerbat-web
+- added binding data source to energy storage container in enerbat-admin
 ### Changed
 - subspace names under the same parent space cannot be duplicated
 - updated power stations
 ### Fixed
-- fixed warnings in myems-web
-- fixed warnings in myems-api
-- fixed issue of pop message in myems-admin
-- fixed issue of meter import function in myems-api
-- fixed issue of virtual meter import function in myems-api
-- fixed administrator access control issues of clone functions in myems-api
-- fixed issue of data source in myems-admin
-- fixed issue of virtual meter clone function in myems-api
-- fixed issue of login failed message in myems-admin
-- fixed issue of space import function in myems-api
-- fixed issue of delete distribution system in myems-api
-- fixed issue of add photovoltaic power station in myems-admin
-- fixed issue of delete svg function in myems-api
-- fixed issue of tanant editor in myems-admin
-- fixed issue of multiplelinechart in myems-web
-- fixed issue of tariff in myems-admin
-- fixed issue of delete contact in myems-api
-- fixed issue of delete meter in myems-api
+- fixed warnings in enerbat-web
+- fixed warnings in enerbat-api
+- fixed issue of pop message in enerbat-admin
+- fixed issue of meter import function in enerbat-api
+- fixed issue of virtual meter import function in enerbat-api
+- fixed administrator access control issues of clone functions in enerbat-api
+- fixed issue of data source in enerbat-admin
+- fixed issue of virtual meter clone function in enerbat-api
+- fixed issue of login failed message in enerbat-admin
+- fixed issue of space import function in enerbat-api
+- fixed issue of delete distribution system in enerbat-api
+- fixed issue of add photovoltaic power station in enerbat-admin
+- fixed issue of delete svg function in enerbat-api
+- fixed issue of tanant editor in enerbat-admin
+- fixed issue of multiplelinechart in enerbat-web
+- fixed issue of tariff in enerbat-admin
+- fixed issue of delete contact in enerbat-api
+- fixed issue of delete meter in enerbat-api
 ### Removed
-- removed tbl_energy_storage_containers_sensors from myems_system_db in database
+- removed tbl_energy_storage_containers_sensors from enerbat_system_db in database
 
 
 ## [v5.6.0] - 2025-06-22
 ### Added
-- added uuid file name pattern in myems-api/.gitignore
+- added uuid file name pattern in enerbat-api/.gitignore
 ### Changed
-- updated datasource in myems-admin
+- updated datasource in enerbat-admin
 ### Fixed
 - fixed image path issues in readme.md
-- fixed unused local symbols warnings in myems-api
-- fixed warnings in myems-web
+- fixed unused local symbols warnings in enerbat-api
+- fixed warnings in enerbat-web
 ### Removed
 - None
 
 ## [v5.5.0] - 2025-05-29
 ### Added
 - added column definitions to tbl_points in databse
-- added definitions to points in myems-api and myems-admin
+- added definitions to points in enerbat-api and enerbat-admin
 ### Changed
 - None
 ### Fixed
-- fixed inefficient regular expression in myems-web
-- fixed comparison of identical values in myems-api
-- fixed unused local variable in myems-api
+- fixed inefficient regular expression in enerbat-web
+- fixed comparison of identical values in enerbat-api
+- fixed unused local variable in enerbat-api
 ### Removed
 - removed hybrid power station
 
@@ -465,46 +465,46 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v5.4.0] - 2025-04-30
 ### Added
 - added control modes and control times
-- added legend to MultipleLineChart in myems-web
+- added legend to MultipleLineChart in enerbat-web
 - added power integrator table in database
 - added columns is_published to historical database
 - added fuel integrator table in database
 - added apipost file
 ### Changed
-- replaced datetime.strftime() with datetime.isoformat() in myems-api
-- changed space reports to automaticly submit in myems-web
-- changed reporting period of space reports to one week in myems-web
-- updated label interval of MultipleLineChart in myems-web
+- replaced datetime.strftime() with datetime.isoformat() in enerbat-api
+- changed space reports to automaticly submit in enerbat-web
+- changed reporting period of space reports to one week in enerbat-web
+- updated label interval of MultipleLineChart in enerbat-web
 ### Fixed
-- fixed datetime isoformat issues in myems-api
-- fixed api key datetime issue in myems-api and myems-admin
-- fixed file is not always closed issue in myems-api
-- fixed off-by-one comparison against length issue in myems-admin
-- fixed on_delete action of point in myems-api
-- fixed equipment and combiend equipment update isssue in myems-admin
-- fixed distribution svg preview issue in myems-admin
+- fixed datetime isoformat issues in enerbat-api
+- fixed api key datetime issue in enerbat-api and enerbat-admin
+- fixed file is not always closed issue in enerbat-api
+- fixed off-by-one comparison against length issue in enerbat-admin
+- fixed on_delete action of point in enerbat-api
+- fixed equipment and combiend equipment update isssue in enerbat-admin
+- fixed distribution svg preview issue in enerbat-admin
 ### Removed
 - removed postal code from power stations
 
 ## [v5.3.0] - 2025-03-28
 ### Added
-- added space output data to dashboard in myems-web and myems-api
-- added space prediction report in  myems-web and myems-api
-- added new point type text_value to myems-admin and myems-api
+- added space output data to dashboard in enerbat-web and enerbat-api
+- added space prediction report in  enerbat-web and enerbat-api
+- added new point type text_value to enerbat-admin and enerbat-api
 ### Changed
 - updated microgrid and power stations
-- updated myems-api/example.env (myems-api/.env in production eviroment)
-- changed default color scheme to light in myems-web
-- updated dashboard in myems-api and myems-web
+- updated enerbat-api/example.env (enerbat-api/.env in production eviroment)
+- changed default color scheme to light in enerbat-web
+- updated dashboard in enerbat-api and enerbat-web
 ### Fixed
 - fixed issue in space statistics report
-- fixed unused import issues in myems-api
-- fixed unused local variable issues in myems-api
-- fixed overwritten property issues in myems-admin
-- fixed duplicate property issues in myems-admin
-- fixed semicolon insertion issues in myems-web
-- fixed unused variable, import, function or class issues in myems-web
-- fixed data source clone issue in myems-api
+- fixed unused import issues in enerbat-api
+- fixed unused local variable issues in enerbat-api
+- fixed overwritten property issues in enerbat-admin
+- fixed duplicate property issues in enerbat-admin
+- fixed semicolon insertion issues in enerbat-web
+- fixed unused variable, import, function or class issues in enerbat-web
+- fixed data source clone issue in enerbat-api
 ### Removed
 - None
 
@@ -515,29 +515,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added optional langitude point, latitude point and svgs to power stations
 - added hybrid power station
 ### Changed
-- updated notification in myems-web
-- updated realtime data title in myems-web
+- updated notification in enerbat-web
+- updated realtime data title in enerbat-web
 ### Fixed
 - fixed google map issue
 - fixed redundant assignment
 - fixed variable defined multiple times
-- fixed meter comparison issue in myems-api
+- fixed meter comparison issue in enerbat-api
 - fixed explicit returns mixed with implicit (fall through) returns
-- fixed label issues of Excel exporter in myems-api
+- fixed label issues of Excel exporter in enerbat-api
 ### Removed
-- removed console.log from myems-web and myems-admin
+- removed console.log from enerbat-web and enerbat-admin
 
 ## [v5.1.0] - 2025-01-29
 ### Added
 - added new property 'faults' to point
-- added `myems_historical_db`.`tbl_text_value` in database
-- added `myems_historical_db`.`tbl_text_value_latest` in database
-- added columns to `myems_fdd_db`.`tbl_web_messages` in database
+- added `enerbat_historical_db`.`tbl_text_value` in database
+- added `enerbat_historical_db`.`tbl_text_value_latest` in database
+- added columns to `enerbat_fdd_db`.`tbl_web_messages` in database
 ### Changed
 - changed length of decimal part of latitude and longitude to 10 in database
-- updated notification in myems-web
+- updated notification in enerbat-web
 - updated dockerfiles to reduce images size
-- updated command actions in myems-api
+- updated command actions in enerbat-api
 - changed all DECIMAL(18, 3) to DECIMAL(21, 6) in database
 - changed get the latest points value interval from 10 minutes to 30 minutes
 - updated data recalculating scripts in database
@@ -549,120 +549,120 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v4.12.0] - 2024-12-21
 ### Added
 - added all in one docker files
-- added associated equipments percentage data to combined equipment reports in myems-web
-- added myems_energy_prediction_db to database
+- added associated equipments percentage data to combined equipment reports in enerbat-web
+- added enerbat_energy_prediction_db to database
 ### Changed
-- updated myems_energy_baseline_db, myems_energy_plan_db, myems_energy_model_db in database
+- updated enerbat_energy_baseline_db, enerbat_energy_plan_db, enerbat_energy_model_db in database
 - changed marker symbol from circle to auto in Excel exporter
 - changed dLbls showVal to false in Excel exporter
 ### Fixed
-- fixed gulp scss compile error in myems-web
+- fixed gulp scss compile error in enerbat-web
 ### Removed
-- removed myems_billing_baseline_db
+- removed enerbat_billing_baseline_db
 
 ## [v4.11.0] - 2024-11-23
 ### Added
 - added tables for photovoltaic power stations in database
 - added per capita data to dashboard and space reports
-- added bind distribution system to space tab in myems-admin
-- added bind photovoltaic power station to space tab in myems-admin
+- added bind distribution system to space tab in enerbat-admin
+- added bind photovoltaic power station to space tab in enerbat-admin
 - added tables for wind farms and charging stations in database
-- added equipment percentage to associated equipment table of combined equipment energy category report in myems-web
-- added blank page background image for reports in myems-web
-- added procedure to set process id in myems-modbut-tcp
+- added equipment percentage to associated equipment table of combined equipment energy category report in enerbat-web
+- added blank page background image for reports in enerbat-web
+- added procedure to set process id in enerbat-modbut-tcp
 ### Changed
-- updated myems_system_db.tbl_data_sources in database
-- updated to hide connection of data source in myems-admin
-- changed column order of datasource list in myems-admin
+- updated enerbat_system_db.tbl_data_sources in database
+- updated to hide connection of data source in enerbat-admin
+- changed column order of datasource list in enerbat-admin
 ### Fixed
 - fixed warn: fromascasing: 'as' and 'from' keywords' casing do not match in dockerfile
-- fixed issues of clone object new name in myems-api
+- fixed issues of clone object new name in enerbat-api
 - fixed clear-text logging of sensitive information
-- fixed overwritten property in myems-web
-- fixed unused import in myems-api
+- fixed overwritten property in enerbat-web
+- fixed unused import in enerbat-api
 ### Removed
 - removed google maps for picking up longtitude and latitude
 - removed svg_id from energy storage container
 
 ## [v4.10.0] - 2024-10-26
 ### Added
-- added ticket actions to myems-api
+- added ticket actions to enerbat-api
 - added space production report
 - added number of occupants to space
-- added space cascader to energy flow diagram in myems-web
+- added space cascader to energy flow diagram in enerbat-web
 - added tbl_spaces_distribution_systems to system database
 ### Changed
 - changed base docker image from python:silm to python:3.10-slim
 - udpated demo database scripts
 - changed mapbox zoom level to 10 (large roads)
 ### Fixed
-- fixed wrong pop messages in myems-admin
-- fixed issue of clone space in myems-api
+- fixed wrong pop messages in enerbat-admin
+- fixed issue of clone space in enerbat-api
 ### Removed
 - None
 
 ## [v4.9.1] - 2024-10-05
 ### Added
-- added myems_production_db config to example.env in myems-api
+- added enerbat_production_db config to example.env in enerbat-api
 - added offset_constant to point
 ### Changed
 - None
 ### Fixed
-- fixed AttributeError of energy flow diagram in myems-api
-- fixed npm install error by replacing node-sass with sass in myems-web
+- fixed AttributeError of energy flow diagram in enerbat-api
+- fixed npm install error by replacing node-sass with sass in enerbat-web
 ### Removed
 - None
 
 ## [v4.9.0] - 2024-09-28
 ### Added
-- added config entry to indicate if show TCE data on reports in myems-web
+- added config entry to indicate if show TCE data on reports in enerbat-web
 - added diagram to energy flow diagram excel exporter (need to rerun 'sudo pip install -r requirements.txt' to upgrade)
-- added tbl_space_hourly to myems_production_db in database
+- added tbl_space_hourly to enerbat_production_db in database
 - added new menu items
-- added tbl_energy_storage_containers_firecontrols to myems_system_db in database
-- added tbl_energy_storage_containers_hvacs to myems_system_db in database
-- added tbl_spaces_energy_flow_diagrams to myems_system_db in database
-- added enter prodction to myems-api and myems-web
+- added tbl_energy_storage_containers_firecontrols to enerbat_system_db in database
+- added tbl_energy_storage_containers_hvacs to enerbat_system_db in database
+- added tbl_spaces_energy_flow_diagrams to enerbat_system_db in database
+- added enter prodction to enerbat-api and enerbat-web
 ### Changed
 - updated energy storage power station reportings
 - changed meter search box size to small
-- updated tbl_energy_storage_containers_power_conversion_systems of myems_system_db in database
-- updated tbl_energy_storage_containers_batteries of myems_system_db in database
-- updated energy storage container actions in myems-api
-- updated tbl_menus of myems_system_db in database
-- updated routes in myems-web
+- updated tbl_energy_storage_containers_power_conversion_systems of enerbat_system_db in database
+- updated tbl_energy_storage_containers_batteries of enerbat_system_db in database
+- updated energy storage container actions in enerbat-api
+- updated tbl_menus of enerbat_system_db in database
+- updated routes in enerbat-web
 - updated default start datetime utc from '2019-12-31 16:00:00' to '2021-12-31 16:00:00'
 ### Fixed
-- fixed typo in myems-web routes
-- fixed virtual point checkbox issue in myems-admin
-- fixed issue of getting all points of data source in myems-api
-- fixed issue of virtual point in myems-normalization
+- fixed typo in enerbat-web routes
+- fixed virtual point checkbox issue in enerbat-admin
+- fixed issue of getting all points of data source in enerbat-api
+- fixed issue of virtual point in enerbat-normalization
 ### Removed
-- removed tbl_energy_storage_containers_sensors from myems_system_db in database
-- removed sensors form energystoragecontainers in myems-api
-- removed sensors from energystoragecontainers in myems-admin
+- removed tbl_energy_storage_containers_sensors from enerbat_system_db in database
+- removed sensors form energystoragecontainers in enerbat-api
+- removed sensors from energystoragecontainers in enerbat-admin
 
 ## [v4.8.0] - 2024-08-13
 ### Warning
 - **MUST** replace '/code/.env' with '/app/.env' in docker run commands because WORKDIR in Dockerfile was changed from '/code' to '/app'
 ### Added
-- added clone action to energy storage container in myems-api
-- added export action to energy storage container in myems-api
-- added actions for protocol in myems-api
-- added settings for protocol in myems-admin
-- added space associated microgrids actions in myems-api
+- added clone action to energy storage container in enerbat-api
+- added export action to energy storage container in enerbat-api
+- added actions for protocol in enerbat-api
+- added settings for protocol in enerbat-admin
+- added space associated microgrids actions in enerbat-api
 - added microgrid energy report
 - added microgrid renevue report
 - added microgrid carbon report
-- added period type list automaticly adjustment logic in myems-web
-- added config entry to indicate if show TCE data on dashboard in myems-web
+- added period type list automaticly adjustment logic in enerbat-web
+- added config entry to indicate if show TCE data on dashboard in enerbat-web
 ### Changed
-- updated protocols and data sources in database and myems-admin
-- updated tariff price to keep 5 decimal places in database and myems-admin
+- updated protocols and data sources in database and enerbat-admin
+- updated tariff price to keep 5 decimal places in database and enerbat-admin
 ### Fixed
 - aligned timestamps of parameters for microgrid details report
 - aligned timestamps of parameters for energy storage power station details report
-- removed @staticmethod from __init__ methods in myems-api
+- removed @staticmethod from __init__ methods in enerbat-api
 ### Removed
 - None
 
@@ -670,9 +670,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Warning
 - This upgrade will delete svg from some tables, save svg source code to tbl_svgs or text file first
 ### Added
-- added svg actions to myems-api, myems-admin
+- added svg actions to enerbat-api, enerbat-admin
 - added phase_of_lifecycle to microgird
-- added work order (preview) to myems-web
+- added work order (preview) to enerbat-web
 - added new protocol mqtt-xintianli
 - added protocols table to database
 ### Changed
@@ -685,28 +685,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - replaced svg with svg_id in wind farm
 - replaced svg with svg_id in microgrid
 - replaced svg with svg_id in energy storage power station
-- set data result hidden by default for space reports in myems-web
-- set data result hidden by default for equipment reports in myems-web
-- set data result hidden by default for shopfloor reports in myems-web
-- set data result hidden by default for store reports in myems-web
-- set data result hidden by default for tenant reports in myems-web
-- set data result hidden by default for combined equipment reports in myems-web
-- set data result hidden by default for meter reports in myems-web
-- set data result hidden by default for virtual meter reports in myems-web
-- set data result hidden by default for offline meter reports in myems-web
+- set data result hidden by default for space reports in enerbat-web
+- set data result hidden by default for equipment reports in enerbat-web
+- set data result hidden by default for shopfloor reports in enerbat-web
+- set data result hidden by default for store reports in enerbat-web
+- set data result hidden by default for tenant reports in enerbat-web
+- set data result hidden by default for combined equipment reports in enerbat-web
+- set data result hidden by default for meter reports in enerbat-web
+- set data result hidden by default for virtual meter reports in enerbat-web
+- set data result hidden by default for offline meter reports in enerbat-web
 ### Fixed
-- added check relations statements to point on_delete action in myems-api
-- fixed issue of on_delete action in myems-api
+- added check relations statements to point on_delete action in enerbat-api
+- fixed issue of on_delete action in enerbat-api
 ### Removed
 - None
 
 ## [v4.6.0] - 2024-06-09
 ### Added
 - added energy plan files table to database
-- added energy plan files actions to myems-api
-- added energy plan files page to myems-admin
+- added energy plan files actions to enerbat-api
+- added energy plan files page to enerbat-admin
 - added reading data from tbl_energy_value after reading data from tbl_analog_value for virtualpoint procedure
-- added support for ojbect type ENERGY_VALUE to virtualpoint procedure in myems-normalization
+- added support for ojbect type ENERGY_VALUE to virtualpoint procedure in enerbat-normalization
 - added columns to tbl_microgrids_power_conversion_systems in databas
 - added columns to tbl_energy_storage_containers_power_conversion_systems in database
 - added round2() function to avoid exceptions for builtin round()
@@ -715,14 +715,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added energy storage power station reporting for revenue
 - added schedules to energy storage containers and microgrids
 ### Changed
-- updated energy storage container settings in myems-admin
-- updated microgird settings in myems-admin
+- updated energy storage container settings in enerbat-admin
+- updated microgird settings in enerbat-admin
 - simplified datetime format of parameter line chart for micrgorid and energy storage power station
-- updated mqtt client to MQTTv5 in myems-api
+- updated mqtt client to MQTTv5 in enerbat-api
 ### Fixed
 - fixed totalRatedCapacity and totalRatedPower issue in microgrid dashboard and energy storage power station dashboard
-- fixed issue of meter batch report in myems-api
-- fixed issue of react-bootstrap-table-next in myems-web
+- fixed issue of meter batch report in enerbat-api
+- fixed issue of react-bootstrap-table-next in enerbat-web
 ### Removed
 - removed charge/discharge points and commands from power conversion system of microgrid
 - removed charge/discharge points and commands from power conversion system of energy storage container
@@ -730,72 +730,72 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v4.5.0] - 2024-05-21
 ### Added
 - added new protocols dtu-rtu, dtu-tcp, dtu-mqtt and mqtt-zhongxian
-- added latest value to data source points table in myems-admin
+- added latest value to data source points table in enerbat-admin
 - added menus for plan functions in database
-- added energy plan reports (preview) in myems-web
+- added energy plan reports (preview) in enerbat-web
 - added new tables for energy, billing and carbon in database
-- added language zh_TW to myems-web, myems-admin and myems-api
+- added language zh_TW to enerbat-web, enerbat-admin and enerbat-api
 ### Changed
-- updated Distribution System in myems-web
+- updated Distribution System in enerbat-web
 - limit virtual meter normalization procedure to calculate at most one month records
 ### Fixed
-- fixed issues of optional svg textarea for equipment and combined equipment in myems-admin
+- fixed issues of optional svg textarea for equipment and combined equipment in enerbat-admin
 - fixed translation issue for zh_CN in Excel exporter
 ### Removed
 - None
 
 ## [v4.4.0] - 2024-04-17
 ### Added
-- added hyperlink to meter name of Meter Batch report in myems-web
-- added SectionLineChart into myems-web
+- added hyperlink to meter name of Meter Batch report in enerbat-web
+- added SectionLineChart into enerbat-web
 - added start datetime, end datetime and update datetime to fdd webmessage
 - added is_cost_data_displayed to microgrid and energy storage power station
-- added energy storage power station relation to space in myems-api
-- added myems energy plan database
-- added cardsummary to fdd fault in myems-web
-- added bind energy storage power station to space in myems-admin
-- added energy plan reports in myems-api
-- added advanced settings menu to myems-admin
+- added energy storage power station relation to space in enerbat-api
+- added enerbat energy plan database
+- added cardsummary to fdd fault in enerbat-web
+- added bind energy storage power station to space in enerbat-admin
+- added energy plan reports in enerbat-api
+- added advanced settings menu to enerbat-admin
 ### Changed
-- changed map marker in myems-web
-- updated popup style of mapbox in myems-web
+- changed map marker in enerbat-web
+- updated popup style of mapbox in enerbat-web
 - changed baidu map to mapbox for longitude and latitude
 - chenged microgrid list alarm link to fdd fault
-- changed query components size to small in myems-web
+- changed query components size to small in enerbat-web
 ### Fixed
-- added decimal data value range check to myems-modbus-tcp
-- added missing lazy load files for router in myems-admin
+- added decimal data value range check to enerbat-modbus-tcp
+- added missing lazy load files for router in enerbat-admin
 ### Removed
 - None
 
 ## [v4.3.0] - 2024-03-11
 
 ### Added
-- added protocol list to data source model in myems-admin
-- added microgrid dashboard into myems-web
-- added energy storage power station dashboard into myems-web and myems-api
-- added tenant dashboard into myems-web and myems-api
-- added store dashboard into myems-web and myems-api
-- added shopfloor dashboard into myems-web and myems-api
+- added protocol list to data source model in enerbat-admin
+- added microgrid dashboard into enerbat-web
+- added energy storage power station dashboard into enerbat-web and enerbat-api
+- added tenant dashboard into enerbat-web and enerbat-api
+- added store dashboard into enerbat-web and enerbat-api
+- added shopfloor dashboard into enerbat-web and enerbat-api
 - added space and microgrid relation table to database
 - added space and energy storage power station relation table to database
 ### Changed
-- updated space export, import and clone functions in myems-api
-- updated microgrid reporting in myems-api and myems-web
-- updated energy storage power station reporting in myems-api and myems-web
-- updated columns of microgrid related tables in database, myems-admin and myems-api
-- updated columns of energy storage power station related tables in database, myems-admin and myems-api
-- updated column of wind farm related tables in database, myems-admin and myems-api
-- updated column of photovoltaic power station related tables in database, myems-admin and myems-api
-- changed the default menu to vertical in myems-web
+- updated space export, import and clone functions in enerbat-api
+- updated microgrid reporting in enerbat-api and enerbat-web
+- updated energy storage power station reporting in enerbat-api and enerbat-web
+- updated columns of microgrid related tables in database, enerbat-admin and enerbat-api
+- updated columns of energy storage power station related tables in database, enerbat-admin and enerbat-api
+- updated column of wind farm related tables in database, enerbat-admin and enerbat-api
+- updated column of photovoltaic power station related tables in database, enerbat-admin and enerbat-api
+- changed the default menu to vertical in enerbat-web
 ### Fixed
-- fixed chart issues in myems-web
-- fixed warnings in myems-web
+- fixed chart issues in enerbat-web
+- fixed warnings in enerbat-web
 - fixed index issues in database
-- fixed Duplicate property of translations in myems-admin
-- fixed Superfluous trailing arguments in myems-web
-- fixed Duplicate property of i18n in myems-web
-- fixed Duplicate HTML element attributes in myems-admin
+- fixed Duplicate property of translations in enerbat-admin
+- fixed Superfluous trailing arguments in enerbat-web
+- fixed Duplicate property of i18n in enerbat-web
+- fixed Duplicate HTML element attributes in enerbat-admin
 ### Removed
 - None
 
@@ -804,20 +804,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - None
 ### Changed
-- updated distribution system export, import and clone functions in myems-api
-- updated meter export, import and clone functions in myems-api
-- updated equipment table in myems-admin
-- updated combined equipment table in myems-admin
-- updated equipment export, import and clone functions in myems-api
-- updated combined equipment export, import and clone functions in myems-api
-- updated shopfloor export, import and clone functions in myems-api
-- updated store export, import and clone functions in myems-api
-- updated tenant export, import and clone functions in myems-api
-- updated run action of rule in myems-api
-- updated run action of advanced report in myems-api
+- updated distribution system export, import and clone functions in enerbat-api
+- updated meter export, import and clone functions in enerbat-api
+- updated equipment table in enerbat-admin
+- updated combined equipment table in enerbat-admin
+- updated equipment export, import and clone functions in enerbat-api
+- updated combined equipment export, import and clone functions in enerbat-api
+- updated shopfloor export, import and clone functions in enerbat-api
+- updated store export, import and clone functions in enerbat-api
+- updated tenant export, import and clone functions in enerbat-api
+- updated run action of rule in enerbat-api
+- updated run action of advanced report in enerbat-api
 ### Fixed
-- fixed warnings in myems-web
-- fixed issue of CardSummary in myems-web
+- fixed warnings in enerbat-web
+- fixed issue of CardSummary in enerbat-web
 - fixed issue of demo data in database
 ### Removed
 - None
@@ -825,29 +825,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v4.1.0] - 2024-02-08
 
 ### Added
-- added arrow up or arrow down icon to cardsummary in myems-web
-- added sensor export, import and clone functions to myems-api, myems-admin
-- added gateway export, import and clone functions to myems-api, myems-admin
-- added equipment export, import and clone functions to myems-api, myems-admin
-- added combined equipment export, import and clone functions to myems-api, myems-admin
-- added shopfloor export, import and clone functions to myems-api, myems-admin
-- added store export, import and clone functions to myems-api, myems-admin
-- added tenant export, import and clone functions to myems-api, myems-admin
-- added offline meter export, import and clone functions to myems-api, myems-admin
-- added virtual meter export, import and clone functions to myems-api, myems-admin
-- added space export, import and clone functions to myems-api, myems-admin
-- added command export, import and clone functions to myems-api, myems-admin
-- added energy flow diagram export, import and clone functions to myems-api, myems-admin
-- added tariff export, import and clone functions to myems-api, myems-admin
-- added working calendar export, import and clone functions to myems-api, myems-admin
-- added virtual power plant export, import and clone functions to myems-api, myems-admin
-- added wind farm export, import and clone functions to myems-api, myems-admin
-- added rule export, import and clone functions to myems-api, myems-admin
-- added photovoltaic power station export, import and clone functions to myems-api, myems-admin
-- added advanced report config export, import and clone functions to myems-api, myems-admin
-- added microgrid export, import and clone functions to myems-api, myems-admin
-- added distribution system export, import and clone functions to myems-api, myems-admin
-- added point export, import and clone functions to myems-api, myems-admin
+- added arrow up or arrow down icon to cardsummary in enerbat-web
+- added sensor export, import and clone functions to enerbat-api, enerbat-admin
+- added gateway export, import and clone functions to enerbat-api, enerbat-admin
+- added equipment export, import and clone functions to enerbat-api, enerbat-admin
+- added combined equipment export, import and clone functions to enerbat-api, enerbat-admin
+- added shopfloor export, import and clone functions to enerbat-api, enerbat-admin
+- added store export, import and clone functions to enerbat-api, enerbat-admin
+- added tenant export, import and clone functions to enerbat-api, enerbat-admin
+- added offline meter export, import and clone functions to enerbat-api, enerbat-admin
+- added virtual meter export, import and clone functions to enerbat-api, enerbat-admin
+- added space export, import and clone functions to enerbat-api, enerbat-admin
+- added command export, import and clone functions to enerbat-api, enerbat-admin
+- added energy flow diagram export, import and clone functions to enerbat-api, enerbat-admin
+- added tariff export, import and clone functions to enerbat-api, enerbat-admin
+- added working calendar export, import and clone functions to enerbat-api, enerbat-admin
+- added virtual power plant export, import and clone functions to enerbat-api, enerbat-admin
+- added wind farm export, import and clone functions to enerbat-api, enerbat-admin
+- added rule export, import and clone functions to enerbat-api, enerbat-admin
+- added photovoltaic power station export, import and clone functions to enerbat-api, enerbat-admin
+- added advanced report config export, import and clone functions to enerbat-api, enerbat-admin
+- added microgrid export, import and clone functions to enerbat-api, enerbat-admin
+- added distribution system export, import and clone functions to enerbat-api, enerbat-admin
+- added point export, import and clone functions to enerbat-api, enerbat-admin
 ### Changed
 - None
 ### Fixed
@@ -859,38 +859,38 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 - added tables for energy storage power station in database
-- added energy storage power station actions to myems-api
-- added energy storage power station UI to myems-admin
-- added realtime data to DistribuitionSystem in myems-web
-- added get coordinate links to myems-admin
-- added interval_in_seconds to modbus-tcp data source definition in database and myems-modbus-tcp
-- added energy storage container to database, myems-api and myems-admin
-- added baidu map link and google maps link to get coordinate in myems-admin
-- added cookieExpireTime to config.js in myems-web
-- added background image to login page in myems-web
-- added energy storage power station reports to myems-api and myems-web
-- added data source export, import and clone functions to myems-api and myems-admin
-- added energy storage power station export, import and clone actions to myems-api and myems-admin
-- added copy api key token function to myems-admin
-- added meter export, import and clone functions to myems-api and myems-admin
+- added energy storage power station actions to enerbat-api
+- added energy storage power station UI to enerbat-admin
+- added realtime data to DistribuitionSystem in enerbat-web
+- added get coordinate links to enerbat-admin
+- added interval_in_seconds to modbus-tcp data source definition in database and enerbat-modbus-tcp
+- added energy storage container to database, enerbat-api and enerbat-admin
+- added baidu map link and google maps link to get coordinate in enerbat-admin
+- added cookieExpireTime to config.js in enerbat-web
+- added background image to login page in enerbat-web
+- added energy storage power station reports to enerbat-api and enerbat-web
+- added data source export, import and clone functions to enerbat-api and enerbat-admin
+- added energy storage power station export, import and clone actions to enerbat-api and enerbat-admin
+- added copy api key token function to enerbat-admin
+- added meter export, import and clone functions to enerbat-api and enerbat-admin
 -
 ### Changed
-- changed microgrid monitoring in myems-web
-- changed Related Parameters to Operating Characteristic Curve in myems-web
-- changed MultiTrendChart in myems-web
+- changed microgrid monitoring in enerbat-web
+- changed Related Parameters to Operating Characteristic Curve in enerbat-web
+- changed MultiTrendChart in enerbat-web
 - updated demo tariffs in database
-- updated view models in myems-admin
-- resized svg editor in myems-admin
-- updated translation of 'Description' in myems-admin
-- moved mapbox access token from CustomizeMapBox.js to config.js in myems-web, you can get access token at https://mapbox.com, if you wnat to turn off online map feature, please set showOnlineMap to false
-- updated WorkingDaysConsumptionTable in myems-web
-- updated FalconCardHeader in myems-web
+- updated view models in enerbat-admin
+- resized svg editor in enerbat-admin
+- updated translation of 'Description' in enerbat-admin
+- moved mapbox access token from CustomizeMapBox.js to config.js in enerbat-web, you can get access token at https://mapbox.com, if you wnat to turn off online map feature, please set showOnlineMap to false
+- updated WorkingDaysConsumptionTable in enerbat-web
+- updated FalconCardHeader in enerbat-web
 -
 ### Fixed
-- fixed non-standard actions of microgrid in myems-api and myems-admin
-- fixed empty qrcode issue when creating objects in myems-admin
-- upgraded Font Awesome to v4.7.0 in myems-admin
-- fixed api key save button issue in myems-admin
+- fixed non-standard actions of microgrid in enerbat-api and enerbat-admin
+- fixed empty qrcode issue when creating objects in enerbat-admin
+- upgraded Font Awesome to v4.7.0 in enerbat-admin
+- fixed api key save button issue in enerbat-admin
 ### Removed
 -
 
@@ -898,77 +898,77 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 - added charge time and discharge time settings to power conversion system of microgrid
-- added nominal voltage to microgrid battery in database, myems-api and myems-admin
-- added new supported protocol to datasource in myems-api
-- added microgrid reporting to myems-web
+- added nominal voltage to microgrid battery in database, enerbat-api and enerbat-admin
+- added new supported protocol to datasource in enerbat-api
+- added microgrid reporting to enerbat-web
 ### Changed
 -
 ### Fixed
-- fixed issues in on_delete actions of equipment, shopfloor, store and tenant in myems-api
-- fixed issues of space and command views in myems-admin
-- fixed issue of delete on point in myems-api
+- fixed issues in on_delete actions of equipment, shopfloor, store and tenant in enerbat-api
+- fixed issues of space and command views in enerbat-admin
+- fixed issue of delete on point in enerbat-api
 - fixed issue of menus in database
-- fixed issue of aggregate_hourly_data_by_period in myems-api
-- fixed issues of on_delete actions in myems-api
-- fixed unused import issues in myems-api
+- fixed issue of aggregate_hourly_data_by_period in enerbat-api
+- fixed issues of on_delete actions in enerbat-api
+- fixed unused import issues in enerbat-api
 -
 ### Removed
-- Removed google map api from myems-admin
+- Removed google map api from enerbat-admin
 
 ## [v3.11.0] - 2023-11-03
 ### Added
-- added sensors realtime data to dashboard in myems-web
-- added energy storage power station to database, myems-api, and myems-admin
-- added photovoltaic power station to database, myems-api, and myems-admin
-- added wind farm to database, myems-api, and myems-admin
+- added sensors realtime data to dashboard in enerbat-web
+- added energy storage power station to database, enerbat-api, and enerbat-admin
+- added photovoltaic power station to database, enerbat-api, and enerbat-admin
+- added wind farm to database, enerbat-api, and enerbat-admin
 - added serial number to microgrid
 - added run state point to microgrid power conversion systems
 - added battery state point to microgrid batteries
 
 ### Changed
-- changed dropdown menu columns from 3 to 2 in myems-web
+- changed dropdown menu columns from 3 to 2 in enerbat-web
 
 ### Fixed
-- refactored energy category reports to remove duplicated code in myems-web
-- fixed issue on delete action of tariff in myems-api
-- fixed issue on delete action of distribution system in myems-api, myems-admin
-- fixed issue on delete action of virtual power plant in myems-api
+- refactored energy category reports to remove duplicated code in enerbat-web
+- fixed issue on delete action of tariff in enerbat-api
+- fixed issue on delete action of distribution system in enerbat-api, enerbat-admin
+- fixed issue on delete action of virtual power plant in enerbat-api
 
 ### Removed
 - removed tbl_microgrid_architecture_types from database
 - removed tbl_microgrid_owner_types from database
-- removed microgrid architecture types from myems-api and myems-admin
-- removed microgrid owner types from myems-api and myems-admin
+- removed microgrid architecture types from enerbat-api and enerbat-admin
+- removed microgrid owner types from enerbat-api and enerbat-admin
 - removed wind turbine from microgrid
-- removed svg column from list of microgrid in myems-admin
-- removed svg column from list of virtual power plant farm in myems-admin
-- removed svg column from list of energy storage power station in myems-admin
-- removed svg column from list of photovoltaic power station in myems-admin
-- removed svg column from list of wind farm in myems-admin
+- removed svg column from list of microgrid in enerbat-admin
+- removed svg column from list of virtual power plant farm in enerbat-admin
+- removed svg column from list of energy storage power station in enerbat-admin
+- removed svg column from list of photovoltaic power station in enerbat-admin
+- removed svg column from list of wind farm in enerbat-admin
 
 ## [v3.10.0] - 2023-10-08
 ### Added
-- added Vietnamese language to myems-web
-- added sort function to tables in myems-admin
-- added Thai language to myems-web
-- added Indonesian language to myems-admin
-- added Turkish language to myems-web
-- added Malay language to myems-web
-- added Indonesian language to myems-web
-- added description property to gateway in database, myems-api and myems-admin
+- added Vietnamese language to enerbat-web
+- added sort function to tables in enerbat-admin
+- added Thai language to enerbat-web
+- added Indonesian language to enerbat-admin
+- added Turkish language to enerbat-web
+- added Malay language to enerbat-web
+- added Indonesian language to enerbat-web
+- added description property to gateway in database, enerbat-api and enerbat-admin
 - added equipment energy category report hyperlink with equipment uuid to equipment tracking
-- added description property to data source in database, myems-api and myems-admin
+- added description property to data source in database, enerbat-api and enerbat-admin
 - added tenant energy category report hyperlink with uuid to tenant batch report
 - added store energy category report hyperlink with uuid to store batch report
 - added shopfloor energy category report hyperlink with uuid to shopfloor batch report
 - added space energy category report hyperlink with uuid to space batch report
 - added combined_equipment energy category report hyperlink with equipment uuid to combined-equipment batch report
 - added equipment energy category report hyperlink with equipment uuid to equipment batch report
-- added latitude and longitude to Space in database, myems-api and myems-admin
-- added run immediately action to Advacned Report in database, myems-api and myems-admin
-- added mapbox to display spaces on map in myems-web
-- added run immediately action to FDD Rule in database, myems-api and myems-admin
-- added microgrid list page to myems-web
+- added latitude and longitude to Space in database, enerbat-api and enerbat-admin
+- added run immediately action to Advacned Report in database, enerbat-api and enerbat-admin
+- added mapbox to display spaces on map in enerbat-web
+- added run immediately action to FDD Rule in database, enerbat-api and enerbat-admin
+- added microgrid list page to enerbat-web
 ### Changed
 - changed user avator from emoji to image
 ### Fixed
@@ -978,210 +978,210 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v3.9.0] - 2023-09-06
 ### Added
-- added SESSION_EXPIRES_IN_SECONDS config to myems-api
-- added virtual power plant to database, myems-api and myems-admin
-- added Russian language to myems-admin
-- added higher limit and lower limit of point to myems-api and myems-admin
+- added SESSION_EXPIRES_IN_SECONDS config to enerbat-api
+- added virtual power plant to database, enerbat-api and enerbat-admin
+- added Russian language to enerbat-admin
+- added higher limit and lower limit of point to enerbat-api and enerbat-admin
 - added balancing price point to virtual power plant
-- added French language to myems-web
-- added Vietnamese language to myems-admin
-- added Thai language to myems-admin
-- added microgrid power conversion system to myems-api and myems-admin
-- added api key control to get actions of core objects in myems-api
-- added Spanish language to myems-web
-- added Russian language to myems-web
-- added Advanced Report Configs to myems-api
-- added Turkish language to myems-admin
-- added tbl_microgrids_users to myems_system_db in database
-- added Arabic language to myems-web
-- added bind user to microgrid function to myems-admin
-- added Malay language to myems-admin
-- added Advanced Report Setting to myems-admin
+- added French language to enerbat-web
+- added Vietnamese language to enerbat-admin
+- added Thai language to enerbat-admin
+- added microgrid power conversion system to enerbat-api and enerbat-admin
+- added api key control to get actions of core objects in enerbat-api
+- added Spanish language to enerbat-web
+- added Russian language to enerbat-web
+- added Advanced Report Configs to enerbat-api
+- added Turkish language to enerbat-admin
+- added tbl_microgrids_users to enerbat_system_db in database
+- added Arabic language to enerbat-web
+- added bind user to microgrid function to enerbat-admin
+- added Malay language to enerbat-admin
+- added Advanced Report Setting to enerbat-admin
 ### Changed
-- changed fdd rule template in myems-admin
+- changed fdd rule template in enerbat-admin
 - renamed tbl_microgrids_converters to tbl_microgrids_power_conversion_systems in database
 -
 ### Fixed
-- fixed sensor bound points issue in myems-admin
-- fixed fdd category and fdd code relations in myems-admin
-- fixed tariff editor issue in myems-admin
-- fixed date range picker issue in myems-web
+- fixed sensor bound points issue in enerbat-admin
+- fixed fdd category and fdd code relations in enerbat-admin
+- fixed tariff editor issue in enerbat-admin
+- fixed date range picker issue in enerbat-web
 -
 ### Removed
-- removed category and report_code from tbl_reports in myems_reporting_db
+- removed category and report_code from tbl_reports in enerbat_reporting_db
 
 ## [v3.8.0] - 2023-08-02
 ### Added
-- added is_recursive boolean option to meter tracking report in myems-api (need to upgrade the myesm-api/.env file)
-- added is_recursive boolean option to meter batch report in myems-api (need to upgrade the myesm-api/.env file)
-- added soc point to microgrids batteries in database, myems-api and myems-admin
-- added svg to combined equipment in database, myems-api and myems-admin
-- added online map to dashboard in myems-web
-- added enterprise edition mark to menus in myems-admin
-- added svg to equipment in database, myems-api and myems-admin
-- added bath delete and update actions for web messages in myems-api and myems-web
+- added is_recursive boolean option to meter tracking report in enerbat-api (need to upgrade the myesm-api/.env file)
+- added is_recursive boolean option to meter batch report in enerbat-api (need to upgrade the myesm-api/.env file)
+- added soc point to microgrids batteries in database, enerbat-api and enerbat-admin
+- added svg to combined equipment in database, enerbat-api and enerbat-admin
+- added online map to dashboard in enerbat-web
+- added enterprise edition mark to menus in enerbat-admin
+- added svg to equipment in database, enerbat-api and enerbat-admin
+- added bath delete and update actions for web messages in enerbat-api and enerbat-web
 - added camera url to equipments and combined equipments in database
-- added French language to myems-admin
-- added Spanish language to myems-admin
-- added offline meter data input to myems-web and myems-api
+- added French language to enerbat-admin
+- added Spanish language to enerbat-admin
+- added offline meter data input to enerbat-web and enerbat-api
 
 ### Changed
 - updated database demo scripts
 - updated notification list style
 
 ### Fixed
-- updated translations of API responses in myems-admin and myems-web
-- fixed issue in querying meter start value of metertracking report in myems-api
+- updated translations of API responses in enerbat-admin and enerbat-web
+- fixed issue in querying meter start value of metertracking report in enerbat-api
 - fixed display format issue for decimal value between 0.0 and 1.0 in meter realtime report
 - fixed unable to redirect to login page issue when user session expires
-- fixed issue of working calendar setting in myems-admin
-- fixed issue of privilege setting in myems-admin
+- fixed issue of working calendar setting in enerbat-admin
+- fixed issue of privilege setting in enerbat-admin
 
 ### Removed
-- removed unnecessary error message at the first login in myems-web
+- removed unnecessary error message at the first login in enerbat-web
 - removed tenant equipments from monitoring
 - removed shopfloor equipments from monitoring
 - removed store equipments from monitoring
 
 ## [v3.7.0] - 2023-07-08
 ### Added
-- added access control to tenant in myems-api, myems-admin and myems-web
-- added point real time report to myems-api
-- added access control to equipment in myems-api, myems-admin and myems-web
-- added access control to combined equipment in myems-api, myems-admin and myems-web
-- added access control to meter, offline meter and virtual meter in myems-api, myems-admin and myems-web
-- added access control to space in myems-api, myems-admin and myems-web
-- added access control to distribution system in myems-api, myems-admin and myems-web
-- added access control to microgrid in myems-api, myems-admin and myems-web
-- added access control to all core objects in myems-api, myems-admin and myems-web
-- added api key access control to all reports in myems-api
+- added access control to tenant in enerbat-api, enerbat-admin and enerbat-web
+- added point real time report to enerbat-api
+- added access control to equipment in enerbat-api, enerbat-admin and enerbat-web
+- added access control to combined equipment in enerbat-api, enerbat-admin and enerbat-web
+- added access control to meter, offline meter and virtual meter in enerbat-api, enerbat-admin and enerbat-web
+- added access control to space in enerbat-api, enerbat-admin and enerbat-web
+- added access control to distribution system in enerbat-api, enerbat-admin and enerbat-web
+- added access control to microgrid in enerbat-api, enerbat-admin and enerbat-web
+- added access control to all core objects in enerbat-api, enerbat-admin and enerbat-web
+- added api key access control to all reports in enerbat-api
 
 ### Changed
 -
 ### Fixed
-- fixed datetime picker issue in myems-web
-- fixed ECharts DEPRECATE warning in myems-web
+- fixed datetime picker issue in enerbat-web
+- fixed ECharts DEPRECATE warning in enerbat-web
 
 ### Removed
-- removed unused getXXX services from myems-admin
+- removed unused getXXX services from enerbat-admin
 
 
 ## [v3.6.0] - 2023-06-22
 ### Added
-- added microgrid battery actions to myems-api and myems-admin
-- added microgrid evcharger actions to myems-api and myems-admin
-- added microgrid generator actions to myems-api and myems-admin
-- added microgrid grid actions to myems-api and myems-admin
-- added microgrid heatpump actions to myems-api and myems-admin
-- added microgrid load actions to myems-api and myems-admin
-- added microgrid photovoltaic actions to myems-api and myems-admin
+- added microgrid battery actions to enerbat-api and enerbat-admin
+- added microgrid evcharger actions to enerbat-api and enerbat-admin
+- added microgrid generator actions to enerbat-api and enerbat-admin
+- added microgrid grid actions to enerbat-api and enerbat-admin
+- added microgrid heatpump actions to enerbat-api and enerbat-admin
+- added microgrid load actions to enerbat-api and enerbat-admin
+- added microgrid photovoltaic actions to enerbat-api and enerbat-admin
 - added microgrid windturbine to system database
-- added microgrid windturbine actions to myems-api and myems-admin
-- added get all associated objects of microgrid to myems-api
+- added microgrid windturbine actions to enerbat-api and enerbat-admin
+- added get all associated objects of microgrid to enerbat-api
 - added new access_control procedure to mymes-api
 - added svg, inverters and converters to microgrid in system database
-- added svg to microgrid in myems-api and myems-admin
-- added API Key to database, myems-api and myems-admin
-- added access control to shopfloor in myems-api, myems-admin and myems-web
-- added access control to store in myems-api, myems-admin and myems-web
+- added svg to microgrid in enerbat-api and enerbat-admin
+- added API Key to database, enerbat-api and enerbat-admin
+- added access control to shopfloor in enerbat-api, enerbat-admin and enerbat-web
+- added access control to store in enerbat-api, enerbat-admin and enerbat-web
 
 ### Changed
-- renamed access_control to admin_control in myems-api
+- renamed access_control to admin_control in enerbat-api
 - changed forgot password and user register processes
 
 ### Fixed
-- fixed dialog doesn't close after myems-admin logging out automatically
-- fixed warning of dependencies in myems-web
+- fixed dialog doesn't close after enerbat-admin logging out automatically
+- fixed warning of dependencies in enerbat-web
 
 ### Removed
 - None
 
 ## [v3.5.0] - 2023-06-09
 ### Added
-- added bind command to meter feature to myems-api and myems-admin
-- added bind command to space feature to myems-api and myems-admin
-- added forgot password function to myems-api and myems-web
-- added user register function to myems-api and myems-web
-- added postal code to microgrid in database, myems-api, myems-admin
-- added bind command to equipment feature to myems-api and myems-admin
-- added bind command to combined equipment feature to myems-api and myems-admin
-- added new user approval function to myems-admin
-- added bind command to tenant feature to myems-api and myems-admin
-- added bind command to store feature to myems-api and myems-admin
-- added bind command to shopfloor feature to myems-api and myems-admin
+- added bind command to meter feature to enerbat-api and enerbat-admin
+- added bind command to space feature to enerbat-api and enerbat-admin
+- added forgot password function to enerbat-api and enerbat-web
+- added user register function to enerbat-api and enerbat-web
+- added postal code to microgrid in database, enerbat-api, enerbat-admin
+- added bind command to equipment feature to enerbat-api and enerbat-admin
+- added bind command to combined equipment feature to enerbat-api and enerbat-admin
+- added new user approval function to enerbat-admin
+- added bind command to tenant feature to enerbat-api and enerbat-admin
+- added bind command to store feature to enerbat-api and enerbat-admin
+- added bind command to shopfloor feature to enerbat-api and enerbat-admin
 - added new tables for microgrids to system database
 -
 ### Changed
 - updated the default tariff type and default tariff valid through date time in tariff editor
 
 ### Fixed
-- fixed save button issue of tariff dialog in myems-admin
-- fixed save button issue of email server dialog in myems-admin
+- fixed save button issue of tariff dialog in enerbat-admin
+- fixed save button issue of email server dialog in enerbat-admin
 -
 ### Removed
-- removed tariff type 'block'(or tiered) from database, myems-api and myems-admin
+- removed tariff type 'block'(or tiered) from database, enerbat-api and enerbat-admin
 -
 ## [v3.4.0] - 2023-06-01
 ### Added
-- added tbl_commands to myems_system_db database
-- added tbl_combianed_equipments_commands to myems_system_db database
-- added tbl_equipments_commands to myems_system_db database
-- added tbl_meters_commands to myems_system_db database
-- added tbl_microgrids_commands to myems_system_db database
-- added tbl_spaces_commands to myems_system_db database
-- added tbl_stores_commands to myems_system_db database
-- added tbl_shopfloors_commands to myems_system_db database
-- added tbl_tenants_commands to myems_system_db database
-- added command actions to myems-api
-- added command feature to myems-admin
-- added tbl_new_users to myems_user_db database
-- added tbl_email_messages and tbl_email_message_sessions to myems_user_db database
+- added tbl_commands to enerbat_system_db database
+- added tbl_combianed_equipments_commands to enerbat_system_db database
+- added tbl_equipments_commands to enerbat_system_db database
+- added tbl_meters_commands to enerbat_system_db database
+- added tbl_microgrids_commands to enerbat_system_db database
+- added tbl_spaces_commands to enerbat_system_db database
+- added tbl_stores_commands to enerbat_system_db database
+- added tbl_shopfloors_commands to enerbat_system_db database
+- added tbl_tenants_commands to enerbat_system_db database
+- added command actions to enerbat-api
+- added command feature to enerbat-admin
+- added tbl_new_users to enerbat_user_db database
+- added tbl_email_messages and tbl_email_message_sessions to enerbat_user_db database
 
 ### Changed
-- updated translations of myems-admin
-- changed theme of BarChart and MultiTrendChart in myems-web
-- swapped columns color in dashboard of myems-web
-- compacted distribution system in myems-web
-- updated supported protocols of datasource in myems-api
+- updated translations of enerbat-admin
+- changed theme of BarChart and MultiTrendChart in enerbat-web
+- swapped columns color in dashboard of enerbat-web
+- compacted distribution system in enerbat-web
+- updated supported protocols of datasource in enerbat-api
 
 ### Fixed
-- fixed HTTPError Deprecated Warning in myems-api
-- fixed edit user issue in myems-api
-- fixed save button issue of energy item dialog in myems-admin
-- fixed validator issue of equipment parameter form in myems-admin
-- fixed validator issue of combined equipment parameter form in myems-admin
+- fixed HTTPError Deprecated Warning in enerbat-api
+- fixed edit user issue in enerbat-api
+- fixed save button issue of energy item dialog in enerbat-admin
+- fixed validator issue of equipment parameter form in enerbat-admin
+- fixed validator issue of combined equipment parameter form in enerbat-admin
 - fixed webpack-dev-server version 4.12.0 caused compile errors
-- fixed save button issue of non-working-day dialog in myems-admin
+- fixed save button issue of non-working-day dialog in enerbat-admin
 
 ### Removed
 - None
 
 ## [v3.3.0] - 2023-05-21
 ### Added
-- Added captcha to myems-web login form
-- Added captcha to myems-admin login form
+- Added captcha to enerbat-web login form
+- Added captcha to enerbat-admin login form
 - Added higher limit and lower limit to tbl_points in database
 - Added is_in_alarm to tbl_points in database
-- Added new rule fdd codes to myems-admin
-- Added data zoom to y axis of MultipleLineChart in myems-web
+- Added new rule fdd codes to enerbat-admin
+- Added data zoom to y axis of MultipleLineChart in enerbat-web
 
 ### Changed
-- Updated English Translation in myems-admin
-- Updated Meter, Point, User and Space editor dialogs in myems-admin
-- Replaced telnetlib with telentlib3 in myems-modbus-tcp
+- Updated English Translation in enerbat-admin
+- Updated Meter, Point, User and Space editor dialogs in enerbat-admin
+- Replaced telnetlib with telentlib3 in enerbat-modbus-tcp
 - Added maximum limit of user password length
 
 ### Fixed
 - Fixed typo in database
-- Fixed typo of error description in myems-api
-- Fixed errors when marking as read, acknowledging and deleteing alarms from myems-web
+- Fixed typo of error description in enerbat-api
+- Fixed errors when marking as read, acknowledging and deleteing alarms from enerbat-web
 
 ### Removed
-- Removed legacy docs for readthedocs, and replaced with https://myems.io
+- Removed legacy docs for readthedocs, and replaced with https://enerbat.io
 
 ## [v3.2.0] - 2023-03-31
 ### Added
-- added automatic logout action when myems-admin is idle for more than 5 minutes
+- added automatic logout action when enerbat-admin is idle for more than 5 minutes
 - Add Environment Monitor to Space Data
 
 ### Changed
@@ -1191,14 +1191,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - None
 
 ### Removed
-- Removed table `tbl_shopfloor_working_days` from `myems_production_db`
+- Removed table `tbl_shopfloor_working_days` from `enerbat_production_db`
 
 ## [v3.1.0] - 2023-03-03
 ### Added
 - added working-days/non-working-days data into tenant energy categroy report
 - added working-days/non-working-days data into store energy categroy report
 - added working-days/non-working-days data into shopfloor energy categroy report
-- added automatic logout action when myems-admin is idle for more than 5 minutes
+- added automatic logout action when enerbat-admin is idle for more than 5 minutes
 
 ### Changed
 - None
@@ -1211,30 +1211,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -
 ## [v3.0.0] - 2023-02-25
 ### Added
-- added tbl_spaces_non_working_days to myems_system_db database
-- added tbl_working_calendars_non_working_days to myems_system_db database
-- added tbl_shopfloors_working_calendars to myems_system_db database
-- added tbl_spaces_working_calendars to myems_system_db database
-- added tbl_stores_working_calendars to myems_system_db database
-- added tbl_tenants_working_calendars to myems_system_db database
-- added calendars and non-working-days settings to myems-admin
+- added tbl_spaces_non_working_days to enerbat_system_db database
+- added tbl_working_calendars_non_working_days to enerbat_system_db database
+- added tbl_shopfloors_working_calendars to enerbat_system_db database
+- added tbl_spaces_working_calendars to enerbat_system_db database
+- added tbl_stores_working_calendars to enerbat_system_db database
+- added tbl_tenants_working_calendars to enerbat_system_db database
+- added calendars and non-working-days settings to enerbat-admin
 - added working-days/non-working-days data into space energy categroy report
 
 ### Changed
-- upgraded bootstrap to v3.4.1 in myems-admin
+- upgraded bootstrap to v3.4.1 in enerbat-admin
 
 ### Fixed
-- fixed make the implicitly inserted semicolon explicit in myems-web
-- fixed use of AngularJS markup in URL-valued attribute in myems-admin
-- fixed variable defined multiple times in myems-api
-- fixed unused local variable in myems-api
-- fixed semicolon insertion in myems-web
-- fixed unused variable, import, function or class in myems-web
-- fixed unused variable, import, function or class in myems-admin
-- fixed semicolon insertion in myems-admin
+- fixed make the implicitly inserted semicolon explicit in enerbat-web
+- fixed use of AngularJS markup in URL-valued attribute in enerbat-admin
+- fixed variable defined multiple times in enerbat-api
+- fixed unused local variable in enerbat-api
+- fixed semicolon insertion in enerbat-web
+- fixed unused variable, import, function or class in enerbat-web
+- fixed unused variable, import, function or class in enerbat-admin
+- fixed semicolon insertion in enerbat-admin
 
 ### Removed
-- removed access control from GET action of offlinemeterfile in myems-api
+- removed access control from GET action of offlinemeterfile in enerbat-api
 
 ## [v2.11.0] - 2023-01-09
 ### Added
@@ -1242,11 +1242,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added read only property to administrator
 -
 ### Changed
-- updated translations of API errors in myems-web
-- updated myems-web to redirect URL to login page after 10 minutes of user idling
+- updated translations of API errors in enerbat-web
+- updated enerbat-web to redirect URL to login page after 10 minutes of user idling
 -
 ### Fixed
-- fixed pagination caused issue in DetailedDataTable of myems-web
+- fixed pagination caused issue in DetailedDataTable of enerbat-web
 - fixed issue of increment_rate_saving in combined equipment saving report
 -
 ### Removed
@@ -1258,7 +1258,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added base period data to Tenant reports
 - added child spaces percentage data to excel of spaceenergycategory report
 - added base period data to Store reports
-- added child spaces percentages to spaceenergycategory in myems-web
+- added child spaces percentages to spaceenergycategory in enerbat-web
 - added base period data to Shopfloor reports
 -
 ### Changed
@@ -1284,8 +1284,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -
 ### Changed
 - updated format statements by period types in execel exporters
-- Replaced LineChart with MultipleLineChart for related parameters of space reports in myems-web
-- Replaced LineChart with MultipleLineChart for related parameters of combined equipment reports in myems-web
+- Replaced LineChart with MultipleLineChart for related parameters of space reports in enerbat-web
+- Replaced LineChart with MultipleLineChart for related parameters of combined equipment reports in enerbat-web
 -
 ### Fixed
 - fixed user calendar cannot fully display issue
@@ -1297,7 +1297,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v2.8.0] - 2022-12-01
 ### Added
-- added DateRangePickerWrapper to myems-web
+- added DateRangePickerWrapper to enerbat-web
 - added base period data to Space Energy Category report
 - added base period data to Space Energy Item report
 - added base period data to Space Carbon report
@@ -1311,22 +1311,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -
 ### Changed
 - Changed basePeriodDateRangePickerDisabled from readonly to disabled
-- Decreased web message drop down list length in myems-admin
+- Decreased web message drop down list length in enerbat-admin
 - Replaced LGTM with CodeQL for code scanning in README
-- Replaced LineChart with MultipleLineChart for related parameters of meter reports in myems-web
-- Replaced LineChart with MultipleLineChart for trend data of meter trend report in myems-web
-- Replaced LineChart with MultipleLineChart for related parameters of equipment reports in myems-web
-- Replaced LineChart with MultipleLineChart for related parameters of store reports in myems-web
-- Replaced LineChart with MultipleLineChart for related parameters of shopfloor reports in myems-web
-- Replaced LineChart with MultipleLineChart for related parameters of tenant reports in myems-web
-- Upgraded angular.js to v1.8.3 in myems-admin
+- Replaced LineChart with MultipleLineChart for related parameters of meter reports in enerbat-web
+- Replaced LineChart with MultipleLineChart for trend data of meter trend report in enerbat-web
+- Replaced LineChart with MultipleLineChart for related parameters of equipment reports in enerbat-web
+- Replaced LineChart with MultipleLineChart for related parameters of store reports in enerbat-web
+- Replaced LineChart with MultipleLineChart for related parameters of shopfloor reports in enerbat-web
+- Replaced LineChart with MultipleLineChart for related parameters of tenant reports in enerbat-web
+- Upgraded angular.js to v1.8.3 in enerbat-admin
 -
 ### Fixed
 - fixed File is not always closed
 - fixed Explicit returns mixed with implicit (fall through) returns
-- fixed Empty except in myems-api
+- fixed Empty except in enerbat-api
 - fixed Variable defined multiple times
-- fixed Unused local variable in myems-api
+- fixed Unused local variable in enerbat-api
 -
 ### Removed
 -
@@ -1336,20 +1336,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added energy categories filter to meter tracking report
 - added meter energy report hyperlink with meter uuid as query string
 - added hyperlink to energy report page for all meters in meter tracking
-- added updating latest value of virtul point in myems-normalization
+- added updating latest value of virtul point in enerbat-normalization
 - added difference values to meter comparison report
-- added quickmode parameter to most APIs in myems-api
+- added quickmode parameter to most APIs in enerbat-api
 -
 ### Changed
-- added translations of TARIFF in myems-api
-- updated query panel of web messages in myems-admin
-- replaced chartjs with echarts for MultipleLineChart in myems-web
+- added translations of TARIFF in enerbat-api
+- updated query panel of web messages in enerbat-admin
+- replaced chartjs with echarts for MultipleLineChart in enerbat-web
 -
 ### Fixed
-- fixed error translations in myems-web
-- added required parameters to webmessages api request in myems-admin
-- fixed base period timestamps index out of range error in myems-api
-- fixed PEP 8 warnings in myems-api
+- fixed error translations in enerbat-web
+- added required parameters to webmessages api request in enerbat-admin
+- fixed base period timestamps index out of range error in enerbat-api
+- fixed PEP 8 warnings in enerbat-api
 -
 ### Removed
 -
@@ -1357,18 +1357,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v2.6.0] - 2022-10-20
 ### Added
 - added API error message for failing to save offline meter file
-- added base period data to meter enegy report excel exporter in myems-api
+- added base period data to meter enegy report excel exporter in enerbat-api
 -
 ### Changed
-- refactored base_period_start_datetime_local and reporting_period_start_datetime_local of all reports in myems-api
-- normalized base period start datetime and reporting period start datetime of all reports in myems-api
-- split bulk insert data into small ones for meter/offlinemeter/virtualmeter billing/carbon procedures in myems-aggregation
+- refactored base_period_start_datetime_local and reporting_period_start_datetime_local of all reports in enerbat-api
+- normalized base period start datetime and reporting period start datetime of all reports in enerbat-api
+- split bulk insert data into small ones for meter/offlinemeter/virtualmeter billing/carbon procedures in enerbat-aggregation
 -
 ### Fixed
-- fixed PEP 8: W605 invalid escape sequence Z in myems-api
-- fixed finally statement issues in myems-aggregation
-- fixed unclosed database connections issues in myems-api
-- replaced unnecessary energy_category_list with single variable in myems-aggregation
+- fixed PEP 8: W605 invalid escape sequence Z in enerbat-api
+- fixed finally statement issues in enerbat-aggregation
+- fixed unclosed database connections issues in enerbat-api
+- replaced unnecessary energy_category_list with single variable in enerbat-aggregation
 -
 ### Removed
 -
@@ -1376,18 +1376,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [v2.5.0] - 2022-10-11
 
 ### Added
-- added base period data and change rates to meter energy report in myems-web
-- added filters to FDD alarm report and notifications in myems-web
+- added base period data and change rates to meter energy report in enerbat-web
+- added filters to FDD alarm report and notifications in enerbat-web
 -
 ### Changed
-- Split batch inserts into small ones in myems-aggregation
-- Updated min_datetime issue in myems-cleaning (NOTE: add START_DATETIME_UTC to myems-cleaning/.env for upgrading)
-- Set access_log off in nginx.conf for myems-admin and myems-web (NOTE: modify myems-web/nginx.conf and myems-admin/nginx.conf for upgrading)
+- Split batch inserts into small ones in enerbat-aggregation
+- Updated min_datetime issue in enerbat-cleaning (NOTE: add START_DATETIME_UTC to enerbat-cleaning/.env for upgrading)
+- Set access_log off in nginx.conf for enerbat-admin and enerbat-web (NOTE: modify enerbat-web/nginx.conf and enerbat-admin/nginx.conf for upgrading)
 -
 ### Fixed
 - updated translations in Excel exporters
-- added try except statements to virtualmeter of myems-api
-- fixed TypeError: Object of type IntegrityError is not JSON serializable in myems-api
+- added try except statements to virtualmeter of enerbat-api
+- fixed TypeError: Object of type IntegrityError is not JSON serializable in enerbat-api
 - fixed wrong meter2 name in Excel exporter of MeterComparison report
 -
 ### Removed
@@ -1395,13 +1395,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v2.4.0] - 2022-09-30
 ### Added
-- added config entry to indicate if the tariff appended to parameters data (NOTE: add IS_TARIFF_APPENDED to myems-api/.env for upgrading)
+- added config entry to indicate if the tariff appended to parameters data (NOTE: add IS_TARIFF_APPENDED to enerbat-api/.env for upgrading)
 
 ### Changed
 - changed table color in the Excel exporters
 - refactored FDD Fault Alarm database, api and web
 - updated child spaces data in Dashboard
-- changed associated points query order in myems-api
+- changed associated points query order in enerbat-api
 
 ### Fixed
 - updated combined equipment energy category Excel exporter to show parameters data even if there is no energy data
@@ -1417,18 +1417,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added i18n to excel exporters of shopfloor
 - added i18n to excel exporters of combined equipment
 - added difference value to meter tracking report
-- added translation of TARIFF in myems-web
-- added barchart to Dashboard in myems-web
-- added translation of API errors in myems-web
+- added translation of TARIFF in enerbat-web
+- added barchart to Dashboard in enerbat-web
+- added translation of API errors in enerbat-web
 -
 ### Changed
-- updated ChildSpacesTable of Dashboard in myems-web
-- updated FDD Faults Report in myems-web
+- updated ChildSpacesTable of Dashboard in enerbat-web
+- updated FDD Faults Report in enerbat-web
 -
 ### Fixed
 - updated datetime picker format pattern
 - fixed integrity rate issue of MeterTracking report
-- fixed MultipleLineChart blank screen issue in myems-web
+- fixed MultipleLineChart blank screen issue in enerbat-web
 -
 ### Removed
 -
@@ -1445,7 +1445,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 -
 ### Fixed
-- updated if/else statements for excelexporters in myems-api
+- updated if/else statements for excelexporters in enerbat-api
 -
 ### Removed
 -
@@ -1454,7 +1454,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - added MAX/MIN/AVG to parameters line charts
 - added associated equipments trend data to combined equipment input energy category report
-- added new protocol to datasource in myems-api
+- added new protocol to datasource in enerbat-api
 - added meter saving report
 - added meter comparison report
 - added virtual meter saving report
@@ -1462,10 +1462,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 - updated demo database
 - updated docker build instruction in README
-- updated daterange picker in myems-web
+- updated daterange picker in enerbat-web
 -
 ### Fixed
-- fixed start datetime issue for virtual point in myems-normalization
+- fixed start datetime issue for virtual point in enerbat-normalization
 -
 ### Removed
 -
@@ -1479,13 +1479,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added store carbon dioxide emissions report
 - added space carbon dioxide emissions report
 - added tenant carbon dioxide emissions report
-- added data repair file UI to myems-admin
+- added data repair file UI to enerbat-admin
 ### Changed
 -
 ### Fixed
-- fixed issues when energy item list refreshing with energy category in myems-admin
-- fixed virtual meter editor issue when refreshing meter list with meter type in myems-admin
-- fixed virtual point issue of conversion from Float to Decimal in myems-normalization
+- fixed issues when energy item list refreshing with energy category in enerbat-admin
+- fixed virtual meter editor issue when refreshing meter list with meter type in enerbat-admin
+- fixed virtual point issue of conversion from Float to Decimal in enerbat-normalization
 -
 ### Removed
 -
@@ -1493,38 +1493,38 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.9.6] - 2022-08-05
 ### Added
-- added data integrity rates to meter tracking report in myems-api & myems-web
-- added piecewise function to virtual point in myems-normalization
+- added data integrity rates to meter tracking report in enerbat-api & enerbat-web
+- added piecewise function to virtual point in enerbat-normalization
 -
 ### Changed
 -
 ### Fixed
-- fixed energy category index error of storebatch report in myems-api
-- fixed setDetailedDataTableData async issue of meterenergy report in myems-web
-- fixed warnings on mouse over by set rsuite version to 5.16.3 in myems-web
+- fixed energy category index error of storebatch report in enerbat-api
+- fixed setDetailedDataTableData async issue of meterenergy report in enerbat-web
+- fixed warnings on mouse over by set rsuite version to 5.16.3 in enerbat-web
 ### Removed
 -
 
 ## [v1.9.5] - 2022-07-18
 ### Added
 - added subtotal to meter/offlinemeter/virtualmeter batch report
-- added mqtt to data source protocol in myems-api
-- added tbl_template_files to myems_reporting_db
-- added tbl_integrators to myems_system_db
-- added alarm audio for notification in myems-web
-- added alarm lottie for notification in myems-web
-- added tbl_data_repair_files to myems_historical_db
-- added data repair file actions to myems-api
-- added data repair file procedure to myems-normalization
+- added mqtt to data source protocol in enerbat-api
+- added tbl_template_files to enerbat_reporting_db
+- added tbl_integrators to enerbat_system_db
+- added alarm audio for notification in enerbat-web
+- added alarm lottie for notification in enerbat-web
+- added tbl_data_repair_files to enerbat_historical_db
+- added data repair file actions to enerbat-api
+- added data repair file procedure to enerbat-normalization
 -
 ### Changed
-- changed parameter line chart to multiple line chart for meterenergy report in myems-web
+- changed parameter line chart to multiple line chart for meterenergy report in enerbat-web
 
 ### Fixed
-- removed invalid ORDER BY clause from myems-api
-- fixed point timestamps issue of metertrend report in myems-web
-- fixed error of DELETE a Virtual Meter from Store in myems-api
-- fixed error of GET a Parameter of an Equipment in myems-api
+- removed invalid ORDER BY clause from enerbat-api
+- fixed point timestamps issue of metertrend report in enerbat-web
+- fixed error of DELETE a Virtual Meter from Store in enerbat-api
+- fixed error of GET a Parameter of an Equipment in enerbat-api
 - fixed typo in postman collection
 ### Removed
 -
@@ -1539,13 +1539,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - Changed default user expiration datetime to one year from the creation.
-- Reduced insert values length each time in myems-modbus-tcp service.
-- Updated routes and menu items name in myems-web (Database Update Required).
-- Updated translations of myems-admin.
+- Reduced insert values length each time in enerbat-modbus-tcp service.
+- Updated routes and menu items name in enerbat-web (Database Update Required).
+- Updated translations of enerbat-admin.
 
 ### Fixed
-- Fixed remove file error in user_logger decorator of myems-api.
-- Fixed email address validator issue in myems-api.
+- Fixed remove file error in user_logger decorator of enerbat-api.
+- Fixed email address validator issue in enerbat-api.
 - Reduced length of title in Excel exporters of carbon reports.
 
 ### Removed
@@ -1553,20 +1553,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.9.3] - 2022-06-03
 ### Added
-- Added quick mode to meterenergy report in myems-api.
-- Added quick mode to spaceenergycategory report in myems-api.
-- Added quick mode to spaceload report in myems-api.
-- Added object ID to editor title of model dialogs in myems-admin.
-- Added ID column to MeterBatch report in myems-web.
-- Added ID column to MeterTracking report in myems-api and myems-web.
-- Added energy value point name to Meter RealtimeChart in myems-web.
+- Added quick mode to meterenergy report in enerbat-api.
+- Added quick mode to spaceenergycategory report in enerbat-api.
+- Added quick mode to spaceload report in enerbat-api.
+- Added object ID to editor title of model dialogs in enerbat-admin.
+- Added ID column to MeterBatch report in enerbat-web.
+- Added ID column to MeterTracking report in enerbat-api and enerbat-web.
+- Added energy value point name to Meter RealtimeChart in enerbat-web.
 
 ### Changed
-- Updated translations of myems-admin.
+- Updated translations of enerbat-admin.
 - Updated MeterTracking Excel exporter.
 - Updated MeterBatch Excel exporter.
-- Deleted width limit from cascader-menu in myems-web.
-- Updated falcon web framework version to the latest (3.1.0) in myems-api
+- Deleted width limit from cascader-menu in enerbat-web.
+- Updated falcon web framework version to the latest (3.1.0) in enerbat-api
 
 ### Fixed
 - updated meterrealtime report to display right units of energy value.
@@ -1580,13 +1580,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added bilibili link to README.
 
 ### Changed
-- updated Dockerfile of myems-web.
-- updated translations of myems-admin.
+- updated Dockerfile of enerbat-web.
+- updated translations of enerbat-admin.
 - updated modbus acquisition procedure.
-- simplified database update queries in myems-cleaning.
-- simplified database insert queries in myems-normalization.
-- updated pagination of meterRealtime in myems-web.
-- moved menu tariff settings upper than cost center settings in myems-admin.
+- simplified database update queries in enerbat-cleaning.
+- simplified database insert queries in enerbat-normalization.
+- updated pagination of meterRealtime in enerbat-web.
+- moved menu tariff settings upper than cost center settings in enerbat-admin.
 
 ### Fixed
 - fixed wrong http status for XXX_NAME_IS_ALREADY_IN_USE.
@@ -1600,12 +1600,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - added API reverse proxy in Apache conf.
 
 ### Changed
-- replaced true with 1 in SQL statements of myems-api.
+- replaced true with 1 in SQL statements of enerbat-api.
 - updated user insert sql statement for failed_login_count.
 - updated icons for vertical menu items.
-- updated acquisition procedure of myems-modbus-tcp.
-- updated myems-web for SCADA visualization system.
-- updated Dockerfile of myems-web.
+- updated acquisition procedure of enerbat-modbus-tcp.
+- updated enerbat-web for SCADA visualization system.
+- updated Dockerfile of enerbat-web.
 
 ### Fixed
 - fixed typo in virtualmetercarbon.
@@ -1618,25 +1618,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.9.0] -   2022-04-16
 ### Added
-- added myems_production_db to database.
-- added column to `myems_production_db`.`tbl_teams` in database.
-- added instruction for running myems-api with waitress on Windows.
+- added enerbat_production_db to database.
+- added column to `enerbat_production_db`.`tbl_teams` in database.
+- added instruction for running enerbat-api with waitress on Windows.
 - added nano to Dockfile.
 - added telnet to Dockerfile.
 
 ### Changed
-- renamed folder admin to myems-admin, and folder web to myems-web.
-- updated nginx configs for myems-admin and myems-web.
+- renamed folder admin to enerbat-admin, and folder web to enerbat-web.
+- updated nginx configs for enerbat-admin and enerbat-web.
 - updated upload folder path.
 - renamed index tbl_tariffs_index in database.
-- replaced TRUE/FALSE with 1/0 in SQL statements in myems-cleaning service.
-- replaced TRUE/FALSE with 1/0 in SQL statements in myems-normalization service.
-- updated example.env for myems-normalization.
-- replaced TRUE/FALSE with 1/0 in SQL statements in myems-aggregation service.
+- replaced TRUE/FALSE with 1/0 in SQL statements in enerbat-cleaning service.
+- replaced TRUE/FALSE with 1/0 in SQL statements in enerbat-normalization service.
+- updated example.env for enerbat-normalization.
+- replaced TRUE/FALSE with 1/0 in SQL statements in enerbat-aggregation service.
 - replaced FALSE with 0 in SQL statements.
 - changed linechart background color when web ui is in light mode.
-- removed dictionary parameter from cursor in myems-cleaning service.
-- removed dictionary parameter from cursor in myems-normalization service.
+- removed dictionary parameter from cursor in enerbat-cleaning service.
+- removed dictionary parameter from cursor in enerbat-normalization service.
 - updated database demo scripts.
 - removed dictionary parameter from cursor of combinedequipment api functions.
 - updated Dockerfile and README of Web UI.
@@ -1647,7 +1647,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Fixed Meter list search and clear issue.
 - moved cnx.close after cursor.close in useractivity.write_log procedure.
 - fixed no such file error in admin ui.
-- moved cursor.close before cnx.close in myems aggregation service.
+- moved cursor.close before cnx.close in enerbat aggregation service.
 
 ### Removed
 - Removed search box from navbar of web ui.
@@ -1726,7 +1726,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.7.1] -   2022-02-11
 ### Added
-- added myems_carbon_db to recalculating script
+- added enerbat_carbon_db to recalculating script
 
 ### Changed
 - updated mysql-connector-python version in README
@@ -1747,7 +1747,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.7.0] -   2022-01-28
 ### Added
-- added new database myems_carbon_db
+- added new database enerbat_carbon_db
 - added alternative uuid parameter to reports of combined equipment, equipment, meter, shopfloor, store and tenant
 - added meter carbon dioxide emission report to api
 - added meter carbon dioxide emission aggregation procedure
@@ -1795,7 +1795,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   added PUT actions to text/wechat/email messages in api
 -   added POST actions to create new email/wechat/text messages
 -   added lock/unlock user who failed login some times to admin and api
--   added bind-mount upload file folder to containers of myems-api and admin
+-   added bind-mount upload file folder to containers of enerbat-api and admin
 
 ### Changed
 -   updated dependencies in web ui
@@ -1804,7 +1804,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   updated web for latest Node.js version
 -   updated get messages by date range in admin and api
 -   updated get emailmessages api in postman and readme
--   updated config.py in myems-aggregation service
+-   updated config.py in enerbat-aggregation service
 
 ### Fixed
 -   None
@@ -1833,8 +1833,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 -   Updated notification(web message) in web and api
--   Updated command of myems-api service in docker-compose.
--   Updated Dockerfile of myems-api.
+-   Updated command of enerbat-api service in docker-compose.
+-   Updated Dockerfile of enerbat-api.
 -   Updated virtual meter procedure in normalization service.
 
 ### Fixed
@@ -1845,20 +1845,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.4.0] -   2021-11-14
 ### Added
--   added installation on docker to myems-modbus-tcp.
+-   added installation on docker to enerbat-modbus-tcp.
 
 ### Changed
 -   Merged expression table into virtual meter table in database.
     NOTE: THIS CHANGE MAY BREAK YOUR SYSTEM.
 
     Upgrade procedure for this change:
-    1. Stop the myems-normalization service or container.
+    1. Stop the enerbat-normalization service or container.
     2. Backup your database.
-    3. Upgrade myems/admin, myems/myems-api, and myems/myems-normalization source code,
+    3. Upgrade enerbat/admin, enerbat/enerbat-api, and enerbat/enerbat-normalization source code,
        and keep previous .env files unchanged.
     4. Run database/upgrade/upgrade1.4.0.sql to merge expression into virtual meter
     5. Check the virtual meters in Admin UI.
-    6. Start the myems-normalization service or container.
+    6. Start the enerbat-normalization service or container.
 
 -   updated virtual meter model view in admin ui
 -   updated docker hub address in README
@@ -1880,7 +1880,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 -   updated Dockerfiles.
--   added default gateway token to database and myems_modbus_tcp
+-   added default gateway token to database and enerbat_modbus_tcp
 
 ### Fixed
 -   fixed NoneType errors in detailed data formatters of Web UI.
@@ -1890,20 +1890,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.3.3] -   2021-10-30
 ### Added
--   added missing rule_id in myems_fdd_db.
+-   added missing rule_id in enerbat_fdd_db.
 
 ### Changed
 -   updated package.json in web ui
 -   updated README and database test procedure
--   added validation of offline meter hourly values to myems-normalization service
+-   added validation of offline meter hourly values to enerbat-normalization service
 -   updated offline meter data template file
 -   added new period type 'weekly' to meterenergy and aggregate_hourly_data_by_period in API
 -   updated comments in aggregate_hourly_data_by_period of API
--   updated myems-api installation.
+-   updated enerbat-api installation.
 
 ### Fixed
--   fixed NoneType error in myems-cleaning service
--   fixed warnings in myems-aggregation service
+-   fixed NoneType error in enerbat-cleaning service
+-   fixed warnings in enerbat-aggregation service
 -   fixed detailed data sort issues in Web UI
 
 ### Removed
@@ -1993,7 +1993,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.2.3] -   2021-09-04
 ### Added
--   added tbl_reports to myems_reporting_db in database.
+-   added tbl_reports to enerbat_reporting_db in database.
 -   added trusted-host to Dockerfiles
 
 ### Changed
@@ -2014,7 +2014,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   added default passwords to README.
 
 ### Changed
--   updated myems_user_db.tbl_logs in database
+-   updated enerbat_user_db.tbl_logs in database
 -   updated i18n of WebUI
 -   changed user token hash algorithm from sha1 to sha256 in API
 -   upgraded dropzone js library in Admin UI
@@ -2071,7 +2071,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   removed jeditable library from Admin UI
 -   removed js plugins codemirror and summernote from Admin UI
 -   removed 'unused import' from API
--   removed uncessary pass from acquisition.py of myems-modbus-tcp
+-   removed uncessary pass from acquisition.py of enerbat-modbus-tcp
 -   removed unused import from meterbatch.py of API
 -   removed unnecessary library mathjax from Admin UI
 -   removed unnecessary libraries d3, and3, nvd3 and c3 from Admin UI
@@ -2125,7 +2125,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [v1.1.4] -   2021-07-19
 ### Added
--   added tbl_email_messages to myems_reporting_db
+-   added tbl_email_messages to enerbat_reporting_db
 -   added data sort to FDD messages in Admin UI
 -   added new category to FDD rule in API & Admin UI
 -   added Search Input for meters in Web UI
@@ -2155,7 +2155,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   fixed Child Space Share Pie issue in Excel exporter of spaceenergycategory
 
 ### Removed
--   Drop table tbl_sms_recipients from myems_fdd_db
+-   Drop table tbl_sms_recipients from enerbat_fdd_db
 -   deleted parameters data from Dashboard
 
 ## [v1.1.3] -   2021-05-25
@@ -2164,11 +2164,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   added Shopfloor Batch Analysis Report
 -   added Store Batch Analysis Report
 -   added Tenant Batch Analysis Report
--   implemented virtual point calculating in myems-normalization service
+-   implemented virtual point calculating in enerbat-normalization service
 -   added is_virtual to tbl_points in database
--   added gateway process to myems-modbus-tcp service
--   added gateway process to myems-bacnet service
--   added procedure to update last seen datetime of data source in myems-modbus service
+-   added gateway process to enerbat-modbus-tcp service
+-   added gateway process to enerbat-bacnet service
+-   added procedure to update last seen datetime of data source in enerbat-modbus service
 -   added last seen datetime to data source setting in Admin UI
 -   added last seen datetime to Gateway Setting in Admin UI
 -   added excel exporter of spaceefficiency report in API
@@ -2177,7 +2177,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   updated Dashboard in web to display energy data of this year
 -   updated tbl_expressions in database
 -   added start value and end value to metertracking report
--   updated comments and log messages in myems-modbus-tcp service
+-   updated comments and log messages in enerbat-modbus-tcp service
 -   improved theme of energyflowdiagram in Web UI
 
 ### Fixed
@@ -2287,7 +2287,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   moved category before fdd_code of rule in admin UI and API
 
 ### Fixed
--   fixed omission mistakes in myems-cleaning
+-   fixed omission mistakes in enerbat-cleaning
 -   fixed error for large number of parameters in combinedequipmentefficiency and equipmentefficiency in API
 -   fixed error of None Comparison in API
 -   fixed NoneType error in all Load reports API.
@@ -2374,7 +2374,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 -   added equipment statistics report excel exporter.
 -   added store energy item report excel exporter.
 -   added shopfloor statistics report excel exporter.
--   merged myems-api.
+-   merged enerbat-api.
 
 ### Changed
 -   modified database table tbl_energy_flow_diagrams_links
@@ -2398,55 +2398,55 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 -   None.
 
-[Unreleased]: https://gitee.com/MyEMS/myems/compare/v6.9.0...HEAD
-[6.9.0]: https://gitee.com/MyEMS/myems/compare/v6.8.0...v6.9.0
-[6.8.0]: https://gitee.com/MyEMS/myems/compare/v6.7.0...v6.8.0
-[6.7.0]: https://gitee.com/MyEMS/myems/compare/v6.6.0...v6.7.0
-[6.6.0]: https://gitee.com/MyEMS/myems/compare/v6.5.0...v6.6.0
-[6.5.0]: https://gitee.com/MyEMS/myems/compare/v6.4.0...v6.5.0
-[6.4.0]: https://gitee.com/MyEMS/myems/compare/v6.3.0...v6.4.0
-[6.3.0]: https://gitee.com/MyEMS/myems/compare/v6.2.0...v6.3.0
-[6.2.0]: https://gitee.com/MyEMS/myems/compare/v6.1.0...v6.2.0
-[6.1.0]: https://gitee.com/MyEMS/myems/compare/v5.12.0...v6.1.0
-[5.12.0]: https://gitee.com/MyEMS/myems/compare/v5.11.0...v5.12.0
-[5.11.0]: https://gitee.com/MyEMS/myems/compare/v5.10.0...v5.11.0
-[5.10.0]: https://gitee.com/MyEMS/myems/compare/v5.9.0...v5.10.0
-[5.9.0]: https://gitee.com/MyEMS/myems/compare/v5.8.0...v5.9.0
-[5.8.0]: https://gitee.com/MyEMS/myems/compare/v5.7.1...v5.8.0
-[5.7.1]: https://gitee.com/MyEMS/myems/compare/v5.7.0...v5.7.1
-[5.7.0]: https://gitee.com/MyEMS/myems/compare/v5.6.0...v5.7.0
-[5.6.0]: https://gitee.com/MyEMS/myems/compare/v5.5.0...v5.6.0
-[5.5.0]: https://gitee.com/MyEMS/myems/compare/v5.4.0...v5.5.0
-[5.4.0]: https://gitee.com/MyEMS/myems/compare/v5.3.0...v5.4.0
-[5.3.0]: https://gitee.com/MyEMS/myems/compare/v5.2.0...v5.3.0
-[5.2.0]: https://gitee.com/MyEMS/myems/compare/v5.1.0...v5.2.0
-[5.1.0]: https://gitee.com/MyEMS/myems/compare/v4.12.0...v5.1.0
-[4.12.0]: https://gitee.com/MyEMS/myems/compare/v4.11.0...v4.12.0
-[4.11.0]: https://gitee.com/MyEMS/myems/compare/v4.10.0...v4.11.0
-[4.10.0]: https://gitee.com/MyEMS/myems/compare/v4.9.1...v4.10.0
-[4.9.1]: https://gitee.com/MyEMS/myems/compare/v4.9.0...v4.9.1
-[4.9.0]: https://gitee.com/MyEMS/myems/compare/v4.8.0...v4.9.0
-[4.8.0]: https://gitee.com/MyEMS/myems/compare/v4.7.0...v4.8.0
-[4.7.0]: https://gitee.com/MyEMS/myems/compare/v4.6.0...v4.7.0
-[4.6.0]: https://gitee.com/MyEMS/myems/compare/v4.5.0...v4.6.0
-[4.5.0]: https://gitee.com/MyEMS/myems/compare/v4.4.0...v4.5.0
-[4.4.0]: https://gitee.com/MyEMS/myems/compare/v4.3.0...v4.4.0
-[4.3.0]: https://gitee.com/MyEMS/myems/compare/v4.2.0...v4.3.0
-[4.2.0]: https://gitee.com/MyEMS/myems/compare/v4.1.0...v4.2.0
-[4.1.0]: https://gitee.com/MyEMS/myems/compare/v4.0.0...v4.1.0
-[4.0.0]: https://gitee.com/MyEMS/myems/compare/v3.12.0...v4.0.0
-[3.12.0]: https://gitee.com/MyEMS/myems/compare/v3.11.0...v3.12.0
-[3.11.0]: https://gitee.com/MyEMS/myems/compare/v3.10.0...v3.11.0
-[3.10.0]: https://gitee.com/MyEMS/myems/compare/v3.9.0...v3.10.0
-[3.9.0]: https://gitee.com/MyEMS/myems/compare/v3.8.0...v3.9.0
-[3.8.0]: https://gitee.com/MyEMS/myems/compare/v3.7.0...v3.8.0
-[3.7.0]: https://gitee.com/MyEMS/myems/compare/v3.6.0...v3.7.0
-[3.6.0]: https://gitee.com/MyEMS/myems/compare/v3.5.0...v3.6.0
-[3.5.0]: https://gitee.com/MyEMS/myems/compare/v3.4.0...v3.5.0
-[3.4.0]: https://gitee.com/MyEMS/myems/compare/v3.3.0...v3.4.0
-[3.3.0]: https://gitee.com/MyEMS/myems/compare/v3.2.0...v3.3.0
-[3.2.0]: https://gitee.com/MyEMS/myems/compare/v3.1.0...v3.2.0
-[3.1.0]: https://gitee.com/MyEMS/myems/compare/v3.0.0...v3.1.0
-[3.0.0]: https://gitee.com/MyEMS/myems/releases/tag/v3.0.0
+[Unreleased]: https://gitee.com/EnerBat/enerbat/compare/v6.9.0...HEAD
+[6.9.0]: https://gitee.com/EnerBat/enerbat/compare/v6.8.0...v6.9.0
+[6.8.0]: https://gitee.com/EnerBat/enerbat/compare/v6.7.0...v6.8.0
+[6.7.0]: https://gitee.com/EnerBat/enerbat/compare/v6.6.0...v6.7.0
+[6.6.0]: https://gitee.com/EnerBat/enerbat/compare/v6.5.0...v6.6.0
+[6.5.0]: https://gitee.com/EnerBat/enerbat/compare/v6.4.0...v6.5.0
+[6.4.0]: https://gitee.com/EnerBat/enerbat/compare/v6.3.0...v6.4.0
+[6.3.0]: https://gitee.com/EnerBat/enerbat/compare/v6.2.0...v6.3.0
+[6.2.0]: https://gitee.com/EnerBat/enerbat/compare/v6.1.0...v6.2.0
+[6.1.0]: https://gitee.com/EnerBat/enerbat/compare/v5.12.0...v6.1.0
+[5.12.0]: https://gitee.com/EnerBat/enerbat/compare/v5.11.0...v5.12.0
+[5.11.0]: https://gitee.com/EnerBat/enerbat/compare/v5.10.0...v5.11.0
+[5.10.0]: https://gitee.com/EnerBat/enerbat/compare/v5.9.0...v5.10.0
+[5.9.0]: https://gitee.com/EnerBat/enerbat/compare/v5.8.0...v5.9.0
+[5.8.0]: https://gitee.com/EnerBat/enerbat/compare/v5.7.1...v5.8.0
+[5.7.1]: https://gitee.com/EnerBat/enerbat/compare/v5.7.0...v5.7.1
+[5.7.0]: https://gitee.com/EnerBat/enerbat/compare/v5.6.0...v5.7.0
+[5.6.0]: https://gitee.com/EnerBat/enerbat/compare/v5.5.0...v5.6.0
+[5.5.0]: https://gitee.com/EnerBat/enerbat/compare/v5.4.0...v5.5.0
+[5.4.0]: https://gitee.com/EnerBat/enerbat/compare/v5.3.0...v5.4.0
+[5.3.0]: https://gitee.com/EnerBat/enerbat/compare/v5.2.0...v5.3.0
+[5.2.0]: https://gitee.com/EnerBat/enerbat/compare/v5.1.0...v5.2.0
+[5.1.0]: https://gitee.com/EnerBat/enerbat/compare/v4.12.0...v5.1.0
+[4.12.0]: https://gitee.com/EnerBat/enerbat/compare/v4.11.0...v4.12.0
+[4.11.0]: https://gitee.com/EnerBat/enerbat/compare/v4.10.0...v4.11.0
+[4.10.0]: https://gitee.com/EnerBat/enerbat/compare/v4.9.1...v4.10.0
+[4.9.1]: https://gitee.com/EnerBat/enerbat/compare/v4.9.0...v4.9.1
+[4.9.0]: https://gitee.com/EnerBat/enerbat/compare/v4.8.0...v4.9.0
+[4.8.0]: https://gitee.com/EnerBat/enerbat/compare/v4.7.0...v4.8.0
+[4.7.0]: https://gitee.com/EnerBat/enerbat/compare/v4.6.0...v4.7.0
+[4.6.0]: https://gitee.com/EnerBat/enerbat/compare/v4.5.0...v4.6.0
+[4.5.0]: https://gitee.com/EnerBat/enerbat/compare/v4.4.0...v4.5.0
+[4.4.0]: https://gitee.com/EnerBat/enerbat/compare/v4.3.0...v4.4.0
+[4.3.0]: https://gitee.com/EnerBat/enerbat/compare/v4.2.0...v4.3.0
+[4.2.0]: https://gitee.com/EnerBat/enerbat/compare/v4.1.0...v4.2.0
+[4.1.0]: https://gitee.com/EnerBat/enerbat/compare/v4.0.0...v4.1.0
+[4.0.0]: https://gitee.com/EnerBat/enerbat/compare/v3.12.0...v4.0.0
+[3.12.0]: https://gitee.com/EnerBat/enerbat/compare/v3.11.0...v3.12.0
+[3.11.0]: https://gitee.com/EnerBat/enerbat/compare/v3.10.0...v3.11.0
+[3.10.0]: https://gitee.com/EnerBat/enerbat/compare/v3.9.0...v3.10.0
+[3.9.0]: https://gitee.com/EnerBat/enerbat/compare/v3.8.0...v3.9.0
+[3.8.0]: https://gitee.com/EnerBat/enerbat/compare/v3.7.0...v3.8.0
+[3.7.0]: https://gitee.com/EnerBat/enerbat/compare/v3.6.0...v3.7.0
+[3.6.0]: https://gitee.com/EnerBat/enerbat/compare/v3.5.0...v3.6.0
+[3.5.0]: https://gitee.com/EnerBat/enerbat/compare/v3.4.0...v3.5.0
+[3.4.0]: https://gitee.com/EnerBat/enerbat/compare/v3.3.0...v3.4.0
+[3.3.0]: https://gitee.com/EnerBat/enerbat/compare/v3.2.0...v3.3.0
+[3.2.0]: https://gitee.com/EnerBat/enerbat/compare/v3.1.0...v3.2.0
+[3.1.0]: https://gitee.com/EnerBat/enerbat/compare/v3.0.0...v3.1.0
+[3.0.0]: https://gitee.com/EnerBat/enerbat/releases/tag/v3.0.0
 
 

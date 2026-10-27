@@ -11,7 +11,7 @@ app.controller('CostCenterController', function(
 	CostCenterService,
 	toaster,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	// Load all cost centers from API
 	$scope.getAllCostCenters = function() {
 		let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

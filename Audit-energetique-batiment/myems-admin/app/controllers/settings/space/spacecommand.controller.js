@@ -16,7 +16,7 @@ app.controller('SpaceCommandController', function(
     $scope.commands = [];
     $scope.spacecommands = [];
     $scope.filteredCommands = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingCommands = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

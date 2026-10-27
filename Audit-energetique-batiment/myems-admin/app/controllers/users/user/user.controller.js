@@ -9,7 +9,7 @@ app.controller('UserController', function ($scope,
 	toaster,
 	$translate,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.searchKeyword = '';
 	$scope.isProtectedSuperAdmin = function (user) {
 		return !!user && user.id === 1;
@@ -286,7 +286,7 @@ app.controller('NewUserController', function ($scope,
 	toaster,
 	$translate,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.getAllNewUsers = function () {
 		let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };
 		UserService.getAllNewUsers(headers, function (response) {

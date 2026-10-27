@@ -19,7 +19,7 @@ app.controller('WorkingCalendarNonWorkingDayController', function (
     WorkingCalendarNonWorkingDayService,
     toaster,
     SweetAlert) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user")) || {};
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user")) || {};
     $scope.currentWorkingCalendar = {};
     $scope.date_local = moment().format('YYYY-MM-DD'),
     $scope.month = moment().format('YYYY-MM'),

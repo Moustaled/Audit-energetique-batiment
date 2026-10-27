@@ -19,7 +19,7 @@ app.controller('SpaceMeterController', function(
     $scope.spaces = [];
     $scope.currentSpaceID = 1;
     $scope.spacemeters = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingMeters = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

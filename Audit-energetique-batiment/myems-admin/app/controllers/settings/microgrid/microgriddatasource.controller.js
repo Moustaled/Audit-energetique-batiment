@@ -18,7 +18,7 @@ app.controller(
     DragDropWarningService
   ) {
     $scope.cur_user = JSON.parse(
-      $window.localStorage.getItem("myems_admin_ui_current_user")
+      $window.localStorage.getItem("enerbat_admin_ui_current_user")
     );
     $scope.currentMicrogrid = { selected: undefined };
     $scope.isMicrogridSelected = false;

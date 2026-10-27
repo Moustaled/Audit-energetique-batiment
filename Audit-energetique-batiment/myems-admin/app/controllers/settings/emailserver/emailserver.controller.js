@@ -10,7 +10,7 @@ app.controller('EmailServerController', function($scope,
     EmailServerService,
     toaster,
     SweetAlert) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	// Load all email servers from API
 	$scope.getAllEmailServers = function() {
 	    let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

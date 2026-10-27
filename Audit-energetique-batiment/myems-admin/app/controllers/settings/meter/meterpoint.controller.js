@@ -13,7 +13,7 @@ app.controller('MeterPointController', function (
     MeterPointService,
     toaster,
     DragDropWarningService) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentMeter = {selected:undefined};
     $scope.isMeterSelected = false;
     $scope.meterpoints = [];

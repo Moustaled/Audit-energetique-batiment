@@ -18,7 +18,7 @@ app.controller('ShopfloorMeterController', function(
     DragDropWarningService) {
     $scope.currentShopfloor = { selected: undefined };
     $scope.currentMeterType = "meters";
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isShopfloorSelected = false;
       
     // Load all shopfloors from API

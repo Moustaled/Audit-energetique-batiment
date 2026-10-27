@@ -12,7 +12,7 @@ app.controller('IoTSIMCardController', function(
     toaster,
     SweetAlert) {
 
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	// Load all io tsim cards from API
 	$scope.getAllIoTSIMCards = function() {
 		let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

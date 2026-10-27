@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["pol"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["pol"] = {
                 TIMEZONE: {
                     "Dateline Standard Time": 'Czas standardowy linii daty zmiany (GMT-12:00) Zachodnia strona międzynarodowej linii daty zmiany',
                     "Samoa Standard Time": 'Czas standardowy Samoary (GMT-11:00) Wyspa Midway, Samoa',
@@ -96,7 +96,7 @@
                     "Paraguay Standard Time": 'Czas standardowy Paragwaju (GMT-04:00) Asunción',
                     "Kamchatka Standard Time": 'Czas standardowy Kamczatki (GMT+12:00) Pietropawłowsk'
                 },
-                MY_EMS_NAME: 'MyEMS',
+                MY_EMS_NAME: 'EnerBat',
                 LANGUAGE: 'Język',
                 FULLSCREEN: 'Pełny ekran',
                 EXITFULLSCREEN: 'Wyjdź z pełnego ekranu',

@@ -14,7 +14,7 @@ app.controller('TenantWorkingCalendarController', function(
     $scope.tenants = [];
     $scope.currentTenantID = 1;
     $scope.tenantworkingcalendars = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentTenant = {selected:undefined};
     $scope.isTenantSelected = false;
     // Handle tenant change

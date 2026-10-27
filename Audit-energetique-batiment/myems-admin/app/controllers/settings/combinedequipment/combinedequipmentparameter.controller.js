@@ -17,7 +17,7 @@ app.controller('CombinedEquipmentParameterController', function (
     CombinedEquipmentDataSourceService,
     toaster,
     SweetAlert) {
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.currentCombinedEquipment = { selected: undefined };
 	$scope.is_show_add_parameter = false;
 	$scope.combinedequipments = [];

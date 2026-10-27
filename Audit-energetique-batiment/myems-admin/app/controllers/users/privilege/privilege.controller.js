@@ -9,7 +9,7 @@ app.controller('PrivilegeController', function (
 	toaster,
 	$translate,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.getAllPrivileges = function () {
 		let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };
 		PrivilegeService.getAllPrivileges(headers, function (response) {
@@ -151,7 +151,7 @@ app.controller('ModalAddPrivilegeCtrl', function ($scope,
 	params) {
 
 	$scope.operation = "USER.ADD_PRIVILEGE";
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.spaces = [];
 	$scope.currentSpaceID = 1;
 	$scope.privilege = {};
@@ -211,7 +211,7 @@ app.controller('ModalEditPrivilegeCtrl', function ($scope,
 	params) {
 	$scope.operation = "USER.EDIT_PRIVILEGE";
 	$scope.privilege = params.privilege;
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.spaces = [];
 	var privilege_data = JSON.parse(params.privilege.data);
 	$scope.currentSpaceID = privilege_data['spaces'][0];

@@ -16,7 +16,7 @@ app.controller('SpaceCombinedEquipmentController', function($scope,
     $scope.combinedequipments = [];
     $scope.spacecombinedequipments = [];
     $scope.filteredCombinedEquipments = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingCombineEquipments = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

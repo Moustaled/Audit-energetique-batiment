@@ -18,7 +18,7 @@ app.controller('EquipmentMeterController', function(
 	toaster,
 	DragDropWarningService,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.currentEquipment = {selected:undefined};
     $scope.currentMeterType = "meters";
     $scope.isEquipmentSelected = false;

@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["fr"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["fr"] = {
                 TIMEZONE: {
                     "Dateline Standard Time": "Heure de la ligne de changement de date (GMT-12:00) Ouest de la ligne de date internationale",
                     "Samoa Standard Time": "Heure des Samoa (GMT-11:00) Île Midway, Samoa",
@@ -96,7 +96,7 @@
                     "Paraguay Standard Time": "Heure du Paraguay (GMT-04:00) Asunción",
                     "Kamchatka Standard Time": "Heure du Kamtchatka (GMT+12:00) Petropavlovsk"
                 },
-                MY_EMS_NAME: "Audit énergétique du bâtiment — MyEMS",
+                MY_EMS_NAME: "Audit énergétique du bâtiment — EnerBat",
                 LANGUAGE: "Langue",
                 FULLSCREEN: "Plein écran",
                 EXITFULLSCREEN: "Quitter le mode plein écran",

@@ -12,7 +12,7 @@ app.controller('PhotovoltaicPowerStationUserController', function (
     toaster,
     SweetAlert) {
     $scope.currentPhotovoltaicPowerStation = {selected:undefined};
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     // Load all users from API
     $scope.getAllUsers = function () {
         let headers = { "User-UUID": $scope.cur_user.uuid, "Token": $scope.cur_user.token };

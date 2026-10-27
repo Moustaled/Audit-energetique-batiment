@@ -11,7 +11,7 @@ app.controller('DataRepairFileController', function(
 	toaster, 
 	SweetAlert) {
 
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 
 	// Load all data repair files from API
 	$scope.getAllDataRepairFiles = function() {

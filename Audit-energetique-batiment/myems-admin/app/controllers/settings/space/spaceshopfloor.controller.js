@@ -16,7 +16,7 @@ app.controller('SpaceShopfloorController', function(
     $scope.shopfloors = [];
     $scope.spaceshopfloors = [];
     $scope.filteredShopfloors = [];
-    $scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+    $scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
     $scope.isLoadingShopfloors = false;
     $scope.tabInitialized = false;
     $scope.isSpaceSelected = false;

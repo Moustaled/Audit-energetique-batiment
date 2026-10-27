@@ -1,6 +1,6 @@
 (function (global) {
-  global.myemsAdminTranslations = global.myemsAdminTranslations || {};
-  global.myemsAdminTranslations["ko_KR"] = {
+  global.enerbatAdminTranslations = global.enerbatAdminTranslations || {};
+  global.enerbatAdminTranslations["ko_KR"] = {
                 TIMEZONE: {
                     "Dateline Standard Time": '국제일자변경선 표준시 (GMT-12:00) 국제일자변경선 서측',
                     "Samoa Standard Time": '사모아 표준시 (GMT-11:00) 미드웨이 제도, 사모아',
@@ -96,7 +96,7 @@
                     "Paraguay Standard Time": '파라과이 표준시 (GMT-04:00) 아순션',
                     "Kamchatka Standard Time": '캄차카 표준시 (GMT+12:00) 페트로파블로프스크'
                 },
-                MY_EMS_NAME: 'MyEMS',
+                MY_EMS_NAME: 'EnerBat',
                 LANGUAGE: '언어',
                 FULLSCREEN: '전체 화면',
                 EXITFULLSCREEN: '전체 화면 나가기',

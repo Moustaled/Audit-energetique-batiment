@@ -11,7 +11,7 @@ app.controller('ControlModeController', function(
 	ControlModeService,
 	toaster,
 	SweetAlert) {
-	$scope.cur_user = JSON.parse($window.localStorage.getItem("myems_admin_ui_current_user"));
+	$scope.cur_user = JSON.parse($window.localStorage.getItem("enerbat_admin_ui_current_user"));
 	$scope.exportdata = '';
 	$scope.importdata = '';
 
