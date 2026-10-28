@@ -96,7 +96,7 @@
                     "Paraguay Standard Time": "Heure du Paraguay (GMT-04:00) Asunción",
                     "Kamchatka Standard Time": "Heure du Kamtchatka (GMT+12:00) Petropavlovsk"
                 },
-                MY_EMS_NAME: "Audit énergétique du bâtiment — EnerBat",
+                MY_EMS_NAME: "MyEMS — Gestion énergétique",
                 LANGUAGE: "Langue",
                 FULLSCREEN: "Plein écran",
                 EXITFULLSCREEN: "Quitter le mode plein écran",
