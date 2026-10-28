@@ -81,4 +81,4 @@ Utiliser le modèle de relevés, choisir un bâtiment et une période, vérifier
 **Moustapha IBRAHIM DJAMA · Thomas DHUNARA · Mariel FRESNEL**  
 Élèves-ingénieurs — ECAM-EPMI · Spécialité ISE
 
-*Dossier pédagogique de présentation et de préparation d’un audit énergétique, sans déclaration de conformité ni résultats de terrain validés.*
+
