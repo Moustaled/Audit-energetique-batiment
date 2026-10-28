@@ -63,8 +63,7 @@ Aucun de ces indicateurs n’est présenté ici comme un résultat de mesure : l
 - [`documentation/ORIGINE_ET_DROITS.md`](documentation/ORIGINE_ET_DROITS.md) : origine des ressources et distinction des contributions.
 - [`documentation/MODELE_RELEVES.csv`](documentation/MODELE_RELEVES.csv) : tableau vierge pour collecter les relevés.
 - [`documentation/illustrations/`](documentation/illustrations/) : quatre maquettes d’écran et deux schémas explicatifs.
-- [`code_source_MyEMS/`](code_source_MyEMS/) : éléments conservés du logiciel **MyEMS**, dont l’interface d’administration et des scripts SQL.
-- [`LICENSE`](LICENSE) : licence du logiciel tiers MyEMS (reproduction de la notice publiée par son éditeur).
+- [`code_source_MyEMS/`](code_source_MyEMS/) : éléments conservés du logiciel **EnerBat**, dont l’interface d’administration et des scripts SQL.
 
 ## À propos du code
 
