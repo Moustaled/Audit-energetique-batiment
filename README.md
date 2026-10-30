@@ -494,11 +494,10 @@ Le dossier associe des méthodes d'analyse énergétique et des supports numéri
 | Interfaces de suivi | Présentation des indicateurs et tableaux de bord |
 | GitHub | Organisation et documentation du projet |
 
-### Base logicielle MyEMS
+### Base logicielle 
+.
 
-Le dépôt contient des éléments issus de l'écosystème open source **MyEMS (My Energy Management System)**, présentés dans le dossier sous le nom EnerBat.
-
-MyEMS constitue une référence pour l'étude des systèmes de gestion énergétique et des fonctionnalités associées au suivi des consommations.
+notre site constitue une référence pour l'étude des systèmes de gestion énergétique et des fonctionnalités associées au suivi des consommations.
 
 Les ressources conservées comprennent notamment des éléments d'administration et des scripts SQL.
 
@@ -506,7 +505,6 @@ Le code provient d'une base logicielle préexistante et ne correspond pas à un 
 
 L'archive étant partielle, elle ne constitue pas une installation complète et directement opérationnelle du logiciel.
 
-**Projet de référence :** [MyEMS — GitHub](https://github.com/MyEMS/myems)
 
 ---
 
